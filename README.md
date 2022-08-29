@@ -18,10 +18,10 @@ recasting codes:
   * [MadGraph5](https://launchpad.net/mg5amcnlo/)
   * [CheckMATE](https://github.com/CheckMATE2/checkmate2)
 
-Execting:
+Executing:
 
 ```
-./installes.sh
+./installer.sh
 ```
 
 Will try to fetch the required packages and install them in the current folder.
