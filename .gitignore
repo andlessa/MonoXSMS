@@ -1,7 +1,7 @@
 *.pyc
 *.pcl
 *.pkl
-*/.ipynb_checkpoints
+*ipynb_checkpoints
 MG5
 pythia8
 HEPData-ins1894408-v2-csv
