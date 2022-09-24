@@ -18,7 +18,7 @@
 #*********************************************************************
 # Tag name for the run (one word)                                    *
 #*********************************************************************
-  pTMed150cut     = run_tag ! name of the run 
+  noBias     = run_tag ! name of the run 
 #*********************************************************************
 # Number of events and rnd seed                                      *
 # Warning: Do not generate more than 1M events in a single run       *
@@ -109,7 +109,7 @@
 #*********************************************************************
  20.0  = ptj       ! minimum pt for the jets 
  -1.0  = ptjmax    ! maximum pt for the jets
- {55 : 150.0} = pt_min_pdg ! pt cut for other particles (use pdg code). Applied on particle and anti-particle
+ {} = pt_min_pdg ! pt cut for other particles (use pdg code). Applied on particle and anti-particle
  {}	= pt_max_pdg ! pt cut for other particles (syntax e.g. {6: 100, 25: 50}) 
 #
 # For display option for energy cut in the partonic center of mass frame type 'update ecut'
