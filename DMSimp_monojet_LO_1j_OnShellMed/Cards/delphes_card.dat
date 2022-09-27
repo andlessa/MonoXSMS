@@ -3,6 +3,9 @@
 #######################################
 
 set ExecutionPath {
+
+  VisibleFilter
+
   ParticlePropagator
 
   ChargedHadronTrackingEfficiency
@@ -57,12 +60,27 @@ set ExecutionPath {
   TreeWriter
 }
 
+
+######################
+# VisibleFilter
+######################
+
+module PdgCodeFilter VisibleFilter {
+  set InputArray Delphes/stableParticles
+  set OutputArray visibleParticles
+  
+  add PdgCode {51}
+  add PdgCode {52}
+  add PdgCode {-51}
+  add PdgCode {-52}
+}
+
 #################################
 # Propagate particles in cylinder
 #################################
 
 module ParticlePropagator ParticlePropagator {
-  set InputArray Delphes/stableParticles
+  set InputArray VisibleFilter/visibleParticles
 
   set OutputArray stableParticles
   set ChargedHadronOutputArray chargedHadrons
@@ -283,7 +301,8 @@ module SimpleCalorimeter ECal {
   add EnergyFraction {13} {0.0}
   add EnergyFraction {14} {0.0}
   add EnergyFraction {16} {0.0}
-  add EnergyFraction {52} {0.0}    
+  add EnergyFraction {51} {0.0}    
+  add EnergyFraction {52} {0.0}      
   add EnergyFraction {1000022} {0.0}
   add EnergyFraction {1000023} {0.0}
   add EnergyFraction {1000025} {0.0}
@@ -369,6 +388,7 @@ module SimpleCalorimeter HCal {
   add EnergyFraction {13} {0.0}
   add EnergyFraction {14} {0.0}
   add EnergyFraction {16} {0.0}
+  add EnergyFraction {51} {0.0}      
   add EnergyFraction {52} {0.0}
   add EnergyFraction {1000022} {0.0}
   add EnergyFraction {1000023} {0.0}
@@ -594,10 +614,12 @@ module PdgCodeFilter NeutrinoFilter {
   add PdgCode {12}
   add PdgCode {14}
   add PdgCode {16}
+  add PdgCode {51}    
   add PdgCode {52}  
   add PdgCode {-12}
   add PdgCode {-14}
   add PdgCode {-16}
+  add PdgCode {-51}    
   add PdgCode {-52}  
 }
 

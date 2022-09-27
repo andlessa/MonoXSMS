@@ -18,12 +18,12 @@
 #*********************************************************************
 # Tag name for the run (one word)                                    *
 #*********************************************************************
-  pT100bias     = run_tag ! name of the run 
+  noBias     = run_tag ! name of the run 
 #*********************************************************************
 # Number of events and rnd seed                                      *
 # Warning: Do not generate more than 1M events in a single run       *
 #*********************************************************************
-  25000 = nevents ! Number of unweighted events requested 
+  50000 = nevents ! Number of unweighted events requested 
   0   = iseed   ! rnd seed (0=assigned automatically=default))
 #*********************************************************************
 # Collider type and energy                                           *
@@ -84,7 +84,7 @@
 # Generation bias, check the wiki page below for more information:   *
 #  'cp3.irmp.ucl.ac.be/projects/madgraph/wiki/LOEventGenerationBias' *
 #*********************************************************************
- ptj_bias = bias_module  ! Bias type of bias, [None, ptj_bias, -custom_folder-]
+ None = bias_module  ! Bias type of bias, [None, ptj_bias, -custom_folder-]
  {'ptj_bias_target_ptj': 100.0, 'ptj_bias_enhancement_power': 1.0} = bias_parameters ! Specifies the parameters of the module.
 #
 #*******************************                                                 
