@@ -18,12 +18,12 @@
 #*********************************************************************
 # Tag name for the run (one word)                                    *
 #*********************************************************************
-  noBias     = run_tag ! name of the run 
+  noBiasCMSpars     = run_tag ! name of the run 
 #*********************************************************************
 # Number of events and rnd seed                                      *
 # Warning: Do not generate more than 1M events in a single run       *
 #*********************************************************************
-  50000 = nevents ! Number of unweighted events requested 
+  25000 = nevents ! Number of unweighted events requested 
   0   = iseed   ! rnd seed (0=assigned automatically=default))
 #*********************************************************************
 # Collider type and energy                                           *
@@ -44,9 +44,9 @@
 #          eva=Effective W/Z/A Approx.       [21yy.zzzzz]            *
 #          none=No PDF, same as lhapdf with lppx=0                   *
 #*********************************************************************
-     nn23lo1    = pdlabel1     ! PDF type for beam #1
-     nn23lo1    = pdlabel2     ! PDF type for beam #2
-     230000    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
+     lhapdf    = pdlabel1     ! PDF type for beam #1
+     lhapdf    = pdlabel2     ! PDF type for beam #2
+     303600    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
 # To see heavy ion options: type "update ion_pdf"
 #*********************************************************************
 # Renormalization and factorization scales                           *
@@ -107,9 +107,9 @@
 #*********************************************************************
 # Minimum and maximum pt's (for max, -1 means no cut)                *
 #*********************************************************************
- 20.0  = ptj       ! minimum pt for the jets 
+ 10.0  = ptj       ! minimum pt for the jets 
  -1.0  = ptjmax    ! maximum pt for the jets
- {55 : 150.0} = pt_min_pdg ! pt cut for other particles (use pdg code). Applied on particle and anti-particle
+ {} = pt_min_pdg ! pt cut for other particles (use pdg code). Applied on particle and anti-particle
  {}	= pt_max_pdg ! pt cut for other particles (syntax e.g. {6: 100, 25: 50}) 
 #
 # For display option for energy cut in the partonic center of mass frame type 'update ecut'
@@ -117,7 +117,7 @@
 #*********************************************************************
 # Maximum and minimum absolute rapidity (for max, -1 means no cut)   *
 #*********************************************************************
- 5.0 = etaj    ! max rap for the jets 
+ -1.0 = etaj    ! max rap for the jets 
  {} = eta_min_pdg ! rap cut for other particles (use pdg code). Applied on particle and anti-particle
  {} = eta_max_pdg ! rap cut for other particles (syntax e.g. {6: 2.5, 23: 5})
 #*********************************************************************
