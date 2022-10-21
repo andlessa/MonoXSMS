@@ -11,6 +11,7 @@
  * [Asymptotic formulae for likelihood-based tests of new physics](https://arxiv.org/pdf/1007.1727.pdf)
  * [Lecture Notes - Limits](https://ipnp.cz/wp-content/uploads/2019/10/notes-2.pdf)
  * [Cowan's webpage](http://www.pp.rhul.ac.uk/~cowan/stat_course.html)
+ * [Simplified Likelihood (CMS NOTE)](https://cds.cern.ch/record/2242860/files/NOTE2017_001.pdf)
  
 ## Monte Carlo Simulation
 
