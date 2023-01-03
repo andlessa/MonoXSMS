@@ -1,0 +1,5 @@
+set main.currentdir = /home/lessa/MonoXSMS/MadAnalysis5
+set main.recast = on
+set main.recasting_card.path = /home/lessa/MonoXSMS/Cards/recasting_card_ma5.dat
+import ./axial_pythia8_events.hepmc
+set defaultset.xsection = 0.39

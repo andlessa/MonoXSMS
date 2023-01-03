@@ -1,0 +1,4 @@
+# AnalysisName               PADType    Switch     DetectorCard
+# Detector cards must be located in the PAD(ForMA5tune/ForSFS) directory
+# Switches must be on or off
+cms_exo_20_004                v1.2        on    delphes_card_cms_exo_20_004.tcl                    #  CMS   - 13 TeV - Mono-jet (137/fb)
