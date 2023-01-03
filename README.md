@@ -4,7 +4,11 @@ Repository for storing the code and results for studies related to LHC Mono-X se
 
 ## Repo Description
 
- * [monoJet](./monoJet): Stores data and code for the mono-jet analyses
+ * [AuxInfo](./AuxInfo): Stores official auxiliary data from ATLAS and CMS
+ * [Cards](./Cards): Cards for generating events with MadGraph5
+ * [modelFiles](./modelFiles): UFO files for the Simplified DM models
+ * [notebooks](./notebooks): Jupyter notebooks for recasting and plotting
+ * [Refs](./Refs): Useful links to references
 
 ## External Packages
 
@@ -12,11 +16,11 @@ Repository for storing the code and results for studies related to LHC Mono-X se
 Currently the following tools can be installed and might be needed for running the 
 recasting codes:
 
+  * [MadGraph5](https://launchpad.net/mg5amcnlo/)[^1]
   * [Delphes](https://cp3.irmp.ucl.ac.be/projects/delphes)
   * [Pythia8](https://pythia.org/)
   * [HepMC](http://hepmc.web.cern.ch/hepmc/)
-  * [MadGraph5](https://launchpad.net/mg5amcnlo/)
-  * [CheckMATE](https://github.com/CheckMATE2/checkmate2)
+
 
 Executing:
 
@@ -52,3 +56,10 @@ cmake ../root-src -DCMAKE_INSTALL_PREFIX=$homeDIR/root-<version> -Dall=ON -Dmems
 make
 make install
 ```
+
+[^1] In recent python versions the installation of LHAPDF6 through MadGraph might fail, because it uses an old LHAPDF version. In order to install it,
+     one needs to modify the lhapdf6 version to its [latest version](https://lhapdf.hepforge.org/downloads/) in MG5/HEPTools/HEPToolsInstallers/HEPToolInstaller.py
+     and run (within the MG5 folder):
+     ```
+     ./HEPTools/HEPToolsInstallers/HEPToolInstaller.py lhapdf6
+     ```
