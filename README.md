@@ -20,6 +20,7 @@ recasting codes:
   * [Delphes](https://cp3.irmp.ucl.ac.be/projects/delphes)
   * [Pythia8](https://pythia.org/)
   * [HepMC](http://hepmc.web.cern.ch/hepmc/)
+  * [MadAnalysis5](https://github.com/MadAnalysis/madanalysis5)[^2]  
 
 
 Executing:
@@ -57,9 +58,13 @@ make
 make install
 ```
 
-[^1] In recent python versions the installation of LHAPDF6 through MadGraph might fail, because it uses an old LHAPDF version. In order to install it,
+[^1]: In recent python versions the installation of LHAPDF6 through MadGraph might fail, because it uses an old LHAPDF version. In order to install it,
      one needs to modify the lhapdf6 version to its [latest version](https://lhapdf.hepforge.org/downloads/) in MG5/HEPTools/HEPToolsInstallers/HEPToolInstaller.py
      and run (within the MG5 folder):
      ```
      ./HEPTools/HEPToolsInstallers/HEPToolInstaller.py lhapdf6
-     ```
+     ```     
+     
+[^2]: The Delphes card for the MadAnalysis5 implementation of CMS-EXO-20-004 must be replaced by [Cards/delphes_card.dat](./Cards/delphes_card.dat)
+      in order to probably treat the DM particles with PDGs 51 and 52.
+

@@ -112,7 +112,9 @@ if echo "$answer" | grep -iq "^y" ;then
    echo -e "install fastjet\ninstall zlib\ninstall delphes\ninstall PAD\nexit\n" > mad_install.txt
    ./ma5 -f < mad_install.txt
    rm mad_install.txt
+   echo "[installer] replacing MA5 delphes card delphes_card_cms_exo_20_004.tcl by Cards/delphes_card.dat"
    cd $homeDIR
+   cp ./Cards/delphes_card.dat ./MadAnalysis5/tools/PAD/Input/Cards/delphes_card_cms_exo_20_004.tcl
    echo "[installer] done";
 fi
 

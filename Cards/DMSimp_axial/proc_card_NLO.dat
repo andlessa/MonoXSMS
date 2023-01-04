@@ -44,4 +44,4 @@ import model /home/lessa/MonoXSMS/modelFiles/DMsimp_Spin1
 define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
 define j = p
 generate p p > xd xd~ / h w+ w- z a [QCD] aEW=0 DMV=2
-output ../../DMSimp_monojet_NLO_0j
+output ../../DMSimp_axial_NLO
