@@ -21,77 +21,11 @@ FORMAT = '%(levelname)s in %(module)s.%(funcName)s(): %(message)s at %(asctime)s
 logging.basicConfig(format=FORMAT,datefmt='%m/%d/%Y %I:%M:%S %p')
 logger = logging.getLogger("MG5Scan")
 
-
-
-def getProcessCard(parser):
-    """
-    Create a process card using the user defined input.
-    If a proccard has been defined and it already exists, it will use it instead.
-    
-    :param parser: ConfigParser object with all the parameters needed
-    
-    :return: The path to the process card
-    
-    """
-    
-    pars = parser.toDict(raw=False)["MadGraphPars"]
-    
-    if 'proccard'in pars:
-        processCard = pars['proccard']     
-        if os.path.isfile(processCard):
-            logger.debug('Process card found.')
-            #Make sure the output folder defined in processCard matches the one defined in processFolder:
-            pcF = open(processCard,'r')
-            cardLines = pcF.readlines()
-            pcF.close()
-            outFolder = [l for l in cardLines if 'output' in l and 'output' == l.strip()[:6]]            
-            if outFolder:
-                outFolder = outFolder[0]
-                outFolder = outFolder.split('output')[1].replace('\n','').strip()
-                outFolder = os.path.abspath(outFolder)
-                if outFolder != os.path.abspath(pars['processFolder'].strip()):
-                    logger.debug("Folder defined in process card does not match the one defined in processFolder. Will use the latter.")
-                pcF = open(processCard,'w')
-                for l in cardLines:
-                    if (not 'output' in l) or (not 'output' == l.strip()[:6]):
-                        pcF.write(l)
-                    else:
-                        pcF.write('output %s \n' %os.path.abspath(pars['processFolder']))
-                pcF.close()
-            if not outFolder:
-                pcF = open(processCard,'a')
-                pcF.write('output %s \n' %os.path.abspath(pars['processFolder']))
-                
-            return processCard
-        
-    else:
-        processCard = tempfile.mkstemp(suffix='.dat', prefix='processCard_', 
-                                   dir=pars['MG5path'])
-        os.close(processCard[0])
-        processCard = processCard[1]
-        
-    processCardF = open(processCard,'w')
-    processCardF.write('import model sm \n')
-    processCardF.write('define p = g u c d s u~ c~ d~ s~ \n')
-    processCardF.write('import model %s \n' %os.path.abspath(parser.get('options','modelFolder')))     
-    xsecPDGList = parser.get('options','computeXsecsFor')
-    ufoFolder =  parser.get('options','modelFolder')
-    processes = defineProcesses(xsecPDGList, ufoFolder)
-    for iproc,proc in enumerate(processes):
-        processCardF.write('add process %s @ %i \n' %(proc,iproc))
-    
-    l = 'output %s\n' %os.path.abspath(pars['processFolder'])
-    processCardF.write(l)
-    processCardF.write('quit\n')
-    processCardF.close()
-    
-    return processCard
-
-def generateProcesses(parser):
+def generateProcess(parser):
     """
     Runs the madgraph process generation.
     This step just need to be performed once for a given
-    model and set of processes, since it is independent of the 
+    model, since it is independent of the 
     numerical values of the model parameters.
     
     :param parser: ConfigParser object with all the parameters needed
@@ -100,20 +34,45 @@ def generateProcesses(parser):
     """
     
     
-    #Get run folder:
-    processCard = os.path.abspath(getProcessCard(parser))
+    #Get run folder:    
     pars = parser.toDict(raw=False)["MadGraphPars"]
+    processCard = os.path.abspath(pars["proccard"])    
+    if not os.path.isfile(processCard):
+        logger.error("Process card %s not found" %processCard)
+        raise ValueError()
+
+    processFolder = os.path.abspath(pars["processFolder"])
+    if os.path.isdir(processFolder):
+        logger.warning("Process folder %s found. Skipping process generation." %processFolder)
+        return False
+
+    logger.info('Generating process using %s' %processCard)
+
+    # Create copy of process card to replace output folder
+    procCard = tempfile.mkstemp(suffix='.dat', prefix='procCard_')
+    os.close(procCard[0])
+    procCard = procCard[1]
+    shutil.copy(processCard,procCard)
+    with open(procCard,'r') as f:
+        lines = f.readlines()
+    lines = [l for l in lines[:] if l.strip()[:6] != 'output']
+    lines.append('output %s\n' %processFolder)
+    with open(procCard,'w') as f:
+        for l in lines:
+            f.write(l)
     
     #Generate process
-    logger.info('Generating process using %s' %processCard)
-    run = subprocess.Popen('./bin/mg5_aMC -f %s' %processCard,shell=True,
+    mg5Folder = os.path.abspath('./MG5')
+    run = subprocess.Popen('./bin/mg5_aMC -f %s' %procCard,shell=True,
                                 stdout=subprocess.PIPE,stderr=subprocess.PIPE,
-                                cwd=pars['MG5path'])
+                                cwd=mg5Folder)
          
     output,errorMsg = run.communicate()
     logger.debug('MG5 process error:\n %s \n' %errorMsg)
     logger.debug('MG5 process output:\n %s \n' %output)
     logger.info("Finished process generation")
+
+    os.remove(procCard)
         
     return True
 
@@ -145,24 +104,44 @@ def generateEvents(parser):
     if 'paramcard' in pars and os.path.isfile(pars['paramcard']):
         shutil.copyfile(pars['paramcard'],os.path.join(processFolder,'Cards/param_card.dat'))    
 
-    pythia8File = os.path.join(processFolder,'Cards/pythia8card.dat')
+
+    # By default do not run Pythia or Delphes
+    runPythia = False
+    runDelphes = False
+
+    pythia8File = os.path.join(processFolder,'Cards/pythia8_card.dat')
     delphesFile = os.path.join(processFolder,'Cards/delphes_card.dat')
-    if 'delphescard' in pars and os.path.isfile(pars['delphescard']):
-        shutil.copyfile(pars['delphescard'],delphesFile)
+    if 'delphescard' in pars:
+        if os.path.isfile(pars['delphescard']):
+            runDelphes = True
+            shutil.copyfile(pars['delphescard'],delphesFile)
+        else:
+            logger.warning('Delphes card %s not found.' %pars['delphescard'])
     elif os.path.isfile(delphesFile):
         os.remove(delphesFile)
 
-    if 'pythia8card' in pars and os.path.isfile(pars['pythia8card']):
-        shutil.copyfile(pars['pythia8card'],pythia8File) 
-    elif os.path.isfile(pythia8File):
-        os.remove(pythia8File)
-        os.remove(delphesFile)
+    if 'pythia8card' in pars:        
+        if os.path.isfile(pars['pythia8card']):
+            runPythia = True
+            shutil.copyfile(pars['pythia8card'],pythia8File) 
+        else:
+            logger.warning('Pythia8 card %s not found.' %pars['pythia8card'])
 
+    
     #Generate commands file:       
     commandsFile = tempfile.mkstemp(suffix='.txt', prefix='MG5_commands_', dir=processFolder)
     os.close(commandsFile[0])
     commandsFileF = open(commandsFile[1],'w')
-    commandsFileF.write('0\n')
+    if runPythia:
+        commandsFileF.write('shower=Pythia8\n')
+    else:
+        commandsFileF.write('shower=OFF\n')
+    if runDelphes:
+        commandsFileF.write('detector=Delphes\n')
+    else:
+        commandsFileF.write('detector=OFF\n')
+
+    commandsFileF.write('done\n')
     comms = parser.toDict(raw=False)["MadGraphSet"]
     #Set a low number of events, since it does not affect the total cross-section value
     #(can be overridden by the user, if the user defines a different number in the input card)
@@ -185,7 +164,8 @@ def generateEvents(parser):
     logger.debug('MG5 event output:\n %s \n' %output)
       
     logger.info("Finished event generation in %1.2f min" %((time.time()-t0)/60.))
-    
+    os.remove(commandsFile)
+
     return True
     
 
@@ -211,8 +191,12 @@ def main(parfile,verbose):
 
     now = datetime.datetime.now()
     for i,newParser in enumerate(parserList):
-        r = generateEvents(newParser)
-        logger.info("Finished run %i/%i at %s" %(i,len(parserList),now.strftime("%Y-%m-%d %H:%M")))
+        processFolder = newParser.get('MadGraphPars','processFolder')
+        if not os.path.isdir(processFolder):
+            logger.info('Folder %s not found. Running MG5 to create folder.' %processFolder)
+            generateProcess(newParser)
+        generateEvents(newParser)
+        logger.info("Finished run %i/%i at %s" %(i+1,len(parserList),now.strftime("%Y-%m-%d %H:%M")))
 
 
     logger.info("Finished all runs (%i) at %s" %(len(parserList),now.strftime("%Y-%m-%d %H:%M")))
