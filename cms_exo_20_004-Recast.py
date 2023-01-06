@@ -92,7 +92,7 @@ def getRecastData(inputFiles):
 
     # ## Cuts
     ## Trigger efficiency
-    triggerEff = 0.9 # Applied to the event weights
+    triggerEff = 0.9 # Applied to the event weight
 
     ## jets
     pTj1min = 100.
@@ -153,26 +153,27 @@ def getRecastData(inputFiles):
             return True
         return False
 
-    weights = []
-    met = []
-    totalweight = 0.0
-    # Keep track of two weights 
-    # (one for the 2016-2017 datasets and one for 2018)
-    zeroWeight = np.zeros(2)
-    cutFlow = { 'Fullsample' : zeroWeight.copy(),
-                'Triggeremulation' : zeroWeight.copy(),
-            '$p_{T}^{miss}>250$GeV' : zeroWeight.copy(), 
-            'Electronveto' : zeroWeight.copy(),
-            'Muonveto' : zeroWeight.copy(), 
-            'Tauveto' : zeroWeight.copy(), 
-            'Bjetveto' : zeroWeight.copy(), 
-            'Photonveto' : zeroWeight.copy(),
-            '$\Delta \phi (jet,p_{T}^{miss})>0.5$ rad' : zeroWeight.copy(),
-            'LeadingAK4jet$p_{T}>100$GeV' : zeroWeight.copy(), 
-            'LeadingAK4jet$\eta<2.4$' : zeroWeight.copy(),            
-            'HCALmitigation(jets)' : zeroWeight.copy(),
-            'HCALmitigation($\phi^{miss}$)' : zeroWeight.copy()
-            }
+    luminosities = {2016 : 36.0, 2017 : 41.5, 2018: 59.7}
+    lumTot = sum(luminosities.values())
+    yields = {ds : [] for ds in luminosities}
+    metAll = {ds : [] for ds in luminosities}
+    totalweightPB = 0.0
+    # Keep track of yields for each dataset
+    cutFlowAll = {ds : 
+                    {'Fullsample' : 0.0,
+                    'Triggeremulation' : 0.0,
+                    '$p_{T}^{miss}>250$GeV' : 0.0, 
+                    'Electronveto' : 0.0,
+                    'Muonveto' : 0.0, 
+                    'Tauveto' : 0.0, 
+                    'Bjetveto' : 0.0, 
+                    'Photonveto' : 0.0,
+                    '$\Delta \phi (jet,p_{T}^{miss})>0.5$ rad' : 0.0,
+                    'LeadingAK4jet$p_{T}>100$GeV' : 0.0, 
+                    'LeadingAK4jet$\eta<2.4$' : 0.0,            
+                    'HCALmitigation(jets)' : 0.0,
+                    'HCALmitigation($\phi^{miss}$)' : 0.0}
+                for ds in luminosities}
 
     modelDict['Total MC Events'] = 0
     for inputFile in inputFiles:
@@ -180,7 +181,6 @@ def getRecastData(inputFiles):
         tree = f.Get("Delphes")
         nevts = tree.GetEntries()
         modelDict['Total MC Events'] += nevts
-
 
         progressbar = P.ProgressBar(widgets=["Reading %i Events: " %nevts, P.Percentage(),
                                     P.Bar(marker=P.RotatingMarker()), P.ETA()])
@@ -193,8 +193,9 @@ def getRecastData(inputFiles):
             tree.GetEntry(ievt)        
 
             jets = tree.Jet
-            weight = np.full(2,tree.Weight.At(1).Weight)
-            totalweight += tree.Weight.At(1).Weight
+            weightPB = tree.Weight.At(1).Weight
+            ns = weightPB*1e3*lumTot # number of signal events
+            totalweightPB += weightPB
 
             missingET = tree.MissingET.At(0)
         #         missingET = tree.GenMissingET.At(0)  # USE REAL MISSING ET!
@@ -260,70 +261,92 @@ def getRecastData(inputFiles):
             dmMET = tree.DMMissingET.At(0).MET
             if dmMET < 150.0:
                 continue
+
+            npass += 1
+
+            # Split event into datasets:
+            lumRnd = np.random.uniform(0.,lumTot)
+            if lumRnd < luminosities[2016]:
+                useDataSet = 2016
+            elif lumRnd < luminosities[2016]+luminosities[2017]:
+                useDataSet = 2017
+            else:
+                useDataSet = 2018
+
             
-            cutFlow['Fullsample'] += weight
+            cutFlow = cutFlowAll[useDataSet]
+            cutFlow['Fullsample'] += ns
 
             # Apply cuts:
             ## Apply trigger efficiency
-            weight = weight*triggerEff
-            cutFlow['Triggeremulation'] += weight
+            ns = ns*triggerEff
+            cutFlow['Triggeremulation'] += ns
+
             ## Cut on MET
             if missingET.MET < minMET: continue              
-            cutFlow['$p_{T}^{miss}>250$GeV'] += weight
+            cutFlow['$p_{T}^{miss}>250$GeV'] += ns
             ## Veto electrons
             if len(electronList) > nMax_el: continue  
-            cutFlow['Electronveto'] += weight
+            cutFlow['Electronveto'] += ns
             ## Veto muons
             if len(muonList) > nMax_mu: continue  
-            cutFlow['Muonveto'] += weight
+            cutFlow['Muonveto'] += ns
             ## Veto tau jets
             if len(taujetList) > nMax_tau: continue  
-            cutFlow['Tauveto'] += weight
+            cutFlow['Tauveto'] += ns
             ## Veto b jets
             if len(bjetList) > nMax_b: continue  
-            cutFlow['Bjetveto'] += weight
+            cutFlow['Bjetveto'] += ns
             ## Veto photons
             if len(photonList) > nMax_a: continue  
-            cutFlow['Photonveto'] += weight
+            cutFlow['Photonveto'] += ns
             ## Delta Phi cut
             if deltaPhi < 0.5: continue
-            cutFlow['$\Delta \phi (jet,p_{T}^{miss})>0.5$ rad'] += weight
+            cutFlow['$\Delta \phi (jet,p_{T}^{miss})>0.5$ rad'] += ns
             ## Jet cuts
             if len(jetList) < 1 or jetList[0].PT < pTj1min: continue
-            cutFlow['LeadingAK4jet$p_{T}>100$GeV'] += weight
+            cutFlow['LeadingAK4jet$p_{T}>100$GeV'] += ns
             if abs(jetList[0].Eta) > etamax: continue
-            cutFlow['LeadingAK4jet$\eta<2.4$'] += weight
-            ## 2018 Calorimeter mitigation cuts:
-            ### Jet cut:
-            if not passVetoJets2018(jetList):
-                weight[1] = 0.0 # Zero weight for 2018 dataset
-            cutFlow['HCALmitigation(jets)'] += weight
-            if not passVetoPtMiss2018(missingET):
-                weight[1] = 0.0 # Zero weight for 2018 dataset
-            cutFlow['HCALmitigation($\phi^{miss}$)'] += weight
+            cutFlow['LeadingAK4jet$\eta<2.4$'] += ns
+            if useDataSet == 2018 and not passVetoJets2018(jetList):
+                continue
+            cutFlow['HCALmitigation(jets)'] += ns
+            if useDataSet == 2018 and not passVetoPtMiss2018(missingET):
+                continue
+            cutFlow['HCALmitigation($\phi^{miss}$)'] += ns
 
             # Store relevant data        
-            weights.append(weight)
-            met.append(missingET.MET)  
+            yields[useDataSet].append(ns)
+            metAll[useDataSet].append(missingET.MET)  
             
         f.Close()
         progressbar.finish()
 
-    weights = np.array(weights)
+    modelDict['Total xsec-pT150 (pb)'] = 0.0
+    # Store total (combined xsec)
+    modelDict['Total xsec (pb)'] = totalweightPB
 
-    # Normalize cutFlow by FullSample:
-    totWeightCMS = cutFlow['Fullsample'][0]
-    for key,val in cutFlow.items():
-        cutFlow[key] = val/totWeightCMS
-    modelDict['Total xsec (pb)'] = totalweight
-    modelDict['Total xsec-pT150 (pb)'] = totWeightCMS
+    for cutFlow in cutFlowAll.values():
+        if not cutFlow['Fullsample']:
+            continue
+        # Get total cross-section after pTDM > 150 cut:
+        modelDict['Total xsec-pT150 (pb)'] += cutFlow['Fullsample']/(1e3*lumTot)
+        # Normalize cutFlow by FullSample:
+        for key,val in cutFlow.items():
+            if key == 'Fullsample':
+                continue
+            cutFlow[key] = val/cutFlow['Fullsample']
+        cutFlow['Fullsample'] = 1.0
+         
 
     metBins = [250,  280,  310,  340,  370,  400,  430,  470,  510, 550,  590,  640,  690,  
             740,  790,  840,  900,  960, 1020, 1090, 1160, 1250, 99999]
 
     # Create a dictionary with lists for each datasets
     dataDict = {'Data-takingperiod' : [2016,2017,2018]}
-    dataDict.update({'Luminosity (1/fb)' : [36.0,41.5,59.7]})
+    dataDict.update({'Luminosity (1/fb)' : [luminosities[ds] 
+                      for ds in dataDict['Data-takingperiod']]})
+    
     for ibin,b in enumerate(metBins[:-1]):
         label = 'bin_%1.1f_%1.1f'%(b,min(1400.0,metBins[ibin+1]))
         dataDict[label] = []
@@ -332,32 +355,25 @@ def getRecastData(inputFiles):
 
     # Split results into 3 data taking periods:
     dataDict.update({key : [] for key in modelDict})
-    dataDict.update({key : [] for key in cutFlow})
+    dataDict.update({key : [] for key in list(cutFlowAll.values())[0]})
 
-    for idp,dp in enumerate(dataDict['Data-takingperiod']):
-        lumi = dataDict['Luminosity (1/fb)'][idp]
+    for ds in dataDict['Data-takingperiod']:
         # Store common values to all datasets:
         for key,val in modelDict.items():
             dataDict[key].append(val)
         # Store dataset-dependent cutflows:
+        cutFlow = cutFlowAll[ds]
         for key,val in cutFlow.items():
-            if dp == 2018:
-                w = val[1] # Use weight with mitigation
-            else:
-                w = val[0]
-            dataDict[key].append(w)
-        # Store MET bins:
-        if dp == 2018:
-            w = weights[:,1] # Use weight with mitigation
-        else:
-            w = weights[:,0]
-        binc,binEdges = np.histogram(met,bins=metBins, weights=w)
-        binc2,_ = np.histogram(met,bins=metBins, weights=w**2)
+            dataDict[key].append(val)
+        met = metAll[ds]
+        ns = np.array(yields[ds])
+        binc,binEdges = np.histogram(met,bins=metBins, weights=ns)
+        binc2,_ = np.histogram(met,bins=metBins, weights=ns**2)
         for ibin,b in enumerate(binc):
             label = 'bin_%1.1f_%1.1f'%(binEdges[ibin],min(1400.0,binEdges[ibin+1]))    
-            dataDict[label].append(b*1e3*lumi)
-            dataDict[label+'_ErrorPlus'].append(np.sqrt(binc2[ibin])*1e3*lumi)
-            dataDict[label+'_ErrorMinus'].append(np.sqrt(binc2[ibin])*1e3*lumi)
+            dataDict[label].append(b)
+            dataDict[label+'_ErrorPlus'].append(np.sqrt(binc2[ibin]))
+            dataDict[label+'_ErrorMinus'].append(np.sqrt(binc2[ibin]))
 
     return dataDict
 

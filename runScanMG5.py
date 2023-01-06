@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #Uses an input SLHA file to compute cross-sections using MadGraph and the UFO model files
 #The calculation goes through the following steps
