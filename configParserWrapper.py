@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #A wrapper for ConfigParser which allows to evaluate expressions
 #in the parameters. The expressions should be of the type ${expr}.

@@ -4,11 +4,7 @@
 #The calculation goes through the following steps
 # 1) Run MadGraph using the options set in the input file 
 # (the proc_card.dat, parameter_card.dat and run_card.dat...).
-# Madgraph is used to compute the widths and cross-sections
-# 2) Run slhaCreator to extract the information of the MadGraph output
-# and generate a SLHA file containing the cross-sections
 
-#First tell the system where to find the modules:
 from __future__ import print_function
 import sys,os
 from configParserWrapper import ConfigParserExt
@@ -260,14 +256,14 @@ def main(parfile,verbose):
                 generateProcess(newParser)        
             runInfo = generateEvents(newParser)
         
-        runRecast = newParser.get('options','runRecast')
-        if runRecast:
-            if not runInfo:
-                logger.warning("Can only run recast if run info has been defined.")
-            elif os.path.isfile(runRecast):
-                generateRecastData(runRecast,runInfo,processFolder)
-            else:
-                logger.warning('Recast file %s not found.' %runRecast)
+        # runRecast = newParser.get('options','runRecast')
+        # if runRecast:
+        #     if not runInfo:
+        #         logger.warning("Can only run recast if run info has been defined.")
+        #     elif os.path.isfile(runRecast):
+        #         generateRecastData(runRecast,runInfo,processFolder)
+        #     else:
+        #         logger.warning('Recast file %s not found.' %runRecast)
 
         logger.info("Finished run %i/%i at %s" %(i+1,len(parserList),now.strftime("%Y-%m-%d %H:%M")))
 
