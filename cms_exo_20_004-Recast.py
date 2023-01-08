@@ -262,8 +262,6 @@ def getRecastData(inputFiles):
             if dmMET < 150.0:
                 continue
 
-            npass += 1
-
             # Split event into datasets:
             lumRnd = np.random.uniform(0.,lumTot)
             if lumRnd < luminosities[2016]:
@@ -325,6 +323,7 @@ def getRecastData(inputFiles):
     modelDict['Total xsec-pT150 (pb)'] = 0.0
     # Store total (combined xsec)
     modelDict['Total xsec (pb)'] = totalweightPB
+    print('\nCross-section (pb) = %1.3e\n' %totalweightPB)
 
     for cutFlow in cutFlowAll.values():
         if not cutFlow['Fullsample']:
