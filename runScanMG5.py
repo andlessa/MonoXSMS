@@ -170,6 +170,7 @@ def generateEvents(parser):
 
     #Done setting up options
     commandsFileF.write('done\n')
+    commandsFileF.write('done\n')
 
     commandsFileF.close()
     commandsFile = commandsFile[1]      
