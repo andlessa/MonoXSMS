@@ -96,7 +96,7 @@ def getRecastData(inputFiles):
 
     ## jets
     pTj1min = 100.
-    pTjmin = 25.
+    pTjmin = 20.
     etamax = 2.4
     ## MET
     minMET = 250.
@@ -114,8 +114,12 @@ def getRecastData(inputFiles):
     nMax_mu = 0
     ## Tau jets
     nMax_tau = 0
+    etatau_max = 2.3
+    pTtau_min = 18.0
     ## b jets
     nMax_b = 0
+    etab_max = 2.4
+    pTb_min = 20.0
 
     def passVetoJets2018(jets):
         """
@@ -239,15 +243,11 @@ def getRecastData(inputFiles):
             taujetList = []
             for ijet in range(jets.GetEntries()):
                 jet = jets.At(ijet)
-                if jet.PT < pTjmin:
-                    continue
-                if abs(jet.Eta) > 2.5:
-                    continue
-                if jet.BTag:
+                if jet.BTag and jet.PT > pTb_min and abs(jet.Eta) < etab_max:
                     bjetList.append(jet)
-                elif jet.TauTag:
+                elif jet.TauTag and jet.PT > pTtau_min and abs(jet.Eta) < etatau_max:
                     taujetList.append(jet)
-                else:
+                elif jet.PT > pTjmin and abs(jet.Eta) < etamax:
                     jetList.append(jet)  
             jetList = sorted(jetList, key = lambda j: j.PT, reverse=True)    
 
