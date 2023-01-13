@@ -23,7 +23,7 @@ ROOT.gInterpreter.Declare('#include "external/ExRootAnalysis/ExRootTreeReader.h"
 
 
 # ### Define dictionary to store data
-def getRecastData(inputFiles):
+def getRecastData(inputFiles,pTcut=150.0):
 
     if len(inputFiles) == 1:
         modelDict = {'filename' : os.path.abspath(inputFiles[0])}
@@ -59,12 +59,27 @@ def getRecastData(inputFiles):
 
     slha = xroot.find('header').find('slha').text
     pars = pyslha.readSLHA(slha)
-    mMed = pars.blocks['MASS'][55]
-    mDM = pars.blocks['MASS'][52]
-    gVq = pars.blocks['DMINPUTS'][4] # Mediator-quark vector coupling
-    gAq = pars.blocks['DMINPUTS'][10] # Mediator-quark axial coupling
-    gVx = pars.blocks['DMINPUTS'][2] # Mediator-DM vector coupling
-    gAx = pars.blocks['DMINPUTS'][3] # Mediator-DM axial coupling
+    if 55 in pars.blocks['MASS']:
+        model = 'spin1'
+        mMed = pars.blocks['MASS'][55]
+    elif 54 in pars.blocks['MASS']:
+        model = 'spin0'
+        mMed = pars.blocks['MASS'][54]
+
+    if model in ['spin1','spin0']:
+        mDM = pars.blocks['MASS'][52]
+
+    if model == 'spin1':
+        gVq = pars.blocks['DMINPUTS'][4] # Mediator-quark vector coupling
+        gAq = pars.blocks['DMINPUTS'][10] # Mediator-quark axial coupling
+        gVx = pars.blocks['DMINPUTS'][2] # Mediator-DM vector coupling
+        gAx = pars.blocks['DMINPUTS'][3] # Mediator-DM axial coupling
+    elif model == 'spin0':
+        gVq = pars.blocks['DMINPUTS'][6] # Mediator-quark scalar coupling
+        gAq = pars.blocks['DMINPUTS'][12] # Mediator-quark pseudoscalar coupling
+        gVx = pars.blocks['DMINPUTS'][3] # Mediator-DM scalar coupling
+        gAx = pars.blocks['DMINPUTS'][4] # Mediator-DM pseudoscalar coupling
+    
     print('\nModel parameters:')
     print('mMed = %1.2f GeV, mDM = %1.2f GeV, gVq = %1.2f, gAq = %1.2f, gVx = %1.2f, gAx = %1.2f\n' 
         %(mMed,mDM,gVq,gAq,gVx,gAx))
@@ -72,15 +87,21 @@ def getRecastData(inputFiles):
 
     # #### Store data
     if gVx != 0:
-        modelDict['Coupling'] = 'Vector'
+        if model == 'spin1':
+            modelDict['Coupling'] = 'Vector'
+        elif model == 'spin0':
+            modelDict['Coupling'] = 'Scalar'
     else:
-        modelDict['Coupling'] = 'Axial'
+        if model == 'spin1':
+            modelDict['Coupling'] = 'Axial'
+        elif model == 'spin0':
+            modelDict['Coupling'] = 'Pseudoscalar'
         
     modelDict['Mode'] = 'DM+QCDjets'
 
     modelDict['$m_{med}$'] = mMed
     modelDict['$m_{DM}$'] = mDM
-    if modelDict['Coupling'] == 'Vector':
+    if (modelDict['Coupling'] == 'Vector') or (modelDict['Coupling'] == 'Scalar'):
         modelDict['$g_{DM}$'] = gVx
         modelDict['$g_{q}$'] = gVq
     else:
@@ -259,7 +280,7 @@ def getRecastData(inputFiles):
             # Apply cut on DM pT to reproduce CMS
             # cut on event generation:
             dmMET = tree.DMMissingET.At(0).MET
-            if dmMET < 150.0:
+            if dmMET < pTcut:
                 continue
 
             # Split event into datasets:
@@ -277,7 +298,9 @@ def getRecastData(inputFiles):
 
             # Apply cuts:
             ## Apply trigger efficiency
-            ns = ns*triggerEff
+            # ns = ns*triggerEff
+            if missingET.MET < 120.0:
+                continue
             cutFlow['Triggeremulation'] += ns
 
             ## Cut on MET
@@ -390,6 +413,9 @@ if __name__ == "__main__":
             help='path to output file storing the DataFrame with the recasting data.'
                  + 'If not defined, will use the name of the first input file', 
             default = None)
+    ap.add_argument('-pt', '--pTcut', required=False,default=150.0,type=float,
+            help='Gen level MET cut for computing partial cross-sections.')
+    
 
     ap.add_argument('-v', '--verbose', default='info',
             help='verbose level (debug, info, warning or error). Default is info')
@@ -407,7 +433,7 @@ if __name__ == "__main__":
     if os.path.splitext(outputFile)[1] != '.pcl':
         outputFile = os.path.splitext(outputFile)[0] + '.pcl'
 
-    modelDict = getRecastData(inputFiles)
+    modelDict = getRecastData(inputFiles,args.pTcut)
 
     # #### Create pandas DataFrame
     df = pd.DataFrame.from_dict(modelDict)
