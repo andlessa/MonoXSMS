@@ -43,5 +43,5 @@ define vl~ = ve~ vm~ vt~
 import model /home/lessa/MonoXSMS/modelFiles/DMsimp_Spin0
 define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
 define j = p
-generate p p > xd xd~ j [noborn=QCD]
-output ../../DMSimp_spin0_monojet_1j
+generate p p > xd xd~  /  h w+ w- z a [noborn=QCD]
+output ../../DMSimp_spin0_monojet_0j
