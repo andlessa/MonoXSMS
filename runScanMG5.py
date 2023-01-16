@@ -203,6 +203,10 @@ def generateEvents(parser):
         logger.debug('Removing  %s' %hepmcFile)
         if os.path.isfile(hepmcFile):
             os.remove(hepmcFile)
+        logFile = os.path.join(processFolder,'Events',runInfo['run number'], '%s_pythia8.log'  %runInfo['run tag'])
+        logger.debug('Removing  %s' %logFile)
+        if os.path.isfile(logFile):
+            os.remove(logFile)
 
     return runInfo
 
