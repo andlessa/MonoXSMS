@@ -118,28 +118,43 @@ def generateEvents(parser):
     t0 = time.time()
     
     pars = parser["MadGraphPars"]
+    if not 'runFolder' in pars:
+        logger.error('Run folder not defined.')
+        return False        
+    else:
+        runFolder = pars['runFolder']
+
     if not 'processFolder' in pars:
         logger.error('Process folder not defined.')
         return False        
     else:
         processFolder = pars['processFolder']
+        if not os.path.isdir(processFolder):
+            logger.error('Process folder %s not found.' %processFolder)
+            return False            
+
+    # If run folder does not exist, create it using processFolder as a template:
+    if not os.path.isdir(runFolder):
+        runFolder = shutil.copytree(processFolder,runFolder,ignore=shutil.ignore_patterns('Events','*.lhe'))
+        os.makedirs(os.path.join(runFolder,'Events'))       
+        logger.info("Created temporary folder %s" %runFolder) 
             
-    if not os.path.isdir(processFolder):
-        logger.error('Process folder %s not found.' %processFolder)
+    if not os.path.isdir(runFolder):
+        logger.error('Run folder %s not found.' %runFolder)
         return False
 
     if 'runcard' in pars and os.path.isfile(pars['runcard']):    
-        shutil.copyfile(pars['runcard'],os.path.join(processFolder,'Cards/run_card.dat'))
+        shutil.copyfile(pars['runcard'],os.path.join(runFolder,'Cards/run_card.dat'))
     if 'paramcard' in pars and os.path.isfile(pars['paramcard']):
-        shutil.copyfile(pars['paramcard'],os.path.join(processFolder,'Cards/param_card.dat'))    
+        shutil.copyfile(pars['paramcard'],os.path.join(runFolder,'Cards/param_card.dat'))    
 
 
     # By default do not run Pythia or Delphes
     runPythia = parser['options']['runPythia']
     runDelphes = parser['options']['runDelphes']
 
-    pythia8File = os.path.join(processFolder,'Cards/pythia8_card.dat')
-    delphesFile = os.path.join(processFolder,'Cards/delphes_card.dat')
+    pythia8File = os.path.join(runFolder,'Cards/pythia8_card.dat')
+    delphesFile = os.path.join(runFolder,'Cards/delphes_card.dat')
     if runDelphes and 'delphescard' in pars:
         if os.path.isfile(pars['delphescard']):
             shutil.copyfile(pars['delphescard'],delphesFile)
@@ -149,7 +164,7 @@ def generateEvents(parser):
             shutil.copyfile(pars['pythia8card'],pythia8File) 
     
     #Generate commands file:       
-    commandsFile = tempfile.mkstemp(suffix='.txt', prefix='MG5_commands_', dir=processFolder)
+    commandsFile = tempfile.mkstemp(suffix='.txt', prefix='MG5_commands_', dir=runFolder)
     os.close(commandsFile[0])
     commandsFileF = open(commandsFile[1],'w')
     if runPythia:
@@ -174,11 +189,13 @@ def generateEvents(parser):
 
     commandsFileF.close()
     commandsFile = commandsFile[1]      
+
+    ncore = parser['options']['ncore']
     
     logger.info("Generating MG5 events with command file %s" %commandsFile)
-    run = subprocess.Popen('./bin/generate_events --multicore --nb_core=1 < %s' %(commandsFile),
+    run = subprocess.Popen('./bin/generate_events --multicore --nb_core=%i < %s' %(ncore,commandsFile),
                            shell=True,stdout=subprocess.PIPE,
-                           stderr=subprocess.PIPE,cwd=processFolder)
+                           stderr=subprocess.PIPE,cwd=runFolder)
       
     output,errorMsg= run.communicate()
     runInfo = {}
@@ -197,14 +214,18 @@ def generateEvents(parser):
 
     cleanOutput = parser['options']['cleanOutput']
     if cleanOutput and runInfo:
-        lheFile = os.path.join(processFolder,'Events',runInfo['run number'],'unweighted_events.lhe.gz')
+        lheFile = os.path.join(runFolder,'Events',runInfo['run number'],'unweighted_events.lhe.gz')
         logger.debug('Removing  %s' %lheFile)
         if os.path.isfile(lheFile):
             os.remove(lheFile)
-        hepmcFile = os.path.join(processFolder,'Events',runInfo['run number'], '%s_pythia8_events.hepmc.gz'  %runInfo['run tag'])
+        hepmcFile = os.path.join(runFolder,'Events',runInfo['run number'], '%s_pythia8_events.hepmc.gz'  %runInfo['run tag'])
         logger.debug('Removing  %s' %hepmcFile)
         if os.path.isfile(hepmcFile):
             os.remove(hepmcFile)
+        logFile = os.path.join(runFolder,'Events',runInfo['run number'], '%s_pythia8.log'  %runInfo['run tag'])
+        logger.debug('Removing  %s' %logFile)
+        if os.path.isfile(logFile):
+            os.remove(logFile)
 
     return runInfo
 
@@ -215,13 +236,24 @@ def moveFolders(runInfo):
     """
 
     # Get run folder:
-    runFolder = runInfo['runFolder']
-    runNumber = runInfo['runNumber']
-    eventFolder = os.path.join(runInfo['processFolder'],'Events')
-
-    for runDir in glob.glob(os.path.join(runFolder,'Events','run_*')):
-        shutil.move(runDir,os.path.join(eventFolder,'run_%02d' %runNumber))
-
+    runFolder = os.path.abspath(runInfo['runFolder'])
+    runNumber = int(runInfo['runNumber'])
+    processFolder = os.path.abspath(runInfo['processFolder'])
+    # If run folder and process folder are the same, do nothing
+    if runFolder == processFolder:
+        return
+    
+    # Move run folder results to process folder
+    eventFolder = os.path.join(processFolder,'Events')
+    runDirs = list(glob.glob(os.path.join(runFolder,'Events','run_*')))
+    if len(runDirs) != 1:
+        logger.error('Something went wrong. Found %i run folders in %s' %len(runDirs,runFolder))
+        return False
+    runDir = runDirs[0]
+    finalRunDir = os.path.join(eventFolder,'run_%02d' %runNumber)
+    logger.info('Moving %s to %s' %(runDir,finalRunDir))
+    shutil.move(runDir,finalRunDir)
+    logger.info('Deleting temporary folder %s' %(runFolder))
     shutil.rmtree(runFolder)
 
 
@@ -252,31 +284,43 @@ def main(parfile,verbose):
     if ncpus  < 0:
         ncpus =  multiprocessing.cpu_count()
     pool = multiprocessing.Pool(processes=ncpus)
+    if ncpus > 1:
+        logger.info('Running in parallel with %i processes' %ncpus)
+    else:
+        logger.info('Running in series with a single process')
 
     now = datetime.datetime.now()
     children = []
-    run0 = 0
     for irun,newParser in enumerate(parserList):
         processFolder = newParser.get('MadGraphPars','processFolder')
+        processFolder = os.path.abspath(processFolder)
+        if processFolder[-1] == '/':
+            processFolder = processFolder[:-1]
         if not os.path.isdir(processFolder):
             logger.info('Folder %s not found. Running MG5 to create folder.' %processFolder)
             generateProcess(newParser)
 
         # Get largest existing events folder:
+        run0 = 1
         eventsFolder = os.path.join(processFolder,'Events')
         if os.path.isdir(eventsFolder):
             for runF in glob.glob(os.path.join(eventsFolder,'run*')):
-                run0 = int(os.path.basename(runF).replace('run_',''))+1
+                run0 = max(run0,int(os.path.basename(runF).replace('run_',''))+1)
 
-        # Create temporary folders
-        runFolder = tempfile.mkdtemp(dir=os.path.dirname(processFolder), 
-                                     prefix='%s_',suffix='_run_%02d' %run0+irun)
+        # Create temporary folder names if running in parallel
+        if ncpus > 1:
+            # Create temporary folders
+            runFolder = tempfile.mkdtemp(prefix='%s_'%(processFolder),suffix='_run_%02d' %(run0+irun))
+            os.removedirs(runFolder)
+        else:
+            runFolder = processFolder
 
         newParser.set('MadGraphPars','runFolder',runFolder)
-        newParser.set('MadGraphPars','runNumber',run0+irun)
+        newParser.set('MadGraphPars','runNumber','%02d' %(run0+irun))
 
         parserDict = newParser.toDict(raw=False)
-        p = pool.apply_async(generateEvents, args=(parserDict,irun), callback=moveFolders)                       
+        logger.debug('submitting with pars:\n %s \n' %parserDict)
+        p = pool.apply_async(generateEvents, args=(parserDict,), callback=moveFolders)                       
         children.append(p)
 
 #     Wait for jobs to finish:
