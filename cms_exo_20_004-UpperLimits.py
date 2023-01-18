@@ -10,7 +10,7 @@ import pandas as pd
 
 
 
-def computeULs(inputFile,outputFile):
+def computeULs(inputFile,outputFile,deltas=0.0):
 
     metBins = [250,  280,  310,  340,  370,  400,  430,  470,  510, 550,  590,  640,  690,  
                 740,  790,  840,  900,  960, 1020, 1090, 1160, 1250, 1400]
@@ -79,9 +79,9 @@ def computeULs(inputFile,outputFile):
             ns.append(signalYield)
         ns = np.array(ns)    
         data = Data(observed=nobs, backgrounds=nbg, covariance=covMatrix, 
-                    nsignal=ns,deltas_rel=0.0)
+                    nsignal=ns,deltas_rel=deltas)
         dataExp = Data(observed=[int(b) for b in nbg], backgrounds=nbg, covariance=covMatrix, 
-                    nsignal=ns,deltas_rel=0.0)    
+                    nsignal=ns,deltas_rel=deltas)    
         try:
             ul = ulComp.getUpperLimitOnMu(data)
         except:
@@ -108,6 +108,8 @@ if __name__ == "__main__":
             "Compute the upper limit on mu from CMS-EXO-20-004 for the recast data stored in the input file.")
     ap.add_argument('-f', '--inputFile', required=True,
             help='path to the pickle file containing the Pandas DataFrame with the recasting results for the models')
+    ap.add_argument('-e', '--signalError', required=False, default = 0.0, type=float,
+            help='value for the relative error on the signal [default = 0.0]')
     ap.add_argument('-o', '--outputFile', required=False,
             help='path to output file. If not defined the upper limits will be stored in the input file.',
             default = None)
@@ -124,7 +126,8 @@ if __name__ == "__main__":
     if outputFile is None:
         outputFile = inputFile
 
-    computeULs(inputFile,outputFile)
+    deltas = args.signalError
+    computeULs(inputFile,outputFile,deltas)
 
     print("\n\nDone in %3.2f min" %((time.time()-t0)/60.))
 

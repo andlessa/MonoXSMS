@@ -114,9 +114,8 @@ def generateEvents(parser):
     
     :return: True if successful. Otherwise False.
     """
-
-    t0 = time.time()
     
+    t0 = time.time()
     pars = parser["MadGraphPars"]
     if not 'runFolder' in pars:
         logger.error('Run folder not defined.')
@@ -162,6 +161,8 @@ def generateEvents(parser):
     if runPythia and 'pythia8card' in pars:        
         if os.path.isfile(pars['pythia8card']):
             shutil.copyfile(pars['pythia8card'],pythia8File) 
+
+    cleanOutput = parser['options']['cleanOutput']
     
     #Generate commands file:       
     commandsFile = tempfile.mkstemp(suffix='.txt', prefix='MG5_commands_', dir=runFolder)
@@ -178,10 +179,12 @@ def generateEvents(parser):
 
     commandsFileF.write('done\n')
     comms = parser["MadGraphSet"]
-    #Set a low number of events, since it does not affect the total cross-section value
-    #(can be overridden by the user, if the user defines a different number in the input card)
+    # Set the MadGraph parameters defined in the ini file
     for key,val in comms.items():
         commandsFileF.write('set %s %s\n' %(key,val))
+    # If cleanOutput = True, do not store the HepMC file (faster run):
+    if cleanOutput:
+        commandsFileF.write('set HEPMCoutput:file hepmcremove\n')
 
     #Done setting up options
     commandsFileF.write('done\n')
@@ -198,7 +201,7 @@ def generateEvents(parser):
                            stderr=subprocess.PIPE,cwd=runFolder)
       
     output,errorMsg= run.communicate()
-    runInfo = {}
+    runInfo = {'time (s)' : time.time()-t0}
     runInfo.update(pars)
     # Try to get info from output
     try:
@@ -209,11 +212,10 @@ def generateEvents(parser):
     logger.debug('MG5 event error:\n %s \n' %errorMsg)
     logger.debug('MG5 event output:\n %s \n' %output)
       
-    logger.info("Finished event generation in %1.2f min" %((time.time()-t0)/60.))
     os.remove(commandsFile)
 
-    cleanOutput = parser['options']['cleanOutput']
-    if cleanOutput and runInfo:
+    
+    if cleanOutput and runInfo and 'run number' in runInfo:
         lheFile = os.path.join(runFolder,'Events',runInfo['run number'],'unweighted_events.lhe.gz')
         logger.debug('Removing  %s' %lheFile)
         if os.path.isfile(lheFile):
@@ -234,6 +236,8 @@ def moveFolders(runInfo):
     Move the run folders from the temporary running folder
     to the process folder.
     """
+
+    logger.info('Finished event generation in %1.2f min' %(runInfo['time (s)']/60.))
 
     # Get run folder:
     runFolder = os.path.abspath(runInfo['runFolder'])
