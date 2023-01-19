@@ -59,7 +59,7 @@ make install
 ```
 
 
-## Validation Results
+## Recasting Validation
 
 In order to produce the validation results for CMS-EXO-20-004 the following steps should be taken:
 
@@ -117,7 +117,9 @@ As an example, to generate the validation plots for the axial (spin 1) model the
   5. Plot the results using [./notebooks/plotUpperLimits-Axial.ipynb](./notebooks/plotUpperLimits-Axial.ipynb)
 
 
+### Validation Results
 
+  Note that the limits provide by CMS include a combination of the Mono-V and MonoJet signal regions, while the results computed here only include the MonoJet SRs. Furthermore for the spin-1 (axial and vector) models, CMS computes the events at NLO, so a small k-factor has to be applied. The k-factor depends on the model point, but we apply a flat value for all points.
 
 
 [^1]: In recent python versions the installation of LHAPDF6 through MadGraph might fail, because it uses an old LHAPDF version. In order to install it,

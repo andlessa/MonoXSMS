@@ -114,6 +114,10 @@ def generateEvents(parser):
     
     :return: True if successful. Otherwise False.
     """
+
+    # Delay event generation to 1min to
+    # avoid too much overlap of disk writing from parallel workers
+    time.sleep(30)
     
     t0 = time.time()
     pars = parser["MadGraphPars"]
@@ -251,7 +255,7 @@ def moveFolders(runInfo):
     eventFolder = os.path.join(processFolder,'Events')
     runDirs = list(glob.glob(os.path.join(runFolder,'Events','run_*')))
     if len(runDirs) != 1:
-        logger.error('Something went wrong. Found %i run folders in %s' %len(runDirs,runFolder))
+        logger.error('Something went wrong. Found %i run folders in %s' %(len(runDirs),runFolder))
         return False
     runDir = runDirs[0]
     finalRunDir = os.path.join(eventFolder,'run_%02d' %runNumber)
