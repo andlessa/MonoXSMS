@@ -115,9 +115,6 @@ def generateEvents(parser):
     :return: True if successful. Otherwise False.
     """
 
-    # Delay event generation to 1min to
-    # avoid too much overlap of disk writing from parallel workers
-    time.sleep(30)
     
     t0 = time.time()
     pars = parser["MadGraphPars"]
@@ -138,7 +135,9 @@ def generateEvents(parser):
 
     # If run folder does not exist, create it using processFolder as a template:
     if not os.path.isdir(runFolder):
-        runFolder = shutil.copytree(processFolder,runFolder,ignore=shutil.ignore_patterns('Events','*.lhe'))
+        runFolder = shutil.copytree(processFolder,runFolder,
+                                    ignore=shutil.ignore_patterns('Events','*.lhe'),
+                                    symlinks=True)
         os.makedirs(os.path.join(runFolder,'Events'))       
         logger.info("Created temporary folder %s" %runFolder) 
             
