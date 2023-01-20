@@ -240,7 +240,8 @@ def moveFolders(runInfo):
     to the process folder.
     """
 
-    logger.info('Finished event generation in %1.2f min' %(runInfo['time (s)']/60.))
+    logger.info('Finished event generation for run %i in %1.2f min' 
+                %(int(runInfo['runNumber']),runInfo['time (s)']/60.))
 
     # Get run folder:
     runFolder = os.path.abspath(runInfo['runFolder'])
