@@ -651,6 +651,7 @@ module PdgCodeFilter DMFilter {
 
   set InputArray Delphes/stableParticles
   set OutputArray filteredParticles
+  set Invert True
 
   set PTMin 0.0
 
