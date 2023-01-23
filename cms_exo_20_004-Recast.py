@@ -61,15 +61,16 @@ def passVetoPtMiss2018(met):
 
 def getModelDict(inputFiles):
 
-    cmsColumns = ['Coupling', 'Mode', '$m_{med}$', '$m_{DM}$', '$g_{DM}$', '$g_{q}$']
+    # cmsColumns = ['Coupling', 'Mode', '$m_{med}$', '$M_{D}$' '$m_{DM}$', '$d$' '$g_{DM}$', '$g_{q}$']
     modelDict = {}
-    for column in cmsColumns:
-        modelDict[column] = None
+    # for column in cmsColumns:
+        # modelDict[column] = None
     
     # ## Get Model Parameters
     banner = sorted(glob.glob(os.path.dirname(inputFiles[0])+'/*banner.txt'),key=os.path.getmtime,reverse=True)
     if len(banner) == 0:
         print('Banner not found for %s' %inputFiles[0])
+        return None
     elif len(banner) > 1:        
         print('\n%i banner files found in %s.' 
             %(len(banner),os.path.dirname(inputFiles[0])))
@@ -84,9 +85,14 @@ def getModelDict(inputFiles):
     elif 54 in pars.blocks['MASS']:
         model = 'spin0'
         mMed = pars.blocks['MASS'][54]
+    elif 5000039 in pars.blocks['MASS']:
+        model = 'ADD'
+        mMed = pars.blocks['MASS'][5000039]
 
     if model in ['spin1','spin0']:
         mDM = pars.blocks['MASS'][52]
+    else:
+        mDM = None
 
     if model == 'spin1':
         gVq = pars.blocks['DMINPUTS'][4] # Mediator-quark vector coupling
@@ -98,49 +104,61 @@ def getModelDict(inputFiles):
         gAq = pars.blocks['DMINPUTS'][12] # Mediator-quark pseudoscalar coupling
         gVx = pars.blocks['DMINPUTS'][3] # Mediator-DM scalar coupling
         gAx = pars.blocks['DMINPUTS'][4] # Mediator-DM pseudoscalar coupling
+    elif model == 'ADD':
+        MD = pars.blocks['ADDINPUTS'][1] # Fundamental Planck scale in large extra dimensions
+        d = pars.blocks['ADDINPUTS'][2] # Number of extra dimentions
     
     print('\nModel parameters:')
-    print('mMed = %1.2f GeV, mDM = %1.2f GeV, gVq = %1.2f, gAq = %1.2f, gVx = %1.2f, gAx = %1.2f\n' 
-        %(mMed,mDM,gVq,gAq,gVx,gAx))
+    if model in ['spin1','spin0']:
+        print('mMed = %1.2f GeV, mDM = %1.2f GeV, gVq = %1.2f, gAq = %1.2f, gVx = %1.2f, gAx = %1.2f\n' 
+            %(mMed,mDM,gVq,gAq,gVx,gAx))
+    elif model == 'ADD':
+        print('MD = %1.2f GeV, d = %1.2f\n'  %(MD,d))
 
 
     # #### Store data
-    if gVx != 0:
-        if model == 'spin1':
-            modelDict['Coupling'] = 'Vector'
-        elif model == 'spin0':
-            modelDict['Coupling'] = 'Scalar'
-    else:
-        if model == 'spin1':
-            modelDict['Coupling'] = 'Axial'
-        elif model == 'spin0':
-            modelDict['Coupling'] = 'Pseudoscalar'
+    if model in ['spin1','spin0']:
+        if gVx != 0:
+            if model == 'spin1':
+                modelDict['Coupling'] = 'Vector'
+            elif model == 'spin0':
+                modelDict['Coupling'] = 'Scalar'
+        else:
+            if model == 'spin1':
+                modelDict['Coupling'] = 'Axial'
+            elif model == 'spin0':
+                modelDict['Coupling'] = 'Pseudoscalar'
+    elif model == 'ADD':
+        modelDict['Coupling'] = 'ADD'
         
     modelDict['Mode'] = 'DM+QCDjets'
 
-    modelDict['$m_{med}$'] = mMed
-    modelDict['$m_{DM}$'] = mDM
-    if (modelDict['Coupling'] == 'Vector') or (modelDict['Coupling'] == 'Scalar'):
-        modelDict['$g_{DM}$'] = gVx
-        modelDict['$g_{q}$'] = gVq
-    else:
-        modelDict['$g_{DM}$'] = gAx
-        modelDict['$g_{q}$'] = gAq    
+    if model in ['spin1','spin0']:
+        modelDict['$m_{med}$'] = mMed
+        modelDict['$m_{DM}$'] = mDM
+        if (modelDict['Coupling'] == 'Vector') or (modelDict['Coupling'] == 'Scalar'):
+            modelDict['$g_{DM}$'] = gVx
+            modelDict['$g_{q}$'] = gVq
+        else:
+            modelDict['$g_{DM}$'] = gAx
+            modelDict['$g_{q}$'] = gAq
+    elif model == 'ADD':
+        modelDict['$M_{D}$'] = MD
+        modelDict['$d$'] = d
 
     return modelDict
 
 # ### Define dictionary to store data
 def getRecastData(inputFiles,pTcut=150.0,normalize=False):
 
-    if len(inputFiles) == 1:
-        modelDict = {'filename' : os.path.abspath(inputFiles[0])}
-    else:
-        modelDict = {'filename' : os.path.abspath(inputFiles[0])+"+"}
+    if len(inputFiles) > 1:
         print('Combining files:')
         for f in inputFiles:
             print(f)
 
     modelDict = getModelDict(inputFiles)
+    if not modelDict:
+        modelDict = {}
     modelDict['Total MC Events'] = 0
     nevtsDict = {}
     # Get total number of events:
@@ -225,7 +243,10 @@ def getRecastData(inputFiles,pTcut=150.0,normalize=False):
             tree.GetEntry(ievt)        
 
             jets = tree.Jet
-            weightPB = tree.Weight.At(1).Weight
+            try:
+                weightPB = tree.Weight.At(1).Weight
+            except:
+                weightPB = tree.Weight.At(0).Weight
             weightPB = weightPB*norm
             ns = weightPB*1e3*lumTot # number of signal events
             totalweightPB += weightPB
