@@ -92,7 +92,7 @@ def computeULs(inputFile,outputFile,deltas=0.0):
         except:
             print('Error computing ulExp for model:\n',m,'\n')
             ulExp = None
-            
+        
         recastData.loc[dfModel.index,'$\mu^{UL}_{obs}$'] = ul
         recastData.loc[dfModel.index,'$\mu^{UL}_{exp}$'] = ulExp
 

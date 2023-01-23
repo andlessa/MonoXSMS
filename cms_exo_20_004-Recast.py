@@ -22,19 +22,47 @@ ROOT.gInterpreter.Declare('#include "classes/DelphesClasses.h"')
 ROOT.gInterpreter.Declare('#include "external/ExRootAnalysis/ExRootTreeReader.h"')
 
 
-# ### Define dictionary to store data
-def getRecastData(inputFiles,pTcut=150.0):
+def passVetoJets2018(jets):
+    """
+    Calorimeter mitigation failure I for the 2018
+    data set.
 
-    if len(inputFiles) == 1:
-        modelDict = {'filename' : os.path.abspath(inputFiles[0])}
-    else:
-        modelDict = {'filename' : os.path.abspath(inputFiles[0])+"+"}
-        print('Combining files:')
-        for f in inputFiles:
-            print(f)
+    :param jets: List of Jet objects
+
+    :return: True if event should be accepted, False otherwise.
+    """
+
+    for jet in jets:
+        if jet.PT < 30.0:
+            continue
+        if jet.Phi < -1.57 or jet.Phi > -0.87:
+            continue
+        if jet.Eta < -3.0 or jet.Eta > -1.3:
+            continue
+        return False
+    return True
+
+def passVetoPtMiss2018(met):
+    """
+    Calorimeter mitigation failure II for the 2018
+    data set.
+
+    :param met: MET object
+
+    :return: True if event should be accepted, False otherwise.
+    """        
+
+    if met.MET > 470.:
+        return True
+    if met.Phi < -1.62 or met.Phi > -0.62:
+        return True
+    return False
+
+
+def getModelDict(inputFiles):
 
     cmsColumns = ['Coupling', 'Mode', '$m_{med}$', '$m_{DM}$', '$g_{DM}$', '$g_{q}$']
-    
+    modelDict = {}
     for column in cmsColumns:
         modelDict[column] = None
     
@@ -48,15 +76,6 @@ def getRecastData(inputFiles,pTcut=150.0):
     banner = banner[0]
     xtree = ET.parse(banner)
     xroot = xtree.getroot()
-    # genInfo = xroot.find('header').find('MGGenerationInfo').text.strip().split('\n')
-    # genInfo = [x.replace('#','').strip().split(':') for x in genInfo]
-    # xsecPBall = [eval(x[1]) for x in genInfo if 'Integrated weight (pb)' in x[0]]
-    # xsecPBmatched = [eval(x[1]) for x in genInfo if 'Matched Integrated weight (pb)' in x[0]]
-    # if xsecPBmatched:
-    #     xsecPB = xsecPBmatched[0]
-    # else:
-    #     xsecPB = xsecPBall[0]
-
     slha = xroot.find('header').find('slha').text
     pars = pyslha.readSLHA(slha)
     if 55 in pars.blocks['MASS']:
@@ -106,15 +125,34 @@ def getRecastData(inputFiles,pTcut=150.0):
         modelDict['$g_{q}$'] = gVq
     else:
         modelDict['$g_{DM}$'] = gAx
-        modelDict['$g_{q}$'] = gAq
+        modelDict['$g_{q}$'] = gAq    
 
-    
-    # # Load events, apply cuts and store relevant info
+    return modelDict
+
+# ### Define dictionary to store data
+def getRecastData(inputFiles,pTcut=150.0,normalize=False):
+
+    if len(inputFiles) == 1:
+        modelDict = {'filename' : os.path.abspath(inputFiles[0])}
+    else:
+        modelDict = {'filename' : os.path.abspath(inputFiles[0])+"+"}
+        print('Combining files:')
+        for f in inputFiles:
+            print(f)
+
+    modelDict = getModelDict(inputFiles)
+    modelDict['Total MC Events'] = 0
+    nevtsDict = {}
+    # Get total number of events:
+    for inputFile in inputFiles:
+        f = ROOT.TFile(inputFile,'read')
+        tree = f.Get("Delphes")
+        nevts = tree.GetEntries()
+        modelDict['Total MC Events'] += nevts        
+        nevtsDict[inputFile] = nevts
+        f.Close()
 
     # ## Cuts
-    ## Trigger efficiency
-    triggerEff = 0.9 # Applied to the event weight
-
     ## jets
     pTj1min = 100.
     pTjmin = 20.
@@ -142,42 +180,6 @@ def getRecastData(inputFiles,pTcut=150.0):
     etab_max = 2.4
     pTb_min = 20.0
 
-    def passVetoJets2018(jets):
-        """
-        Calorimeter mitigation failure I for the 2018
-        data set.
-
-        :param jets: List of Jet objects
-
-        :return: True if event should be accepted, False otherwise.
-        """
-
-        for jet in jets:
-            if jet.PT < 30.0:
-                continue
-            if jet.Phi < -1.57 or jet.Phi > -0.87:
-                continue
-            if jet.Eta < -3.0 or jet.Eta > -1.3:
-                continue
-            return False
-        return True
-
-    def passVetoPtMiss2018(met):
-        """
-        Calorimeter mitigation failure II for the 2018
-        data set.
-
-        :param met: MET object
-
-        :return: True if event should be accepted, False otherwise.
-        """        
-
-        if met.MET > 470.:
-            return True
-        if met.Phi < -1.62 or met.Phi > -0.62:
-            return True
-        return False
-
     luminosities = {2016 : 36.0, 2017 : 41.5, 2018: 59.7}
     lumTot = sum(luminosities.values())
     yields = {ds : [] for ds in luminosities}
@@ -200,25 +202,31 @@ def getRecastData(inputFiles,pTcut=150.0):
                     'HCALmitigation($\phi^{miss}$)' : 0.0}
                 for ds in luminosities}
 
-    modelDict['Total MC Events'] = 0
+
+    progressbar = P.ProgressBar(widgets=["Reading %i Events: " %modelDict['Total MC Events'], 
+                                P.Percentage(),P.Bar(marker=P.RotatingMarker()), P.ETA()])
+    progressbar.maxval = modelDict['Total MC Events']
+    progressbar.start()
+
+    ntotal = 0
     for inputFile in inputFiles:
         f = ROOT.TFile(inputFile,'read')
         tree = f.Get("Delphes")
         nevts = tree.GetEntries()
-        modelDict['Total MC Events'] += nevts
-
-        progressbar = P.ProgressBar(widgets=["Reading %i Events: " %nevts, P.Percentage(),
-                                    P.Bar(marker=P.RotatingMarker()), P.ETA()])
-        progressbar.maxval = nevts
-        progressbar.start()
+        if normalize:
+            norm =nevtsDict[inputFile]/modelDict['Total MC Events']
+        else:
+            norm = 1.0
 
         for ievt in range(nevts):    
             
-            progressbar.update(ievt)
+            ntotal += 1
+            progressbar.update(ntotal)
             tree.GetEntry(ievt)        
 
             jets = tree.Jet
             weightPB = tree.Weight.At(1).Weight
+            weightPB = weightPB*norm
             ns = weightPB*1e3*lumTot # number of signal events
             totalweightPB += weightPB
 
@@ -341,7 +349,7 @@ def getRecastData(inputFiles,pTcut=150.0):
             metAll[useDataSet].append(missingET.MET)  
             
         f.Close()
-        progressbar.finish()
+    progressbar.finish()
 
     modelDict['Total xsec-pT150 (pb)'] = 0.0
     # Store total (combined xsec)
@@ -405,7 +413,7 @@ if __name__ == "__main__":
     import argparse    
     ap = argparse.ArgumentParser( description=
             "Run the recasting for CMS-EXO-20-004 using one or multiple Delphes ROOT files as input. "
-            + "If multiple files are given as argument, combine them. "
+            + "If multiple files are given as argument, add them (the samples weights will be normalized if -n is given)."
             + " Store the cutflow and SR bins in a pickle (Pandas DataFrame) file." )
     ap.add_argument('-f', '--inputFile', required=True,nargs='+',
             help='path to the ROOT event file(s) generated by Delphes.', default =[])
@@ -415,6 +423,8 @@ if __name__ == "__main__":
             default = None)
     ap.add_argument('-pt', '--pTcut', required=False,default=150.0,type=float,
             help='Gen level MET cut for computing partial cross-sections.')
+    ap.add_argument('-n', '--normalize', required=False,action='store_true',
+            help='If set, the input files will be considered to refer to multiple samples of the same process and their weights will be normalized.')
     
 
     ap.add_argument('-v', '--verbose', default='info',
@@ -433,7 +443,7 @@ if __name__ == "__main__":
     if os.path.splitext(outputFile)[1] != '.pcl':
         outputFile = os.path.splitext(outputFile)[0] + '.pcl'
 
-    modelDict = getRecastData(inputFiles,args.pTcut)
+    modelDict = getRecastData(inputFiles,args.pTcut,args.normalize)
 
     # #### Create pandas DataFrame
     df = pd.DataFrame.from_dict(modelDict)
