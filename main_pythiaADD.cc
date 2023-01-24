@@ -23,15 +23,11 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   size_t lastindex = outname.find_last_of("."); 
 
   string bannerFile = outname.substr(0, lastindex) + "_banner.txt";
-  cout << "Banner = " << bannerFile << endl;
-
   // Generator. Shorthand for the event.
   Pythia pythia("",false); //Set printBanner to false
   pythia.readFile( cfgfile );
 
   // pythia.settings.writeFileXML(banner)
-
-  cout << "mass = " << pythia.particleData.m0(5000039) << endl;
   // Create basic banner for convenience
   ofstream banner;
   banner.open (bannerFile);
@@ -50,11 +46,17 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   sprintf(linebuf, "  3 %s # Cutoff (on/off)\n", pythia.settings.output("ExtraDimensionsLED:CutOffmode",false).c_str());
   banner << linebuf;
   banner << "</slha>\n";
-  banner << "</header>\n";
-  banner << "</PythiaBanner>\n";
-  banner.close();
- 
 
+  // Copy pythia input
+  ifstream pythia_file;
+  pythia_file.open(cfgfile);
+  string line;
+  banner << "<PythiaCard>\n";
+  while (getline(pythia_file, line)) {
+          banner << line << "\n";
+        }
+  banner << "</PythiaCard>\n";
+  
 // trying to write hepmc
 // Interface for conversion from Pythia8::Event to HepMC event.
   Pythia8ToHepMC ToHepMC(outname);
@@ -142,6 +144,18 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   // Update the cross section info based on Monte Carlo integration during run.
   // myLHEF3.closeLHEF(true);
   // Done.
+
+  //Write cross-section and number of events and close banner.
+  banner << "<GenerationInfo>\n";
+  sprintf(linebuf, "#  Number of Events        :       %d\n", iEvent);
+  banner << linebuf;
+  sprintf(linebuf, "#  Integrated weight (pb)  :      %.4e\n", pythia.info.sigmaGen()*1e9);
+  banner << linebuf;
+  banner << "</GenerationInfo>\n";
+  banner << "</header>\n";
+  banner << "</PythiaBanner>\n";
+  banner.close();
+
   return 0;
 }
 

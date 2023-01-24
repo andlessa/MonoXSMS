@@ -14,6 +14,15 @@ PartonLevel:FSR = on
 ParticleDecays:limitTau0 = on
 ParticleDecays:tauMax = 1
 
+Next:numberShowInfo = 0
+Next:numberCount = 5000
+Next:numberShowProcess = 0
+Next:numberShowEvent = 0
+Stat:showErrors = off
+Init:showChangedSettings = off
+Init:showMultipartonInteractions = off
+Init:showProcesses = off
+
 # Tune, common shower settings, etc
 Tune:preferLHAPDF = 2
 Main:timesAllowErrors = 10000
