@@ -94,8 +94,16 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   int iEvent = 0;
   double xsecPB = 0.;
   double xsecPBErr = 0.;
-  vector<double> w;
-  int nXsecEstimate = max(100,int(nevents/10.)); // Number of events to estimate the xsec
+  // Make the weights have two entries:
+  // the first is the pythia (dummy) value
+  // and the second is the real weight computed from
+  // the estimated cross-section
+  vector<double> w = {0.0, 0.0};
+  vector<string> wNames = {pythia.info.weightNameVector()[0],"WeightPB"};
+  // Number of events to estimate the xsec (10% of events)
+  // and determine the correct event weight
+  // Limited to the interval: 100 < nXsecEstimate < 1000
+  int nXsecEstimate = min(1000,max(100,int(nevents/10.))); 
   while (iEvent < nevents){
 
       // If failure because reached end of file then exit event loop.
@@ -117,16 +125,12 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
         iEvent = 1; // Reset event count
         xsecPB = pythia.info.sigmaGen()*1e9;
         xsecPBErr  = pythia.info.sigmaErr()*1e9;
-        for (int iw=0 ; iw < pythia.info.numberOfWeights(); ++iw){
-          w.push_back(xsecPB/nevents);
-        }
+        w[1] = xsecPB/nevents;
       }
+      w[0] = pythia.info.weightValueByIndex(0);
       
-
-      // Construct new empty HepMC event and fill it.
-      // Units will be as chosen for HepMC build; but can be changed
-      // by arguments, e.g. GenEvt( HepMC::Units::GEV, HepMC::Units::MM)
-      ToHepMC.setWeightNames(pythia.info.weightNameVector());     
+      // Set weights, fill HEPMC event and write it
+      ToHepMC.setWeightNames(wNames);     
       ToHepMC.fillNextEvent( pythia );
       ToHepMC.setXSec(xsecPB, xsecPBErr);
       ToHepMC.setWeights(w);
