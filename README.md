@@ -67,13 +67,13 @@ In order to produce the validation results for CMS-EXO-20-004 the following step
  ```
  ./runScanMG5.py -p <parameters-file>
  ```
- where the scan parameters are defined by a steering card, such as[scan_parameters_0j_spin1.ini](./scan_parameters_0j_spin1.ini). The scan can be run in series or parallel. However, since MG5 already parallelize much of the event generation, it is recommended to run it in series. The Delphes output will be stored in the process folder with all the runs.
+ where the scan parameters are defined by a steering card, such as [scan_parameters_0j_spin1.ini](./scan_parameters_0j_spin1.ini). The scan can be run in series or parallel. However, since MG5 already parallelize much of the event generation, it is recommended to run it in series. The Delphes output will be stored in the process folder with all the runs.
 
   2. *Recasting and event selection*: the recasting of CMS-EXO-20-004 is implemented by the [cms_exo_20_004-Recast.py](./cms_exo_20_004-Recast.py) code and can be run as:
    ```
    ./cms_exo_20_004-Recast.py -f <list of Delphes input files>
   ```
-  where the list of input files could correspond to (matched) event samples with 0 and 1 jets, for instance. Note that the weights of the input files will be directly added withou any additional normalization applied. The results with the cutflow and SR events will be stored in a pickle file containing a Pandas DataFrame.
+  where the list of input files could correspond to (matched) event samples with 0 and 1 jets, for instance. Note that the weights of the input files will be directly added without any additional normalization applied. The results with the cutflow and SR events will be stored in a pickle file containing a Pandas DataFrame.
 
   3. *Combination of results*: for convenience results from individual models (or model points) can be combined in a single pickle file. This can be done running:
    ```
@@ -102,7 +102,7 @@ As an example, to generate the validation plots for the axial (spin 1) model the
        
        (generates the 0 and 1 jet matched samples)
   
-  2. ```for i in DMSimp_axial_0j_match/Events/run*/*root; do cms_exo_20_004-Recast.py $i ${i/0j/1j}```
+  2. ```for i in DMSimp_axial_0j_match/Events/run*/*root; do ./cms_exo_20_004-Recast.py $i ${i/0j/1j}; done```
   
      (generates the recasting data for each model point combining the 0j and 1j samples)
 
