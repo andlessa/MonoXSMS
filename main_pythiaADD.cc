@@ -26,36 +26,6 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   // Generator. Shorthand for the event.
   Pythia pythia("",false); //Set printBanner to false
   pythia.readFile( cfgfile );
-
-  // pythia.settings.writeFileXML(banner)
-  // Create basic banner for convenience
-  ofstream banner;
-  banner.open (bannerFile);
-  banner << "<PythiaBanner>\n";
-  banner << "<header>\n";
-  banner << "<slha>\n";  
-  char linebuf[100];
-  banner << "BLOCK MASS #\n";
-  sprintf(linebuf, "  5000039 %.4f\n", pythia.particleData.m0(5000039));
-  banner << linebuf;
-  banner << "BLOCK ADDINPUTS #\n";
-  sprintf(linebuf, "  1 %s # MD (fundamental scale)\n", pythia.settings.output("ExtraDimensionsLED:MD",false).c_str());
-  banner << linebuf;
-  sprintf(linebuf, "  2 %s # n (number of extra dim)\n", pythia.settings.output("ExtraDimensionsLED:n",false).c_str());
-  banner << linebuf;
-  sprintf(linebuf, "  3 %s # Cutoff (on/off)\n", pythia.settings.output("ExtraDimensionsLED:CutOffmode",false).c_str());
-  banner << linebuf;
-  banner << "</slha>\n";
-
-  // Copy pythia input
-  ifstream pythia_file;
-  pythia_file.open(cfgfile);
-  string line;
-  banner << "<PythiaCard>\n";
-  while (getline(pythia_file, line)) {
-          banner << line << "\n";
-        }
-  banner << "</PythiaCard>\n";
   
 // trying to write hepmc
 // Interface for conversion from Pythia8::Event to HepMC event.
@@ -104,6 +74,8 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   // and determine the correct event weight
   // Limited to the interval: 100 < nXsecEstimate < 1000
   int nXsecEstimate = min(1000,max(100,int(nevents/10.))); 
+  if (nevents < 0) nevents = pythia.mode("Main:numberOfEvents");
+
   while (iEvent < nevents){
 
       // If failure because reached end of file then exit event loop.
@@ -149,6 +121,36 @@ int run(int nevents, const string & cfgfile, const string & outputfile)
   // myLHEF3.closeLHEF(true);
   // Done.
 
+  // pythia.settings.writeFileXML(banner)
+  // Create basic banner for convenience
+  ofstream banner;
+  banner.open (bannerFile);
+  banner << "<PythiaBanner>\n";
+  banner << "<header>\n";
+  banner << "<slha>\n";  
+  char linebuf[100];
+  banner << "BLOCK MASS #\n";
+  sprintf(linebuf, "  5000039 %.4f\n", pythia.particleData.m0(5000039));
+  banner << linebuf;
+  banner << "BLOCK ADDINPUTS #\n";
+  sprintf(linebuf, "  1 %s # MD (fundamental scale)\n", pythia.settings.output("ExtraDimensionsLED:MD",false).c_str());
+  banner << linebuf;
+  sprintf(linebuf, "  2 %s # n (number of extra dim)\n", pythia.settings.output("ExtraDimensionsLED:n",false).c_str());
+  banner << linebuf;
+  sprintf(linebuf, "  3 %s # Cutoff (on/off)\n", pythia.settings.output("ExtraDimensionsLED:CutOffmode",false).c_str());
+  banner << linebuf;
+  banner << "</slha>\n";
+
+  // Copy pythia input
+  ifstream pythia_file;
+  pythia_file.open(cfgfile);
+  string line;
+  banner << "<PythiaCard>\n";
+  while (getline(pythia_file, line)) {
+          banner << line << "\n";
+        }
+  banner << "</PythiaCard>\n";
+
   //Write cross-section and number of events and close banner.
   banner << "<GenerationInfo>\n";
   sprintf(linebuf, "#  Number of Events        :       %d\n", iEvent);
@@ -172,7 +174,7 @@ void help( const char * name )
 	  cout << "syntax: " << name << " [-h] [-f <input file>] [-o <output file>] [-n <number of events>] [-c <pythia cfg file>]" << endl;
 	  cout << "        -c <pythia config file>:  pythia config file [pythia8.cfg]" << endl;
 	  cout << "        -o <output file>:  output filename for HepMC files [<input file>.hepmc]" << endl;
-	  cout << "        -n <number of events>:  Number of events to be generated [100]. If n < 0, it will run over all events in the LHE file" << endl;
+	  cout << "        -n <number of events>:  Number of events to be generated. If n < 0, it will read from the cfg file" << endl;
   exit( 0 );
 };
 
