@@ -52,6 +52,8 @@ if echo "$answer" | grep -iq "^y" ;then
 	echo "install pythia8\ninstall Delphes\nexit\n" > mad_install.txt;
 	./mg5_aMC -f mad_install.txt;
 	rm mad_install.txt;
+#	echo "Replacing MG5/Template/NLO/SubProcesses/cuts.f by Cards/CMS-SUS-20-004/cuts.f";
+#	cp ./Cards/CMS-SUS-20-004/cuts.f ./MG5/Template/NLO/SubProcesses/cuts.f
 	cd $homeDIR;
 	sed  "s|homeDIR|$homeDIR|g" mg5_configuration.txt > ./MG5/input/mg5_configuration.txt;
         rm $madgraph;
@@ -79,17 +81,35 @@ if echo "$answer" | grep -iq "^y" ;then
 fi
 
 #Get pythia tarball
+lhapdf="LHAPDF-6.5.3.tar.gz"
+URL=https://lhapdf.hepforge.org/downloads/$lhapdf
+echo -n "Install LHADPF6 (y/n)? "
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+  mkdir lhapdf6;
+  mkdir lhapdf6_temp;
+  echo "[installer] getting LHADPF"; wget $URL 2>/dev/null || curl -O $URL; tar -zxf $lhapdf -C lhapdf6_temp --strip-components 1;
+  echo "Installing LHAPDF in lhapdf6";
+  cd lhapdf6_temp;
+  ./configure --prefix=$homeDIR/lhapdf6;
+  make -j4; make install;
+  cd $homeDIR
+  rm $lhapdf;
+  rm -r lhapdf6_temp;
+fi
+
+#Get pythia tarball
 pythia="pythia8307.tgz"
 URL=https://pythia.org/download/pythia83/$pythia
-echo -n "Install Pythia (y/n)? "
+echo -n "Install Pythia8 (y/n)? "
 read answer
 if echo "$answer" | grep -iq "^y" ;then
 	if hash gzip 2>/dev/null; then
 		mkdir pythia8;
-		echo "[installer] getting Pythia"; wget $URL 2>/dev/null || curl -O $URL; tar -zxf $pythia -C pythia8 --strip-components 1;
+		echo "[installer] getting Pythia8"; wget $URL 2>/dev/null || curl -O $URL; tar -zxf $pythia -C pythia8 --strip-components 1;
 		echo "Installing Pythia in pythia8";
 		cd pythia8;
-		./configure --with-hepmc2=$homeDIR/HepMC2 --with-root=$ROOTSYS --prefix=$homeDIR/pythia8 --with-gzip
+		./configure --with-hepmc2=$homeDIR/HepMC2 --with-root=$ROOTSYS --with-lhapdf6=$homeDIR/lhapdf6 --prefix=$homeDIR/pythia8 --with-gzip
 		make -j4; make install;
 		cd $homeDIR
 		rm $pythia;

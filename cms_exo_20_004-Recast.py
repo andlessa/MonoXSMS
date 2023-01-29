@@ -22,81 +22,158 @@ ROOT.gInterpreter.Declare('#include "classes/DelphesClasses.h"')
 ROOT.gInterpreter.Declare('#include "external/ExRootAnalysis/ExRootTreeReader.h"')
 
 
-# ### Define dictionary to store data
-def getRecastData(inputFiles):
+def passVetoJets2018(jets):
+    """
+    Calorimeter mitigation failure I for the 2018
+    data set.
 
-    if len(inputFiles) == 1:
-        modelDict = {'filename' : os.path.abspath(inputFiles[0])}
-    else:
-        modelDict = {'filename' : os.path.abspath(inputFiles[0])+"+"}
-        print('Combining files:')
-        for f in inputFiles:
-            print(f)
+    :param jets: List of Jet objects
 
-    cmsColumns = ['Coupling', 'Mode', '$m_{med}$', '$m_{DM}$', '$g_{DM}$', '$g_{q}$']
-    
-    for column in cmsColumns:
-        modelDict[column] = None
+    :return: True if event should be accepted, False otherwise.
+    """
+
+    for jet in jets:
+        if jet.PT < 30.0:
+            continue
+        if jet.Phi < -1.57 or jet.Phi > -0.87:
+            continue
+        if jet.Eta < -3.0 or jet.Eta > -1.3:
+            continue
+        return False
+    return True
+
+def passVetoPtMiss2018(met):
+    """
+    Calorimeter mitigation failure II for the 2018
+    data set.
+
+    :param met: MET object
+
+    :return: True if event should be accepted, False otherwise.
+    """        
+
+    if met.MET > 470.:
+        return True
+    if met.Phi < -1.62 or met.Phi > -0.62:
+        return True
+    return False
+
+
+def getModelDict(inputFiles):
+
+    # cmsColumns = ['Coupling', 'Mode', '$m_{med}$', '$M_{D}$' '$m_{DM}$', '$d$' '$g_{DM}$', '$g_{q}$']
+    modelDict = {}
+    # for column in cmsColumns:
+        # modelDict[column] = None
     
     # ## Get Model Parameters
     banner = sorted(glob.glob(os.path.dirname(inputFiles[0])+'/*banner.txt'),key=os.path.getmtime,reverse=True)
     if len(banner) == 0:
         print('Banner not found for %s' %inputFiles[0])
+        return None
     elif len(banner) > 1:        
         print('\n%i banner files found in %s.' 
             %(len(banner),os.path.dirname(inputFiles[0])))
     banner = banner[0]
     xtree = ET.parse(banner)
     xroot = xtree.getroot()
-    # genInfo = xroot.find('header').find('MGGenerationInfo').text.strip().split('\n')
-    # genInfo = [x.replace('#','').strip().split(':') for x in genInfo]
-    # xsecPBall = [eval(x[1]) for x in genInfo if 'Integrated weight (pb)' in x[0]]
-    # xsecPBmatched = [eval(x[1]) for x in genInfo if 'Matched Integrated weight (pb)' in x[0]]
-    # if xsecPBmatched:
-    #     xsecPB = xsecPBmatched[0]
-    # else:
-    #     xsecPB = xsecPBall[0]
-
     slha = xroot.find('header').find('slha').text
     pars = pyslha.readSLHA(slha)
-    mMed = pars.blocks['MASS'][55]
-    mDM = pars.blocks['MASS'][52]
-    gVq = pars.blocks['DMINPUTS'][4] # Mediator-quark vector coupling
-    gAq = pars.blocks['DMINPUTS'][10] # Mediator-quark axial coupling
-    gVx = pars.blocks['DMINPUTS'][2] # Mediator-DM vector coupling
-    gAx = pars.blocks['DMINPUTS'][3] # Mediator-DM axial coupling
+    if 55 in pars.blocks['MASS']:
+        model = 'spin1'
+        mMed = pars.blocks['MASS'][55]
+    elif 54 in pars.blocks['MASS']:
+        model = 'spin0'
+        mMed = pars.blocks['MASS'][54]
+    elif 5000039 in pars.blocks['MASS']:
+        model = 'ADD'
+        mMed = pars.blocks['MASS'][5000039]
+
+    if model in ['spin1','spin0']:
+        mDM = pars.blocks['MASS'][52]
+    else:
+        mDM = None
+
+    if model == 'spin1':
+        gVq = pars.blocks['DMINPUTS'][4] # Mediator-quark vector coupling
+        gAq = pars.blocks['DMINPUTS'][10] # Mediator-quark axial coupling
+        gVx = pars.blocks['DMINPUTS'][2] # Mediator-DM vector coupling
+        gAx = pars.blocks['DMINPUTS'][3] # Mediator-DM axial coupling
+    elif model == 'spin0':
+        gVq = pars.blocks['DMINPUTS'][6] # Mediator-quark scalar coupling
+        gAq = pars.blocks['DMINPUTS'][12] # Mediator-quark pseudoscalar coupling
+        gVx = pars.blocks['DMINPUTS'][3] # Mediator-DM scalar coupling
+        gAx = pars.blocks['DMINPUTS'][4] # Mediator-DM pseudoscalar coupling
+    elif model == 'ADD':
+        MD = pars.blocks['ADDINPUTS'][1] # Fundamental Planck scale in large extra dimensions
+        d = pars.blocks['ADDINPUTS'][2] # Number of extra dimentions
+    
     print('\nModel parameters:')
-    print('mMed = %1.2f GeV, mDM = %1.2f GeV, gVq = %1.2f, gAq = %1.2f, gVx = %1.2f, gAx = %1.2f\n' 
-        %(mMed,mDM,gVq,gAq,gVx,gAx))
+    if model in ['spin1','spin0']:
+        print('mMed = %1.2f GeV, mDM = %1.2f GeV, gVq = %1.2f, gAq = %1.2f, gVx = %1.2f, gAx = %1.2f\n' 
+            %(mMed,mDM,gVq,gAq,gVx,gAx))
+    elif model == 'ADD':
+        print('MD = %1.2f GeV, d = %1.2f\n'  %(MD,d))
 
 
     # #### Store data
-    if gVx != 0:
-        modelDict['Coupling'] = 'Vector'
-    else:
-        modelDict['Coupling'] = 'Axial'
+    if model in ['spin1','spin0']:
+        if gVx != 0:
+            if model == 'spin1':
+                modelDict['Coupling'] = 'Vector'
+            elif model == 'spin0':
+                modelDict['Coupling'] = 'Scalar'
+        else:
+            if model == 'spin1':
+                modelDict['Coupling'] = 'Axial'
+            elif model == 'spin0':
+                modelDict['Coupling'] = 'Pseudoscalar'
+    elif model == 'ADD':
+        modelDict['Coupling'] = 'ADD'
         
     modelDict['Mode'] = 'DM+QCDjets'
 
-    modelDict['$m_{med}$'] = mMed
-    modelDict['$m_{DM}$'] = mDM
-    if modelDict['Coupling'] == 'Vector':
-        modelDict['$g_{DM}$'] = gVx
-        modelDict['$g_{q}$'] = gVq
-    else:
-        modelDict['$g_{DM}$'] = gAx
-        modelDict['$g_{q}$'] = gAq
+    if model in ['spin1','spin0']:
+        modelDict['$m_{med}$'] = mMed
+        modelDict['$m_{DM}$'] = mDM
+        if (modelDict['Coupling'] == 'Vector') or (modelDict['Coupling'] == 'Scalar'):
+            modelDict['$g_{DM}$'] = gVx
+            modelDict['$g_{q}$'] = gVq
+        else:
+            modelDict['$g_{DM}$'] = gAx
+            modelDict['$g_{q}$'] = gAq
+    elif model == 'ADD':
+        modelDict['$M_{D}$'] = MD
+        modelDict['$d$'] = d
 
-    
-    # # Load events, apply cuts and store relevant info
+    return modelDict
+
+# ### Define dictionary to store data
+def getRecastData(inputFiles,pTcut=150.0,normalize=False):
+
+    if len(inputFiles) > 1:
+        print('Combining files:')
+        for f in inputFiles:
+            print(f)
+
+    modelDict = getModelDict(inputFiles)
+    if not modelDict:
+        modelDict = {}
+    modelDict['Total MC Events'] = 0
+    nevtsDict = {}
+    # Get total number of events:
+    for inputFile in inputFiles:
+        f = ROOT.TFile(inputFile,'read')
+        tree = f.Get("Delphes")
+        nevts = tree.GetEntries()
+        modelDict['Total MC Events'] += nevts        
+        nevtsDict[inputFile] = nevts
+        f.Close()
 
     # ## Cuts
-    ## Trigger efficiency
-    triggerEff = 0.9 # Applied to the event weight
-
     ## jets
     pTj1min = 100.
-    pTjmin = 25.
+    pTjmin = 20.
     etamax = 2.4
     ## MET
     minMET = 250.
@@ -114,44 +191,12 @@ def getRecastData(inputFiles):
     nMax_mu = 0
     ## Tau jets
     nMax_tau = 0
+    etatau_max = 2.3
+    pTtau_min = 18.0
     ## b jets
     nMax_b = 0
-
-    def passVetoJets2018(jets):
-        """
-        Calorimeter mitigation failure I for the 2018
-        data set.
-
-        :param jets: List of Jet objects
-
-        :return: True if event should be accepted, False otherwise.
-        """
-
-        for jet in jets:
-            if jet.PT < 30.0:
-                continue
-            if jet.Phi < -1.57 or jet.Phi > -0.87:
-                continue
-            if jet.Eta < -3.0 or jet.Eta > -1.3:
-                continue
-            return False
-        return True
-
-    def passVetoPtMiss2018(met):
-        """
-        Calorimeter mitigation failure II for the 2018
-        data set.
-
-        :param met: MET object
-
-        :return: True if event should be accepted, False otherwise.
-        """        
-
-        if met.MET > 470.:
-            return True
-        if met.Phi < -1.62 or met.Phi > -0.62:
-            return True
-        return False
+    etab_max = 2.4
+    pTb_min = 20.0
 
     luminosities = {2016 : 36.0, 2017 : 41.5, 2018: 59.7}
     lumTot = sum(luminosities.values())
@@ -175,25 +220,34 @@ def getRecastData(inputFiles):
                     'HCALmitigation($\phi^{miss}$)' : 0.0}
                 for ds in luminosities}
 
-    modelDict['Total MC Events'] = 0
+
+    progressbar = P.ProgressBar(widgets=["Reading %i Events: " %modelDict['Total MC Events'], 
+                                P.Percentage(),P.Bar(marker=P.RotatingMarker()), P.ETA()])
+    progressbar.maxval = modelDict['Total MC Events']
+    progressbar.start()
+
+    ntotal = 0
     for inputFile in inputFiles:
         f = ROOT.TFile(inputFile,'read')
         tree = f.Get("Delphes")
         nevts = tree.GetEntries()
-        modelDict['Total MC Events'] += nevts
-
-        progressbar = P.ProgressBar(widgets=["Reading %i Events: " %nevts, P.Percentage(),
-                                    P.Bar(marker=P.RotatingMarker()), P.ETA()])
-        progressbar.maxval = nevts
-        progressbar.start()
+        if normalize:
+            norm =nevtsDict[inputFile]/modelDict['Total MC Events']
+        else:
+            norm = 1.0
 
         for ievt in range(nevts):    
             
-            progressbar.update(ievt)
+            ntotal += 1
+            progressbar.update(ntotal)
             tree.GetEntry(ievt)        
 
             jets = tree.Jet
-            weightPB = tree.Weight.At(1).Weight
+            try:
+                weightPB = tree.Weight.At(1).Weight
+            except:
+                weightPB = tree.Weight.At(0).Weight
+            weightPB = weightPB*norm
             ns = weightPB*1e3*lumTot # number of signal events
             totalweightPB += weightPB
 
@@ -239,15 +293,11 @@ def getRecastData(inputFiles):
             taujetList = []
             for ijet in range(jets.GetEntries()):
                 jet = jets.At(ijet)
-                if jet.PT < pTjmin:
-                    continue
-                if abs(jet.Eta) > 2.5:
-                    continue
-                if jet.BTag:
+                if jet.BTag and jet.PT > pTb_min and abs(jet.Eta) < etab_max:
                     bjetList.append(jet)
-                elif jet.TauTag:
+                elif jet.TauTag and jet.PT > pTtau_min and abs(jet.Eta) < etatau_max:
                     taujetList.append(jet)
-                else:
+                elif jet.PT > pTjmin and abs(jet.Eta) < etamax:
                     jetList.append(jet)  
             jetList = sorted(jetList, key = lambda j: j.PT, reverse=True)    
 
@@ -259,7 +309,7 @@ def getRecastData(inputFiles):
             # Apply cut on DM pT to reproduce CMS
             # cut on event generation:
             dmMET = tree.DMMissingET.At(0).MET
-            if dmMET < 150.0:
+            if dmMET < pTcut:
                 continue
 
             # Split event into datasets:
@@ -277,7 +327,9 @@ def getRecastData(inputFiles):
 
             # Apply cuts:
             ## Apply trigger efficiency
-            ns = ns*triggerEff
+            # ns = ns*triggerEff
+            if missingET.MET < 120.0:
+                continue
             cutFlow['Triggeremulation'] += ns
 
             ## Cut on MET
@@ -318,7 +370,7 @@ def getRecastData(inputFiles):
             metAll[useDataSet].append(missingET.MET)  
             
         f.Close()
-        progressbar.finish()
+    progressbar.finish()
 
     modelDict['Total xsec-pT150 (pb)'] = 0.0
     # Store total (combined xsec)
@@ -382,7 +434,7 @@ if __name__ == "__main__":
     import argparse    
     ap = argparse.ArgumentParser( description=
             "Run the recasting for CMS-EXO-20-004 using one or multiple Delphes ROOT files as input. "
-            + "If multiple files are given as argument, combine them. "
+            + "If multiple files are given as argument, add them (the samples weights will be normalized if -n is given)."
             + " Store the cutflow and SR bins in a pickle (Pandas DataFrame) file." )
     ap.add_argument('-f', '--inputFile', required=True,nargs='+',
             help='path to the ROOT event file(s) generated by Delphes.', default =[])
@@ -390,6 +442,11 @@ if __name__ == "__main__":
             help='path to output file storing the DataFrame with the recasting data.'
                  + 'If not defined, will use the name of the first input file', 
             default = None)
+    ap.add_argument('-pt', '--pTcut', required=False,default=150.0,type=float,
+            help='Gen level MET cut for computing partial cross-sections.')
+    ap.add_argument('-n', '--normalize', required=False,action='store_true',
+            help='If set, the input files will be considered to refer to multiple samples of the same process and their weights will be normalized.')
+    
 
     ap.add_argument('-v', '--verbose', default='info',
             help='verbose level (debug, info, warning or error). Default is info')
@@ -407,7 +464,7 @@ if __name__ == "__main__":
     if os.path.splitext(outputFile)[1] != '.pcl':
         outputFile = os.path.splitext(outputFile)[0] + '.pcl'
 
-    modelDict = getRecastData(inputFiles)
+    modelDict = getRecastData(inputFiles,args.pTcut,args.normalize)
 
     # #### Create pandas DataFrame
     df = pd.DataFrame.from_dict(modelDict)

@@ -44,8 +44,7 @@
 #          eva=Effective W/Z/A Approx.       [21yy.zzzzz]            *
 #          none=No PDF, same as lhapdf with lppx=0                   *
 #*********************************************************************
-     lhapdf    = pdlabel1     ! PDF type for beam #1
-     lhapdf    = pdlabel2     ! PDF type for beam #2
+     lhapdf    = pdlabel     ! PDF type for beam
      303600    = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
 # To see heavy ion options: type "update ion_pdf"
 #*********************************************************************
@@ -102,7 +101,7 @@
 # Generation bias, check the wiki page below for more information:   *
 #  'cp3.irmp.ucl.ac.be/projects/madgraph/wiki/LOEventGenerationBias' *
 #*********************************************************************
- ptj_bias = bias_module  ! Bias type of bias, [None, ptj_bias, -custom_folder-]
+ None = bias_module  ! Bias type of bias, [None, ptj_bias, -custom_folder-]
  {'ptj_bias_target_ptj': 100.0, 'ptj_bias_enhancement_power': 1.0} = bias_parameters ! Specifies the parameters of the module.
 #
 #*******************************                                                 

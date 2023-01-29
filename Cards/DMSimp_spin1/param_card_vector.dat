@@ -10,31 +10,22 @@ BLOCK CKMBLOCK #
 ## INFORMATION FOR DMINPUTS
 ###################################
 BLOCK DMINPUTS # 
-      1 0.000000e+00 # gsxr
-      2 0.000000e+00 # gsxc
-      3 1.000000e+00 # gsxd
-      4 0.000000e+00 # gpxd
-      5 0.000000e+00 # gsd11
-      6 0.000000e+00 # gsu11
-      7 0.000000e+00 # gsd22
-      8 0.000000e+00 # gsu22
-      9 0.000000e+00 # gsd33
-      10 1.000000e+00 # gsu33
-      11 0.000000e+00 # gpd11
-      12 0.000000e+00 # gpu11
-      13 0.000000e+00 # gpd22
-      14 0.000000e+00 # gpu22
-      15 0.000000e+00 # gpd33
-      16 1.000000e+00 # gpu33
-      17 1.000000e+04 # lambda
-      18 1.000000e+00 # gsg
-      19 1.000000e+00 # gpg
-      20 0.000000e+00 # gsh1
-      21 0.000000e+00 # gsh2
-      22 0.000000e+00 # gsb
-      23 0.000000e+00 # gpb
-      24 0.000000e+00 # gsw
-      25 0.000000e+00 # gpw
+      1 0.000000e+00 # gvxc
+      2 1.000000e+00 # gvxd
+      3 0.000000e+00 # gaxd
+      4 2.500000e-01 # gvd11
+      5 2.500000e-01 # gvu11
+      6 2.500000e-01 # gvd22
+      7 2.500000e-01 # gvu22
+      8 2.500000e-01 # gvd33
+      9 2.500000e-01 # gvu33
+      10 0.000000e+00 # gad11
+      11 0.000000e+00 # gau11
+      12 0.000000e+00 # gad22
+      13 0.000000e+00 # gau22
+      14 0.000000e+00 # gad33
+      15 0.000000e+00 # gau33
+      16 0.000000e+00 # gvh
 ###################################
 ## INFORMATION FOR MASS
 ###################################
@@ -43,9 +34,9 @@ BLOCK MASS #
       15 1.777000e+00 # mta
       23 9.118760e+01 # mz
       25 1.250000e+02 # mh
-      51 1.000000e+01 # mxc
+      51 1.000000e+00 # mxc
       52 1.000000e+00 # mxd
-      54 2.000000e+03 # my0
+      55 2.000000e+03 # my1
       5000001 1.000000e+01 # mxr
       1 0.000000e+00 # d : 0.0
       2 0.000000e+00 # u : 0.0
@@ -79,7 +70,7 @@ BLOCK YUKAWA #
 ###################################
 ## INFORMATION FOR QNUMBERS 9000001
 ###################################
-BLOCK QNUMBERS 9000001 #   gha
+BLOCK QNUMBERS 9000001 #         gha
       1 0 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -87,7 +78,7 @@ BLOCK QNUMBERS 9000001 #   gha
 ###################################
 ## INFORMATION FOR QNUMBERS 9000002
 ###################################
-BLOCK QNUMBERS 9000002 #   ghz
+BLOCK QNUMBERS 9000002 #         ghz
       1 0 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -95,7 +86,7 @@ BLOCK QNUMBERS 9000002 #   ghz
 ###################################
 ## INFORMATION FOR QNUMBERS 9000003
 ###################################
-BLOCK QNUMBERS 9000003 #   ghwp
+BLOCK QNUMBERS 9000003 #         ghwp
       1 3 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -103,7 +94,7 @@ BLOCK QNUMBERS 9000003 #   ghwp
 ###################################
 ## INFORMATION FOR QNUMBERS 9000004
 ###################################
-BLOCK QNUMBERS 9000004 #   ghwm
+BLOCK QNUMBERS 9000004 #         ghwm
       1 -3 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -111,7 +102,7 @@ BLOCK QNUMBERS 9000004 #   ghwm
 ###################################
 ## INFORMATION FOR QNUMBERS 82
 ###################################
-BLOCK QNUMBERS 82 #   ghg
+BLOCK QNUMBERS 82 #         ghg
       1 0 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 8 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -119,7 +110,7 @@ BLOCK QNUMBERS 82 #   ghg
 ###################################
 ## INFORMATION FOR QNUMBERS 5000001
 ###################################
-BLOCK QNUMBERS 5000001 #   xr
+BLOCK QNUMBERS 5000001 #         xr
       1 0 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -127,7 +118,7 @@ BLOCK QNUMBERS 5000001 #   xr
 ###################################
 ## INFORMATION FOR QNUMBERS 51
 ###################################
-BLOCK QNUMBERS 51 #   xc
+BLOCK QNUMBERS 51 #         xc
       1 0 # 3 times electric charge
       2 1 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
@@ -135,17 +126,17 @@ BLOCK QNUMBERS 51 #   xc
 ###################################
 ## INFORMATION FOR QNUMBERS 52
 ###################################
-BLOCK QNUMBERS 52 #   xd
+BLOCK QNUMBERS 52 #         xd
       1 0 # 3 times electric charge
       2 2 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
       4 1 # particle/antiparticle distinction (0=own anti)
 ###################################
-## INFORMATION FOR QNUMBERS 54
+## INFORMATION FOR QNUMBERS 55
 ###################################
-BLOCK QNUMBERS 54 #   y0
+BLOCK QNUMBERS 55 #         y1
       1 0 # 3 times electric charge
-      2 1 # number of spin states (2s+1)
+      2 3 # number of spin states (2s+1)
       3 1 # colour rep (1: singlet, 3: triplet, 8: octet)
       4 0 # particle/antiparticle distinction (0=own anti)
 ###################################
@@ -170,12 +161,17 @@ DECAY 24 2.085000e+00 #
 DECAY 25 4.070000e-03 # 
 DECAY 51 0.000000e+00 # 
 DECAY 52 0.000000e+00 # 
-DECAY 54 3.057065e+02 # 
-      7.396936e-01 2 -6 6 # 226.12913562163115
-      2.603064e-01 2 -52 52 # 79.57735217977019
-
-DECAY 5000001 0.000000e+00 # 
-DECAY 9000002 2.495200e+00 # 
-DECAY 9000003 2.085000e+00 # 
-DECAY 9000004 2.085000e+00 # 
+DECAY 55 auto # 
+#
+#      PDG        Width
+DECAY  5000001   0.000000e+00
+#
+#      PDG        Width
+DECAY  9000002   2.495200e+00
+#
+#      PDG        Width
+DECAY  9000003   2.085000e+00
+#
+#      PDG        Width
+DECAY  9000004   2.085000e+00
 
