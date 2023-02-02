@@ -66,7 +66,7 @@ def generateEvents(parser):
     os.remove(commandsFile)
 
     if runDelphes:
-        delphesOutput = outputFile.replace('.gz','_delphes_events.root')
+        delphesOutput = outputFile.replace(os.path.splitext(outputFile)[1],'.root')
         delphesFile = os.path.relpath(delphesFile)
         logger.info("Running Delphes with card %s" %delphesFile)
         run = subprocess.Popen('./runDelphesHepMC.sh %s %s %s' %(delphesFile,delphesOutput,outputFile),
@@ -77,7 +77,10 @@ def generateEvents(parser):
         logger.debug('Delphes output:\n %s \n' %output)
 
         if cleanOutput:
-            os.remove(outputFile)
+            try:
+                os.remove(outputFile)
+            except:
+                pass
 
 
     runInfo = {'time (s)' : time.time()-t0}
