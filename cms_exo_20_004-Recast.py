@@ -74,7 +74,13 @@ def getModelDict(inputFiles):
     elif len(banner) > 1:        
         print('\n%i banner files found in %s.' 
             %(len(banner),os.path.dirname(inputFiles[0])))
-    banner = banner[0]
+        matches = [set(os.path.basename(inputFiles[0])).intersection(set(os.path.basename(b))) 
+                   for b in banner]
+        banner = banner[np.argmax(matches)]
+        print('Using banner %s'%banner)
+    else:
+        banner = banner[0]
+
     xtree = ET.parse(banner)
     xroot = xtree.getroot()
     slha = xroot.find('header').find('slha').text

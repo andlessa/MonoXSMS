@@ -69,7 +69,6 @@ def generateEvents(parser):
         delphesOutput = outputFile.replace('.gz','_delphes_events.root')
         delphesFile = os.path.relpath(delphesFile)
         logger.info("Running Delphes with card %s" %delphesFile)
-        print('./runDelphesHepMC.sh %s %s %s' %(delphesFile,delphesOutput,outputFile))
         run = subprocess.Popen('./runDelphesHepMC.sh %s %s %s' %(delphesFile,delphesOutput,outputFile),
                            shell=True,stdout=subprocess.PIPE,
                            stderr=subprocess.PIPE)
@@ -113,6 +112,8 @@ def main(parfile,verbose):
         ncpus = int(parser.get("options","ncpu"))
     if ncpus  < 0:
         ncpus =  multiprocessing.cpu_count()
+    if ncpus > len(parserList):
+        ncpus = len(parserList)
     pool = multiprocessing.Pool(processes=ncpus)
     if ncpus > 1:
         logger.info('Running in parallel with %i processes' %ncpus)
