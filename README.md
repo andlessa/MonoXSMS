@@ -102,7 +102,7 @@ As an example, to generate the validation plots for the axial (spin 1) model the
        
        (generates the 0 and 1 jet matched samples)
   
-  2. ```for i in DMSimp_axial_0j_match/Events/run*/*root; do ./cms_exo_20_004-Recast.py $i ${i/0j/1j}; done```
+  2. ```for i in DMSimp_axial_0j_match/Events/run*/*root; do ./cms_exo_20_004-Recast.py -f $i ${i/0j/1j}; done```
   
      (generates the recasting data for each model point combining the 0j and 1j samples)
 
