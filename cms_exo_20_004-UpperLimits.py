@@ -49,7 +49,13 @@ def computeULs(inputFile,outputFile,deltas=0.0):
 
     # ### Get all model points
     models = []
-    mCols = ['Coupling','Mode','$m_{med}$','$m_{DM}$']
+
+    if recastData['Coupling'].iloc[0] == 'ADD':
+        mCols = ['Coupling','Mode','$M_{D}$','$d$']
+    else:
+        mCols = ['Coupling','Mode','$m_{med}$','$m_{DM}$']
+
+    
     for row in recastData[mCols].values:
         m = dict(zip(mCols,row.tolist()))
         if m not in models:

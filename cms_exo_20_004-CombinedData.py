@@ -20,10 +20,13 @@ def combineRecastData(files,outputFile):
 
         
     allColumns = allData.columns.tolist()
-    orderColumns = ['Coupling','Mode','$m_{med}$','$m_{DM}$','Data-takingperiod'] 
-    orderColumns += [c for c in allColumns if not c in orderColumns]
-    allData = allData[orderColumns]
-    allData.sort_values(['Coupling','Mode','$m_{med}$','$m_{DM}$','Data-takingperiod'],inplace=True,
+    if allData['Coupling'].iloc[0] == 'ADD':
+        orderColumns = ['Coupling','Mode','$M_{D}$','$d$','Data-takingperiod']
+    else:
+        orderColumns = ['Coupling','Mode','$m_{med}$','$m_{DM}$','Data-takingperiod']
+    allCols = orderColumns[:] + [c for c in allColumns if not c in orderColumns]
+    allData = allData[allCols]
+    allData.sort_values(orderColumns,inplace=True,
                 ascending=[False,False,True,True,False],ignore_index=True)        
 
     allData.to_pickle(outputFile)
