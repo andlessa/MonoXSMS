@@ -289,9 +289,8 @@ def main(parfile,verbose):
         ncpus = int(parser.get("options","ncpu"))
     if ncpus  < 0:
         ncpus =  multiprocessing.cpu_count()
+    ncpus = min(ncpus,len(parserList))
     pool = multiprocessing.Pool(processes=ncpus)
-    if ncpus > len(parserList):
-        ncpus = len(parserList)
     if ncpus > 1:
         logger.info('Running in parallel with %i processes' %ncpus)
     else:
@@ -349,6 +348,15 @@ if __name__ == "__main__":
     ap.add_argument('-v', '--verbose', default='info',
             help='verbose level (debug, info, warning or error). Default is info')
 
+
+    # First make sure the correct env variables have been set:
+    LDPATH = subprocess.check_output('echo $LD_LIBRARY_PATH',shell=True,text=True)
+    ROOTINC = subprocess.check_output('echo $ROOT_INCLUDE_PATH',shell=True,text=True)
+    pythiaDir = os.path.abspath('./MG5/HEPTools/pythia8/lib')
+    delphesDir = os.path.abspath('./MG5/Delphes/external')
+    if pythiaDir not in LDPATH or delphesDir not in ROOTINC:
+        print('Enviroment variables not properly set. Run source setenv.sh first.')
+        sys.exit()
 
     t0 = time.time()
 
