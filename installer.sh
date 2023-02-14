@@ -144,9 +144,9 @@ if echo "$answer" | grep -iq "^y" ;then
    echo "[installer] getting MadAnalysis";
    latest=`git ls-remote --refs --sort="version:refname" --tags $repo | cut -d/ -f3-|tail -n1`
    git clone --branch $latest git@github.com:MadAnalysis/madanalysis5.git MadAnalysis5;
-   cd MadAnalysis5/bin
-   echo -e "install fastjet\ninstall zlib\ninstall delphes\ninstall PAD\nexit\n" > mad_install.txt
-   ./ma5 -f < mad_install.txt
+   cd MadAnalysis5
+   echo "install fastjet\ninstall zlib\ninstall delphes\ninstall PAD\nexit\n" > mad_install.txt
+   python3 ./bin/ma5 -f < mad_install.txt
    rm mad_install.txt
    echo "[installer] replacing MA5 delphes card delphes_card_cms_exo_20_004.tcl by Cards/delphes_card.dat"
    cd $homeDIR
