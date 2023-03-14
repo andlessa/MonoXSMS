@@ -15,18 +15,18 @@ In both cases, i.e., involving the spin 1 or the spin 0 mediator, the dark matte
 
 ## Event Selection ##
 
-After the generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 for comparison with the background and observed samples given by the CMS analysis. (failure mitigation hcak 2018).In order to reproduce the CMS event selection, the following cuts were implemented after the event generation:
+After the generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 for comparison with the background and observed samples given by the CMS analysis. (failure mitigation hcal 2018).In order to reproduce the CMS event selection, the following cuts were implemented after the event generation:
 
-| Variable 	| 		Selection 	    |
-| ------------- | --------------------------------- |
-|AK4 jets	| $p_{T} > 20,  |\eta| < 2.4$  |
-|AK4 leading jet| $p_{T} < 100$ GeV, $|\eta| < 2.4$ |
-|tau-tagged jets| $p_{T} > 18$ GeV, $|\eta| < 2.3$  |
-|b-tagged jets	| $p_{T} > 20$ GeV, $|\eta| < 2.4$  |
+| Variable 	  | 		Selection		|
+| :------------- | :---------------------------------: |
+|AK4 jets	| $p_{T} > 20$ GeV,  $\|\eta\| < 2.4$  |
+|AK4 leading jet| $p_{T} < 100$ GeV, $\|\eta\| < 2.4$ |
+|tau-tagged jets| $p_{T} > 18$ GeV, $\|\eta\| < 2.3$  |
+|b-tagged jets	| $p_{T} > 20$ GeV, $\|\eta\| < 2.4$  |
 |missing energy | $p_{T}^{miss} > 250$ GeV	    |
-| electron veto | $p_{T} > 10$ GeV, $|\eta| < 2.5$  |
-| muon veto     | $p_{T} > 10$ GeV, $|\eta| < 2.4$  |
-| photon veto   | $p_{T} > 15$ GeV, $|\eta| < 2.5$  |
+| electron veto | $p_{T} > 10$ GeV, $\|\eta\| < 2.5$  |
+| muon veto     | $p_{T} > 10$ GeV, $\|\eta\| < 2.4$  |
+| photon veto   | $p_{T} > 15$ GeV, $\|\eta\| < 2.5$  |
 
 
 
@@ -38,9 +38,9 @@ After the generating the events, we randomly split them into three datasets, rep
 The following validation plots can be generated running this [ipython notebook](../../notebooks/plotValidation-Axial.ipynb):
 
 
-![Alt text](../../notebooks/cms_exo_20_004_axial.png?raw=true "Exclusion curve")
+![Alt text](../../notebooks/cms-exo-20-004-axial.png "Exclusion curve")
 
-![Alt text](../../notebooks/cms_exo_20_004_axial2.png?raw=true "Upper limit comparison")
+![Alt text](../../notebooks/cms-exo-20-004-axial-k1.png?raw=true "Upper limit comparison")
 
 
  * mLLP = 2 TeV, mDM = 1 GeV, Coupling = Axial
