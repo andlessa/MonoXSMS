@@ -19,13 +19,11 @@ After the generating the events, we randomly split them into three datasets, rep
 
 | Variable 	| 		Selection 	    |
 | ------------- | --------------------------------- |
-|AK4 jets	| $p_{T} > 20$ GeV, $|\eta| < 2.4$  |
+|AK4 jets	| $p_{T} > 20 \text{ GeV,} |\eta| < 2.4$  |
 |AK4 leading jet| $p_{T} < 100$ GeV, $|\eta| < 2.4$ |
 |tau-tagged jets| $p_{T} > 18$ GeV, $|\eta| < 2.3$  |
 |b-tagged jets	| $p_{T} > 20$ GeV, $|\eta| < 2.4$  |
-| ------------- | --------------------------------- |
 |missing energy | $p_{T}^{miss} > 250$ GeV	    |
-| ------------- | --------------------------------- |
 | electron veto | $p_{T} > 10$ GeV, $|\eta| < 2.5$  |
 | muon veto     | $p_{T} > 10$ GeV, $|\eta| < 2.4$  |
 | photon veto   | $p_{T} > 15$ GeV, $|\eta| < 2.5$  |
