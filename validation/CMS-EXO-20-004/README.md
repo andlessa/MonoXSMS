@@ -9,9 +9,12 @@ Repository for storing the code and results for studies related to LHC Mono-X se
 
 ## Event Generation ##
 
-In both models, the events are generated at leading order (LO) using MadGraph_aMC@NLO version 3.4.2, with PYTHIA and Delphes versions integrated in MadGraph, with the DMSIMP model implemented. The entire setup can be installed through this [script](../../installer.sh). While the CMS-EXO-20-004 analysis include a combination of the Mono-V and MonoJet signal regions (SRs), the results obtained here only cover the MonoJet SRs. In this validation we use the MLM matching scheme to combine jets from matrix element calculations with the parton shower. 
+In both models, the events are generated at leading order (LO) using MadGraph_aMC@NLO version 3.4.2, with PYTHIA and Delphes versions integrated in MadGraph, and with the DMSIMP model implemented. The entire setup can be installed through this [script](../../installer.sh). While the CMS-EXO-20-004 analysis include a combination of the Mono-V and MonoJet signal regions (SRs), the results obtained here only cover the MonoJet SRs.
 
-In both cases, i.e., involving the spin 1 or the spin 0 mediator, the dark matter (DM) pairs are produced firstly with no additional parton, and secondly with one parton. Then, the events are combined. We perform the generations separately since some of the cuts during event selection cannot be implemented otherwise. Other relevant information about the model, event generation or showering, hadronization processes can be found in the [Cards](../../Cards/) folder.
+In both cases the dark matter (DM) pairs are produced firstly with no additional parton, and secondly with one parton. During the generation a bias module is used on the jet transverse momentum ($p_{T}$) in order to smoothen the events distribution. Additionally, we use the MLM matching scheme to combine jets from matrix element calculatrions with the parton shower. Then, the events are combined. We perform the generations separately since the bias module cannot be implemented with the MLM matching scheme otherwise.
+
+
+Other relevant information about the model, event generation or showering, hadronization processes can be found in the [Cards](../../Cards/) folder.
 
 ## Event Selection ##
 
