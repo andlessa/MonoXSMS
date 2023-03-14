@@ -18,7 +18,7 @@ Other relevant information about the model, event generation or showering, hadro
 
 ## Event Selection ##
 
-After the generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 for comparison with the background and observed samples given by the CMS analysis. (failure mitigation hcal 2018).In order to reproduce the CMS event selection, the following cuts were implemented after the event generation:
+After generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 for comparison with the background and observed samples given by the CMS analysis. (failure mitigation hcal 2018).In order to reproduce the CMS event selection, the following cuts were implemented after the event generation:
 
 | Variable 	  | 		Selection		|
 | :------------- | :---------------------------------: |
