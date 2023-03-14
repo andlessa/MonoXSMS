@@ -17,6 +17,8 @@ In both cases, i.e., involving the spin 1 or the spin 0 mediator, the dark matte
 
 After the generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 for comparison with the background and observed samples given by the CMS analysis. (failure mitigation hcak 2018).In order to reproduce the CMS event selection, the following cuts were implemented after the event generation:
 
+| Variable 	| 		Selection 	    |
+| ------------- | --------------------------------- |
 |AK4 jets	| $p_{T} > 20$ GeV, $|\eta| < 2.4$  |
 |AK4 leading jet| $p_{T} < 100$ GeV, $|\eta| < 2.4$ |
 |tau-tagged jets| $p_{T} > 18$ GeV, $|\eta| < 2.3$  |
