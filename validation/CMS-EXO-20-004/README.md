@@ -43,7 +43,7 @@ The following validation plots can be generated running this [ipython notebook](
 
 ![Alt text](../../notebooks/cms-exo-20-004-axial.png "Exclusion curve")
 
-![Alt text](../../notebooks/cms-exo-20-004-axial-k1.png?raw=true "Upper limit comparison")
+![Alt text](../../notebooks/cms-exo-20-004-axial-comp.png?raw=true "Comparison exclusion curve")
 
 
  * mLLP = 2 TeV, mDM = 1 GeV, Coupling = Axial

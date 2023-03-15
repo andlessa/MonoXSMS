@@ -8,7 +8,7 @@ import pyslha
 import time
 import progressbar as P
 
-delphesDir = os.path.abspath("./MG5/Delphes")
+delphesDir = os.path.abspath("../MG5/Delphes")
 os.environ['ROOT_INCLUDE_PATH'] = os.path.join(delphesDir,"external")
 
 import ROOT
