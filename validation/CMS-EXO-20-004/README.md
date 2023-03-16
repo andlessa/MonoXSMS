@@ -11,7 +11,10 @@ Repository for storing the code and results for studies related to LHC Mono-X se
 
 In both models, the events are generated at leading order (LO) using MadGraph_aMC@NLO version 3.4.2, with PYTHIA and Delphes versions integrated in MadGraph, and with the DMSIMP model implemented. The entire setup can be installed through this [script](../../installer.sh). While the CMS-EXO-20-004 analysis include a combination of the Mono-V and MonoJet signal regions (SRs), the results obtained here only cover the MonoJet SRs.
 
-In both cases the dark matter (DM) pairs are produced firstly with no additional parton, and secondly with one parton. During the generation a bias module is used on the jet transverse momentum ($p_{T}$) in order to smoothen the events distribution. Additionally, we use the MLM matching scheme to combine jets from matrix element calculatrions with the parton shower. Then, the events are combined. We perform the generations separately since the bias module cannot be implemented with the MLM matching scheme otherwise.
+The dark matter (DM) pairs are produced firstly with no additional parton, and secondly with one parton. During the generation a bias module is used on the jet transverse momentum ($p_{T}$) in order to smoothen the event distributions. Additionally, we use the MLM matching scheme to combine jets from matrix element calculatrions with the parton shower. Then, the events are combined. We perform the generations separately since the bias module cannot be implemented with the MLM matching scheme otherwise.
+
+For the showering process we vary the cutoff scale "xqcut", using the mediator mass as reference. The xqcut value is set as $m_{med}/15$, unless $m_{med}$ is too light, and in that case we choose xqcut = $30$. 
+
 
 
 Other relevant information about the model, event generation or showering, hadronization processes can be found in the [Cards](../../Cards/) folder.

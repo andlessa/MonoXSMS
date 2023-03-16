@@ -57,7 +57,7 @@ def generateProcess(parser):
             f.write(l)
     
     #Generate process
-    mg5Folder = os.path.abspath('./MG5')
+    mg5Folder = os.path.abspath('../MG5')
     run = subprocess.Popen('./bin/mg5_aMC -f %s' %procCard,shell=True,
                                 stdout=subprocess.PIPE,stderr=subprocess.PIPE,
                                 cwd=mg5Folder)
