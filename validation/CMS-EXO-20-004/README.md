@@ -62,7 +62,16 @@ The following validation plots can be generated running this [ipython notebook](
  
   | Cut         | CMS eff.        | Recast eff.| 
   | ----------------------- | ----------------- | ------------- | 
+  |     Full Sample         |       1.000       |       1.000   |
+  | Trigger Emulation       |       0.898       |       0.997   |
   | $p_{T}^{miss} > 250$ GeV |      0.452      |   0.462    | 
+  | $p_{T}^{miss}$ quality filters |    0.451   |   --      |
+  |     Electron veto       |       0.450       |   0.462   |
+  |     Muon veto           |       0.449       |   0.462   |
+  |     Tau veto            |       0.440       |   0.449   |
+  |     b jet veto          |       0.440       |   0.393   |      
   |       Photon veto       |      0.436      |   0.384    |
-  | $\Delta \phi (jet, p_{T}^{miss}) > 0.5$ rad |      0.406      |   0.383    |
+  | $\Delta \phi (jet, p_{T}^{miss}) > 0.5$ rad |    0.406      |   0.383    |
+  | $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ rad    |    0.405   |   --      |
+  |     Leading AK4 jet  $p_{T}$       |    0.393      |   0.380        |
   |   HCAL mitigation (jets)     |    0.376      |   0.380    |
