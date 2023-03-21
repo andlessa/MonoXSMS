@@ -44,9 +44,7 @@ After generating the events, we randomly split them into three datasets, represe
 The following validation plots can be generated running this [ipython notebook](../../notebooks/plotValidation-Axial.ipynb):
 
 
-![Alt text](../../notebooks/cms-exo-20-004-axial.png "Exclusion curve")
-
-![Alt text](../../notebooks/cms-exo-20-004-axial-comp.png?raw=true "Comparison exclusion curve")
+![Alt text](../../notebooks/cms-exo-20-004-axial-comp.png?raw=true "Exclusion curve")
 
 
  * mLLP = 2 TeV, mDM = 1 GeV, Coupling = Axial
