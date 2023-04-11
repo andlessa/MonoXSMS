@@ -35,6 +35,7 @@ After generating the events, we randomly split them into three datasets, represe
 |HCAL failure mitigation (2018) | no AK4 jet with $p_{T} > 30$ GeV, $-1.57 < \phi < -0.87$ rad, and $-3.0 < \eta < -1.3$ rad |
 |HCAL failure mitigation (2018) | $p_{T}^{miss} < 470$ GeV with $-1.62 < \phi(p_{T}^{miss}) < -0.62$ rad|
 |$\Delta \phi (p_{T}ˆ{jet}, p_{T}^{miss})$ | $> 0.5$ rad |
+
 Note that $n_{j}^{max}$ is the maximum number of jets.
 
 The event selection is implemented through this [python script](../../cms_exo_20_004-Recast.py), using the root file output from the event generation. We highligh that we are able to employ all of the selection described in the table above, however there are additional criteria that we are unable to apply, as seen in the [Results](#Results) section. This [README](../../README.md) card describes step by step how to generate events, apply the necessary cuts, combine the data and finally estimate the upper limit on the signal events.
