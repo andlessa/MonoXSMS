@@ -4,22 +4,22 @@
 
 # MonoXSMS
 
-Repository for storing the code and results for studies related to LHC Mono-X searches and simplified models (SMS).
+Repository for storing the code and results for studies related to LHC Mono-X searches and simplified models (SMS). Here we validate the CMS-EXO-20-004 analysis, specifically the dark matter (DM) production in SMS via new mediators with spin 1 or 0. The referred analysis can be found [here](http://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-20-004/index.html).
 
 
 ## Event Generation ##
 
 In both models, the events are generated at leading order (LO) using MadGraph_aMC@NLO version 3.4.2, with PYTHIA and Delphes versions integrated within MadGraph, and with the DMSIMP model implemented. The entire setup can be installed through this [script](../../installer.sh). While the CMS-EXO-20-004 analysis include a combination of the Mono-V and MonoJet signal regions (SRs), the results obtained here only cover the MonoJet SRs.
 
-The dark matter (DM) pairs are produced firstly with no additional parton, and secondly with one parton. During the generation a bias module is used on the jet transverse momentum ($p_{T}$) in order to smoothen the event distributions. Additionally, we use the MLM matching scheme to combine jets from matrix element calculatrions with the parton shower. Then, the events are combined. We perform the generations separately since the bias module cannot be implemented with the MLM matching scheme otherwise. It is also important to mention that we do not perform event generations with two additional partons, as done by the CMS-EXO-20-004 analysis in some events for the spin-1 mediators cases.
+The DM pairs are produced firstly with no additional parton, and secondly with one parton. During the generation a bias module is used on the jet transverse momentum ($p_{T}$) in order to smoothen the event distributions. Additionally, we use the MLM matching scheme to combine jets from matrix element calculatrions with the parton shower. Then, the events are combined. We perform the generations separately since the bias module cannot be implemented with the MLM matching scheme otherwise. It is also important to mention that we do not perform event generations with two additional partons, as done by the CMS-EXO-20-004 analysis in some events for the spin-1 mediators cases.
 
 For the showering process we vary the cutoff scale "xqcut", depending on whether the production is on-shell or not. If the process is on-shell, then the xqcut value is set as $m_{med}/15$ ($m_{med}/12$ for the model with a scalar mediator). On the other hand, if the process is off-shell, then the xqcut value is set as $2m_{\chi}/15$ ($2m_{\chi}/12$). In the case of both particles being too light, we choose xqcut = $30$ GeV.
 
-Other relevant information about the model, event generation or showering, hadronization processes can be found in the [Cards](../../Cards/) folder.
+Other relevant information about the model, event generation or showering and hadronization processes can be found in the [Cards](../../Cards/) folder.
 
 ## Event Selection ##
 
-After generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 for comparison with the background and observed samples given by the CMS analysis. For the 2018 dataset, due to a failure in a section of the calorimeter, a specific selection was applied in the CMS analysis in order to avoid contamination from the mismeasument in the data taking period. We apply the same veto for the specific dataset, as shown in the table below. Therefore, in order to reproduce the CMS event selection, the other following cuts were implemented after the event generation:
+After generating the events, we randomly split them into three datasets, representing the 2016, 2017, and 2018 data for comparison with the background and observed samples given by the CMS analysis. For the 2018 dataset, due to a failure in a section of the calorimeter, a specific selection was applied in the CMS analysis in order to avoid contamination from the mismeasument in the data taking period. We implement the same veto for the specific dataset, as shown in the table below. Therefore, in order to reproduce the CMS event selection, the other following cuts were applied after the event generation:
 
 | Variable 	  | 		Selection		|
 | :------------- | :---------------------------------: |
@@ -32,14 +32,13 @@ After generating the events, we randomly split them into three datasets, represe
 | electron veto | $n_{j}^{max} = 0$ ($p_{T} > 10$ GeV, $\|\eta\| < 2.5$)  |
 | muon veto     | $n_{j}^{max} = 0$ ($p_{T} > 10$ GeV, $\|\eta\| < 2.4$)  |
 | photon veto   | $n_{j}^{max} = 0$ ($p_{T} > 15$ GeV, $\|\eta\| < 2.5$)  |
-|HCAL failure mitigation (2018) | no AK4 jet with $p_{T} > 30$ GeV, $-1.57 < \phi < -0.87, and -3.0 < \eta < -1.3$ |
-|HCAL failure mitigation (2018) | $p_{T}^{miss} < 470$ GeV with $-1.62 < \phi(p_{T}^{miss}) < -0.62$ |
+|HCAL failure mitigation (2018) | no AK4 jet with $p_{T} > 30$ GeV, $-1.57 < \phi < -0.87$ rad, and $-3.0 < \eta < -1.3$ rad |
+|HCAL failure mitigation (2018) | $p_{T}^{miss} < 470$ GeV with $-1.62 < \phi(p_{T}^{miss}) < -0.62$ rad|
+|$\Delta \phi (p_{T}ˆ{jet}, p_{T}^{miss})$ | $> 0.5$ rad |
 
+Note that $n_{j}^{max}$ is the maximum number of jets.
 
-
-
-
-
+The event selection is implemented through this [python script](../../cms_exo_20_004-Recast.py), using the root file output from the event generation. We highligh that we are able to employ all of the selection described in the table above, however there are additional criteria that we are unable to apply, as seen in the [Results](#Results) section. This [README](../../README.md) card describes step by step how to generate events, apply the necessary cuts, combine the data and finally estimate the upper limit on the signal events.
 
 ## Results ##
 
@@ -62,7 +61,7 @@ The following validation plots can be generated running this [ipython notebook](
   |     	Tau veto			 |   0.44311  |	    0.41499	|	 0.06776	  |
   |     	b jet veto			 |   0.44311  |	    0.36210	|        0.22373	  |
   |       	Photon veto			 |   0.43913  |	    0.34949	|	 0.25651	  |
-  |  $\Delta \phi (jet, p_{T}^{miss}) > 0.5$ rad |   0.40875  |	    0.34851	|	 0.17286	  |
+  |  $\Delta \phi (p_{T}ˆ{jet}, p_{T}^{miss}) > 0.5$ rad |   0.40875  |	    0.34851	|	 0.17286	  |
   |  $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ rad	 |   0.40683  |	    -------	|	 -------	  |
   |     Leading AK4 jet  $p_{T} > 100$ GeV	 |   0.39557  |	    0.34650	|	 0.14161	  |
   |     Leading AK4 jet  $\eta < 2.4$		 |   0.39557  |	    0.34650	|	 0.14161	  |
