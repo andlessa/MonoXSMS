@@ -41,7 +41,7 @@ It is important to emphasize that the table above does not contain all of the cu
 
 |               Variable         |              Selection              |
 | :----------------------------- | :---------------------------------: |
-| PF reconstruction failure mitigation ($p_{T}^{miss}$) | $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ |
+| PF reconstruction failure mitigation ($p_{T}^{miss}$) | $\Delta p_{T}^{miss} (\mathrm{PF}-\mathrm{Cal}) < 0.5$ |
 | PF reconstruction failure mitigation ($\phi$) | $\Delta \phi(\mathrm{PF}_{\mathrm{charged}}) < 2.0$ rad |
 
 The Mono-V overlap removal is not considered since we only generated are Monojet events. For the remaining selection variables, the $p_{T}^{miss}$ quality filters and Leading AK4 jet  energy fractions involve a multiple set of benchmarks that are too long to describe here, but can be found in this reference. 
