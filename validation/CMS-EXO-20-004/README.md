@@ -34,14 +34,13 @@ After generating the events, we randomly split them into three datasets, represe
 | photon veto   | $n_{j}^{max} = 0$ ($p_{T} > 15$ GeV, $\|\eta\| < 2.5$)  |
 |HCAL failure mitigation (2018) | no AK4 jet with $p_{T} > 30$ GeV, $-1.57 < \phi < -0.87$ rad, and $-3.0 < \eta < -1.3$ rad |
 |HCAL failure mitigation (2018) | $p_{T}^{miss} < 470$ GeV with $-1.62 < \phi(p_{T}^{miss}) < -0.62$ rad|
-|$\Delta \phi (p_{T}ˆ{jet}, p_{T}^{miss})$ | $> 0.5$ rad |
+|$\Delta \phi (p_{T}^{jet}, p_{T}^{miss})$ | $> 0.5$ rad |
 
 Note that $n_{j}^{max}$ is the maximum number of jets. 
 It is important to emphasize that the table above does not contain all of the cuts employed by the CMS analysis, only the ones we are able to reproduce. Some of the additional selection criteria can be found in the table below.
 
 |               Variable         |              Selection              |
 | :----------------------------- | :---------------------------------: |
-|$p_{T}^{miss}$ quality filters  |
 | PF reconstruction failure mitigation ($p_{T}^{miss}$) | $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ |
 | PF reconstruction failure mitigation ($\phi$) | $\Delta \phi(\mathrm{PF}_{\mathrm{charged}}) < 2.0$ rad |
 
