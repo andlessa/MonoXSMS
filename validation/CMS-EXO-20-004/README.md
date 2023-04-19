@@ -36,9 +36,18 @@ After generating the events, we randomly split them into three datasets, represe
 |HCAL failure mitigation (2018) | $p_{T}^{miss} < 470$ GeV with $-1.62 < \phi(p_{T}^{miss}) < -0.62$ rad|
 |$\Delta \phi (p_{T}ˆ{jet}, p_{T}^{miss})$ | $> 0.5$ rad |
 
-Note that $n_{j}^{max}$ is the maximum number of jets.
+Note that $n_{j}^{max}$ is the maximum number of jets. 
+It is important to emphasize that the table above does not contain all of the cuts employed by the CMS analysis, only the ones we are able to reproduce. Some of the additional selection criteria can be found in the table below.
 
-The event selection is implemented through this [python script](../../cms_exo_20_004-Recast.py), using the root file output from the event generation. We highligh that we are able to employ all of the selection described in the table above, however there are additional criteria that we are unable to apply, as seen in the [Results](#Results) section. This [README](../../README.md) card describes step by step how to generate events, apply the necessary cuts, combine the data and finally estimate the upper limit on the signal events.
+|               Variable         |              Selection              |
+| :----------------------------- | :---------------------------------: |
+|$p_{T}^{miss}$ quality filters  |
+| PF reconstruction failure mitigation ($p_{T}^{miss}$) | $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ |
+| PF reconstruction failure mitigation ($\phi$) | $\Delta \phi(\mathrm{PF}_{\mathrm{charged}}) < 2.0$ rad |
+
+The Mono-V overlap removal is not considered since we only generated are Monojet events. For the remaining selection variables, the $p_{T}^{miss}$ quality filters and Leading AK4 jet  energy fractions involve a multiple set of benchmarks that are too long to describe here, but can be found in this reference. 
+
+The event selection is implemented through this [python script](../../cms_exo_20_004-Recast.py), using the root file output from the event generation. This [README](../../README.md) card describes step by step how to generate events, apply the necessary cuts, combine the data and finally estimate the upper limit on the signal events.
 
 ## Results ##
 
@@ -62,7 +71,7 @@ The following validation plots can be generated running this [ipython notebook](
   |     	b jet veto			 |   0.44311  |	    0.36210	|        0.22373	  |
   |       	Photon veto			 |   0.43913  |	    0.34949	|	 0.25651	  |
   |  $\Delta \phi (p_{T}ˆ{jet}, p_{T}^{miss}) > 0.5$ rad |   0.40875  |	    0.34851	|	 0.17286	  |
-  |  $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ rad	 |   0.40683  |	    -------	|	 -------	  |
+  |  $\Delta p_{T}^{miss} (PF-Cal) < 0.5$ 	 |   0.40683  |	    -------	|	 -------	  |
   |     Leading AK4 jet  $p_{T} > 100$ GeV	 |   0.39557  |	    0.34650	|	 0.14161	  |
   |     Leading AK4 jet  $\eta < 2.4$		 |   0.39557  |	    0.34650	|	 0.14161	  |
   |     Leading AK4 jet  energy fractions	 |   0.39366  |	    -------	|	 -------	  |
