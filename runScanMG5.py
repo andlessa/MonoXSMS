@@ -28,10 +28,35 @@ def generateProcess(parser):
     :return: True if successful. Otherwise False.
     """
     
+    #Check if run card, delphes card and pythia card exist
+    pars = parser["MadGraphPars"]    
+    runCard = os.path.abspath(pars["runcard"]) 
+    paramCard = os.path.abspath(pars["paramcard"]) 
+    delphesCard = os.path.abspath(pars["delphescard"])
+    pythiaCard = os.path.abspath(pars["pythia8card"])
+    
+    
+    if not os.path.isfile(runCard):
+        logger.error('Run card %s not found.' %runCard)
+        raise ValueError()
+
+    if not os.path.isfile(paramCard):
+        logger.error('Param card %s not found.' %paramCard)
+        raise ValueError()
+        
+    if not os.path.isfile(delphesCard):
+        logger.error('Delphes card %s not found.' %delphesCard)
+        raise ValueError()
+        
+    if not os.path.isfile(pythiaCard):
+        logger.error('Pythia card %s not found.' %pythiaCard)
+        raise ValueError()
+    
     
     #Get run folder:    
-    pars = parser["MadGraphPars"]
-    processCard = os.path.abspath(pars["proccard"])    
+    processCard = os.path.abspath(pars["proccard"])   
+  
+     
     if not os.path.isfile(processCard):
         logger.error("Process card %s not found" %processCard)
         raise ValueError()
@@ -144,9 +169,10 @@ def generateEvents(parser):
         return False
 
     if 'runcard' in pars and os.path.isfile(pars['runcard']):    
-        shutil.copyfile(pars['runcard'],os.path.join(runFolder,'Cards/run_card.dat'))
+        shutil.copyfile(pars['runcard'],os.path.join(runFolder,'Cards/run_card.dat'))    
+        
     if 'paramcard' in pars and os.path.isfile(pars['paramcard']):
-        shutil.copyfile(pars['paramcard'],os.path.join(runFolder,'Cards/param_card.dat'))    
+        shutil.copyfile(pars['paramcard'],os.path.join(runFolder,'Cards/param_card.dat'))      
 
 
     # By default do not run Pythia or Delphes
@@ -162,7 +188,7 @@ def generateEvents(parser):
     if runPythia and 'pythia8card' in pars:        
         if os.path.isfile(pars['pythia8card']):
             shutil.copyfile(pars['pythia8card'],pythia8File) 
-
+            
     cleanOutput = parser['options']['cleanOutput']
     
     #Generate commands file:       
