@@ -1,14 +1,14 @@
 # MonoXSMS
-Repository for storing the code and results for studies related to LHC Mono-X searches and simplified models (SMS)
+Repository for storing the code and results for studies related to LHC Mono-X searches and simplified models (SMS).
 
 
 ## Repo Description
 
- * [AuxInfo](./AuxInfo): Stores official auxiliary data from ATLAS and CMS
  * [Cards](./Cards): Cards for generating events with MadGraph5
  * [modelFiles](./modelFiles): UFO files for the Simplified DM models
  * [notebooks](./notebooks): Jupyter notebooks for recasting and plotting
  * [Refs](./Refs): Useful links to references
+ * [validation](./validation): Stores [auxiliary](./validation/AuxInfo) data from ATLAS and CMS, as well as [scripts](./validation/CMS-EXO-20-004/) used for recasting.
 
 ## External Packages
 
@@ -116,10 +116,6 @@ As an example, to generate the validation plots for the axial (spin 1) model the
   
   5. Plot the results using [./notebooks/plotValidation-Axial.ipynb](./notebooks/plotValidation-Axial.ipynb)
 
-
-### Validation Results
-
-  Note that the limits provide by CMS include a combination of the Mono-V and MonoJet signal regions, while the results computed here only include the MonoJet SRs. Furthermore for the spin-1 (axial and vector) models, CMS computes the events at NLO, so a small k-factor has to be applied. The k-factor depends on the model point, but we apply a flat value for all points.
 
 
 [^1]: In recent python versions the installation of LHAPDF6 through MadGraph might fail, because it uses an old LHAPDF version. In order to install it,
