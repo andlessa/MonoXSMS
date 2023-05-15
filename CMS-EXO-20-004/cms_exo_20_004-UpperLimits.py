@@ -17,14 +17,14 @@ def computeULs(inputFile,outputFile,deltas=0.0):
 
 
     # ### Load CMS data
-    cmsYieldFile = './AuxInfo/CMS-EXO-20-004-data/HEPData-ins1894408-v2-csv/Simplifiedlikelihood:Yields(Monojet).csv'
+    cmsYieldFile = '../AuxInfo/CMS-EXO-20-004-data/HEPData-ins1894408-v2-csv/Simplifiedlikelihood:Yields(Monojet).csv'
     bgYields = np.genfromtxt(cmsYieldFile,delimiter=',',skip_header=5,
                             skip_footer=67,names=True,dtype=None,encoding=None)
 
     dataYields = np.genfromtxt(cmsYieldFile,delimiter=',',skip_header=73,
                             names=True,dtype=None,encoding=None)
 
-    covarianceFile = './AuxInfo/CMS-EXO-20-004-data/HEPData-ins1894408-v2-csv/Simplifiedlikelihood:covariancematrix(Monojet).csv'
+    covarianceFile = '../AuxInfo/CMS-EXO-20-004-data/HEPData-ins1894408-v2-csv/Simplifiedlikelihood:covariancematrix(Monojet).csv'
     cov = np.genfromtxt(covarianceFile,delimiter=',',skip_header=5,
                             names=True,dtype=None,encoding='UTF-8')
 
