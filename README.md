@@ -8,7 +8,7 @@ Repository for storing the code and results for studies related to LHC Mono-X se
  * [modelFiles](./modelFiles): UFO files for the Simplified DM models
  * [notebooks](./notebooks): Jupyter notebooks for recasting and plotting
  * [Refs](./Refs): Useful links to references
- * [validation](./validation): Stores [auxiliary](./validation/AuxInfo) data from ATLAS and CMS, along with [instructions to produce the validation results](./validation/CMS-EXO-20-004/instructions.md) [scripts](./validation/CMS-EXO-20-004/) used, details about the [event generation](./validation/CMS-EXO-20-004/generation-and-selection.md), and the [recasting results](./validation/CMS-EXO-20-004/README.md).
+ * [CMS-EXO-20-004](./CMS-EXO-20-004): Stores [auxiliary](./CMS-EXO-20-004/AuxInfo) data from ATLAS and CMS, along with [instructions to produce the validation results](./CMS-EXO-20-004/instructions.md) [scripts](./CMS-EXO-20-004/) used, details about the [event generation](./CMS-EXO-20-004/validation/generation-and-selection.md), and the [recasting results](./CMS-EXO-20-004/validation/README.md).
 
 ## External Packages
 
