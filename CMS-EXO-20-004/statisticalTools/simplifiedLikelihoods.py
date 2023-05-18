@@ -12,7 +12,7 @@
 from scipy import stats, optimize, integrate, special, linalg
 from numpy import sqrt, exp, log, sign, array, ndarray
 from functools import reduce
-from statisticalTools.statistics import CLsfromNLL, determineBrentBracket
+from statistics import CLsfromNLL, determineBrentBracket
 from typing import Text, Optional, Union, Tuple
 
 import numpy as np
