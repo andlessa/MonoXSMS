@@ -41,6 +41,6 @@ It is important to emphasize that the table above does not contain all of the cu
 
 The Mono-V overlap removal is not considered since we only generated are Monojet events. For the remaining selection variables, the $p_{T}^{miss}$ quality filters and Leading AK4 jet  energy fractions involve a multiple set of benchmarks described here (ref). 
 
-The event selection is implemented through this [python script](../../cms_exo_20_004-Recast.py), using the root file output from the event generation. This [README](../../README.md) card describes step by step how to generate events, apply the necessary cuts, combine the data and finally estimate the upper limit on the signal events.
+The event selection is implemented through this [python script](../../cms_exo_20_004-Recast.py), using the root file output from the event generation. This [README](../../README.md) card describes step by step how to generate events, apply the necessary cuts, combine the data and finally estimate the upper limit on the signal events. When perfoming the event selection, we apply the cut $p_{T} > 150$ GeV for the spin-1 mediator case only. The same selection was made on the CMS analysis, however this occurs during event generation. 
 
 
