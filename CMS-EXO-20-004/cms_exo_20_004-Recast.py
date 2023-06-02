@@ -74,9 +74,15 @@ def getModelDict(inputFiles):
     elif len(banner) > 1:        
         print('\n%i banner files found in %s.' 
             %(len(banner),os.path.dirname(inputFiles[0])))
-        matches = [set(os.path.basename(inputFiles[0])).intersection(set(os.path.basename(b))) 
-                   for b in banner]
-        banner = banner[np.argmax(matches)]
+        f = os.path.basename(inputFiles[0])
+        matches = []
+        for b in banner:
+            if os.path.splitext(f)[0] in b:
+                banner = b
+                break
+            matches.append(set(f).intersection(set(os.path.basename(b))))
+        if isinstance(banner,list):
+            banner = banner[np.argmax(matches)]
         print('Using banner %s'%banner)
     else:
         banner = banner[0]
