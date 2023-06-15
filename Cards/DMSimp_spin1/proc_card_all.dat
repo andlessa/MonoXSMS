@@ -45,4 +45,4 @@ define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
 define j = p
 generate p p > xd xd~ /  h w+ w- z a
 add process p p > xd xd~ j /  h w+ w- z a
-output ../../DMSimp_axial_all
+output ../../DMSimp_spin1_all
