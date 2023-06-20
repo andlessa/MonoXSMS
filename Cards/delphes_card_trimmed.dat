@@ -78,6 +78,9 @@ module PdgCodeFilter VisibleFilter {
   add PdgCode {-52}
   add PdgCode {5000039}
   add PdgCode {-5000039}
+  add PdgCode {1000022}
+  add PdgCode {-1000022}  
+  
 }
 
 #################################
@@ -630,6 +633,9 @@ module PdgCodeFilter NeutrinoFilter {
   add PdgCode {-52}  
   add PdgCode {5000039}
   add PdgCode {-5000039}
+  add PdgCode {1000022}
+  add PdgCode {-1000022}  
+  
 }
 
 
@@ -669,6 +675,9 @@ module PdgCodeFilter DMFilter {
   add PdgCode {-52}  
   add PdgCode {5000039}
   add PdgCode {-5000039}
+  add PdgCode {1000022}
+  add PdgCode {-1000022}  
+  
 }
 
 #########################

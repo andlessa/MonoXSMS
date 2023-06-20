@@ -100,9 +100,15 @@ def getModelDict(inputFiles):
     elif 5000039 in pars.blocks['MASS']:
         model = 'ADD'
         mMed = pars.blocks['MASS'][5000039]
+    elif 2000002 in pars.blocks['MASS']:
+        model = 'squark'
+        mMed = pars.blocks['MASS'][2000002]
+
 
     if model in ['spin1','spin0']:
         mDM = pars.blocks['MASS'][52]
+    elif model == 'squark':
+        mDM = pars.blocks['MASS'][1000022]
     else:
         mDM = None
 
@@ -126,8 +132,8 @@ def getModelDict(inputFiles):
             %(mMed,mDM,gVq,gAq,gVx,gAx))
     elif model == 'ADD':
         print('MD = %1.2f GeV, d = %1.2f\n'  %(MD,d))
-
-
+    elif model == 'squark':
+        print('mSquark = %1.2f GeV, mDM = %1.2f GeV\n' %(mMed,mDM))        
     # #### Store data
     if model in ['spin1','spin0']:
         if gVx != 0:
@@ -142,10 +148,12 @@ def getModelDict(inputFiles):
                 modelDict['Coupling'] = 'Pseudoscalar'
     elif model == 'ADD':
         modelDict['Coupling'] = 'ADD'
-        
+    elif model == 'squark':        
+        modelDict['Coupling'] = 'Squark'
+                
     modelDict['Mode'] = 'DM+QCDjets'
 
-    if model in ['spin1','spin0']:
+    if model in ['spin1','spin0', ]:
         modelDict['$m_{med}$'] = mMed
         modelDict['$m_{DM}$'] = mDM
         if (modelDict['Coupling'] == 'Vector') or (modelDict['Coupling'] == 'Scalar'):
@@ -154,6 +162,9 @@ def getModelDict(inputFiles):
         else:
             modelDict['$g_{DM}$'] = gAx
             modelDict['$g_{q}$'] = gAq
+    elif model in ['squark']:
+        modelDict['$m_{med}$'] = mMed
+        modelDict['$m_{DM}$'] = mDM
     elif model == 'ADD':
         modelDict['$M_{D}$'] = MD
         modelDict['$d$'] = d
