@@ -19,16 +19,17 @@ def combineRecastData(files,outputFile):
         allData = pd.concat((allData,recastData),ignore_index=True)
 
         
-        if allData['Coupling'].iloc[0] == 'ADD':
-            orderColumns = ['Coupling','Mode','$M_{D}$','$d$','Data-takingperiod']
-        else:
-            orderColumns = ['Coupling','Mode','$m_{med}$','$m_{DM}$','Data-takingperiod']
-        allCols = orderColumns[:] + [c for c in allColumns if not c in orderColumns]
-        allData = allData[allCols]
-        allData.sort_values(orderColumns,inplace=True,
-                             ascending=[False,False,True,True,False],ignore_index=True)        
+    allColumns = allData.columns.tolist()
+    if allData['Coupling'].iloc[0] == 'ADD':
+        orderColumns = ['Coupling','Mode','$M_{D}$','$d$','Data-takingperiod']
+    else:
+        orderColumns = ['Coupling','Mode','$m_{med}$','$m_{DM}$','Data-takingperiod']
+    allCols = orderColumns[:] + [c for c in allColumns if not c in orderColumns]
+    allData = allData[allCols]
+    allData.sort_values(orderColumns,inplace=True,
+                ascending=[False,False,True,True,False],ignore_index=True)        
 
-        allData.to_pickle(outputFile)
+    allData.to_pickle(outputFile)
 
 
 
