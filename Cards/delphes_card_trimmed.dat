@@ -856,6 +856,8 @@ module UniqueObjectFinder UniqueObjectFinder {
 module TreeWriter TreeWriter {
 # add Branch InputArray BranchName BranchClass
 
+  add Branch Delphes/allParticles Particle GenParticle
+
   add Branch DMFilter/dmParticles dmParticles GenParticle
 
   add Branch GenMissingET/momentum GenMissingET MissingET
