@@ -1,0 +1,13 @@
+,257
+Fullsample,1.0
+Triggeremulation,0.9915218891400922
+$p_{T}^{miss}>250$GeV,0.433102026877522
+Electronveto,0.43249584071847547
+Tauveto,0.42162278607056086
+Bjetveto,0.37486093606737275
+Photonveto,0.36672697405948906
+"$\Delta \phi (jet,p_{T}^{miss})>0.5$ rad",0.3660982071013828
+LeadingAK4jet$p_{T}>100$GeV,0.3614433631989971
+LeadingAK4jet$\eta<2.4$,0.3614433631989971
+HCALmitigation(jets),0.3614433631989971
+HCALmitigation($\phi^{miss}$),0.3614433631989971

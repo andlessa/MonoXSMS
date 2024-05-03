@@ -8,7 +8,7 @@ import pyslha
 import time
 import progressbar as P
 
-delphesDir = os.path.abspath("../../../MG5/Delphes")
+delphesDir = os.path.abspath("../../mg5amcnlo/Delphes")
 os.environ['ROOT_INCLUDE_PATH'] = os.path.join(delphesDir,"external")
 
 import ROOT
@@ -86,7 +86,7 @@ def getModelDict(inputFiles):
         print('Using banner %s'%banner)
     else:
         banner = banner[0]
-
+        
     xtree = ET.parse(banner)
     xroot = xtree.getroot()
     slha = xroot.find('header').find('slha').text
