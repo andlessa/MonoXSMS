@@ -1,0 +1,27 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t31
+#: name: Contour g_exp_p2 TT_directCC
+#: description: 2 $\sigma$ up expected excluded regions at the 95% CL in the ($\tilde{t}_1,\tilde{\chi}^{0}_{1}$)mass plane for the decay channel $\tilde{t}_1 \to c +  \tilde{\chi}^{0}_{1}$ ($\mathcal{B}=100\%$)
+#: data_file: contour_g_exp_p2_tt_directcc.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\tilde{t}_{1}}$ [GeV],$m_{\tilde{\chi}^{0}_{1}}$ [GeV]
+324.31,244.31
+331.46,262.58
+350.0,298.48
+350.7,300.28
+351.19,301.19
+400.0,371.19
+405.04,378.99
+407.38,382.95
+417.68,395.47
+438.92,421.8
+450.0,434.07
+458.15,444.14
+468.76,456.88
+500.0,491.78
+500.98,493.14
+502.4,494.78
+507.68,500.68
+300.0,295.0
+

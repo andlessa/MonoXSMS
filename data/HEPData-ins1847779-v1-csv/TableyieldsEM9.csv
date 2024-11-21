@@ -1,0 +1,204 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t80
+#: name: Table yields EM9
+#: description: Expected and observed backgrounds, before and after a binned likelihood fit in the control regions, in the exclusive SR bin EM9.
+#: data_file: table_yields_em9.yaml
+#: keyword phrases: Exclusive EM9 region
+#: keyword cmenergies: 13000.0
+EM9,SR,stat+syst +,stat+syst -
+Observed events (139 fb$^{-1}$),738.0,0,0
+SM prediction (post-fit),754.0,20.0,-20.0
+Fitted $W\rightarrow e\nu$,13.4,1.0,-1.0
+Fitted $W\rightarrow \mu\nu$,31.2,1.2,-1.2
+Fitted $W\rightarrow \tau\nu$,77.4,2.9,-2.9
+Fitted VBF $W$+jets,16.0,5.0,-5.0
+Fitted $Z\rightarrow ee$,-,0,0
+Fitted $Z\rightarrow \mu\mu$,0.6,0.02,-0.02
+Fitted $Z\rightarrow \tau\tau$,0.4,0.02,-0.02
+Fitted $Z\rightarrow \nu\nu$,534.0,20.0,-20.0
+Fitted VBF $Z$+jets,45.0,10.0,-10.0
+Fitted $t\bar{t}$,2.4,0.4,-0.4
+Fitted single-$t$,0.01,0.015,-0.015
+Fitted dibosons,33.0,8.0,-8.0
+multijet,-,0,0
+noncollision background,-,0,0
+MC exp. SM events,670.0,40.0,-40.0
+Fit input $W\rightarrow e\nu$,12.0,1.1,-1.1
+Fit input $W\rightarrow \mu\nu$,27.9,1.9,-1.9
+Fit input $W\rightarrow \tau\nu$,70.0,5.0,-5.0
+Fit input VBF $W$+jets,10.0,6.0,-6.0
+Fit input $Z\rightarrow ee$,-,0,0
+Fit input $Z\rightarrow \mu\mu$,0.5,0.02,-0.02
+Fit input $Z\rightarrow \tau\tau$,0.3,0.02,-0.02
+Fit input $Z\rightarrow \nu\nu$,476.0,30.0,-30.0
+Fit input VBF $Z$+jets,32.0,12.0,-12.0
+Fit input $t\bar{t}$,2.7,1.2,-1.2
+Fit input single-$t$,4.0,4.0,-4.0
+Fit input dibosons,35.0,10.0,-10.0
+Fit input multijet,-,0,0
+Fit input noncollision background,-,0,0
+
+EM9,W$\rightarrow \mu\nu$,stat+syst +,stat+syst -
+Observed events (139 fb$^{-1}$),438.0,0,0
+SM prediction (post-fit),409.0,10.0,-10.0
+Fitted $W\rightarrow e\nu$,-,0,0
+Fitted $W\rightarrow \mu\nu$,312.0,11.0,-11.0
+Fitted $W\rightarrow \tau\nu$,24.5,1.0,-1.0
+Fitted VBF $W$+jets,42.0,10.0,-10.0
+Fitted $Z\rightarrow ee$,-,0,0
+Fitted $Z\rightarrow \mu\mu$,2.76,0.11,-0.11
+Fitted $Z\rightarrow \tau\tau$,-,0,0
+Fitted $Z\rightarrow \nu\nu$,-,0,0
+Fitted VBF $Z$+jets,-,0,0
+Fitted $t\bar{t}$,5.9,0.8,-0.8
+Fitted single-$t$,0.03,0.05,-0.05
+Fitted dibosons,22.0,6.0,-6.0
+multijet,-,0,0
+noncollision background,-,0,0
+MC exp. SM events,371.0,31.0,-31.0
+Fit input $W\rightarrow e\nu$,-,0,0
+Fit input $W\rightarrow \mu\nu$,279.0,21.0,-21.0
+Fit input $W\rightarrow \tau\nu$,21.9,1.7,-1.7
+Fit input VBF $W$+jets,28.0,12.0,-12.0
+Fit input $Z\rightarrow ee$,-,0,0
+Fit input $Z\rightarrow \mu\mu$,2.42,0.18,-0.18
+Fit input $Z\rightarrow \tau\tau$,-,0,0
+Fit input $Z\rightarrow \nu\nu$,-,0,0
+Fit input VBF $Z$+jets,-,0,0
+Fit input $t\bar{t}$,6.7,2.0,-2.0
+Fit input single-$t$,10.0,10.0,-10.0
+Fit input dibosons,23.0,7.0,-7.0
+Fit input multijet,-,0,0
+Fit input noncollision background,-,0,0
+
+EM9,W$\rightarrow e\nu$,stat+syst +,stat+syst -
+Observed events (139 fb$^{-1}$),389.0,0,0
+SM prediction (post-fit),400.0,9.0,-9.0
+Fitted $W\rightarrow e\nu$,303.0,10.0,-10.0
+Fitted $W\rightarrow \mu\nu$,-,0,0
+Fitted $W\rightarrow \tau\nu$,20.8,0.8,-0.8
+Fitted VBF $W$+jets,37.0,9.0,-9.0
+Fitted $Z\rightarrow ee$,-,0,0
+Fitted $Z\rightarrow \mu\mu$,-,0,0
+Fitted $Z\rightarrow \tau\tau$,0.8,0.04,-0.04
+Fitted $Z\rightarrow \nu\nu$,-,0,0
+Fitted VBF $Z$+jets,-,0,0
+Fitted $t\bar{t}$,15.6,2.0,-2.0
+Fitted single-$t$,0.5,0.5,-0.5
+Fitted dibosons,21.0,5.0,-5.0
+multijet,-,0,0
+noncollision background,-,0,0
+MC exp. SM events,366.0,29.0,-29.0
+Fit input $W\rightarrow e\nu$,274.0,20.0,-20.0
+Fit input $W\rightarrow \mu\nu$,-,0,0
+Fit input $W\rightarrow \tau\nu$,18.9,1.4,-1.4
+Fit input VBF $W$+jets,25.0,11.0,-11.0
+Fit input $Z\rightarrow ee$,-,0,0
+Fit input $Z\rightarrow \mu\mu$,-,0,0
+Fit input $Z\rightarrow \tau\tau$,0.7,0.04,-0.04
+Fit input $Z\rightarrow \nu\nu$,-,0,0
+Fit input VBF $Z$+jets,-,0,0
+Fit input $t\bar{t}$,18.0,4.0,-4.0
+Fit input single-$t$,8.0,7.0,-7.0
+Fit input dibosons,22.0,6.0,-6.0
+Fit input multijet,-,0,0
+Fit input noncollision background,-,0,0
+
+EM9,Top,stat+syst +,stat+syst -
+Observed events (139 fb$^{-1}$),51.0,0,0
+SM prediction (post-fit),55.0,4.0,-4.0
+Fitted $W\rightarrow e\nu$,10.5,1.0,-1.0
+Fitted $W\rightarrow \mu\nu$,12.3,1.2,-1.2
+Fitted $W\rightarrow \tau\nu$,2.66,0.23,-0.23
+Fitted VBF $W$+jets,6.7,3.3,-3.3
+Fitted $Z\rightarrow ee$,-,0,0
+Fitted $Z\rightarrow \mu\mu$,0.07,0.01,-0.01
+Fitted $Z\rightarrow \tau\tau$,-,0,0
+Fitted $Z\rightarrow \nu\nu$,-,0,0
+Fitted VBF $Z$+jets,-,0,0
+Fitted $t\bar{t}$,18.3,2.9,-2.9
+Fitted single-$t$,-,0,0
+Fitted dibosons,4.9,2.0,-2.0
+multijet,-,0,0
+noncollision background,-,0,0
+MC exp. SM events,76.0,26.0,-26.0
+Fit input $W\rightarrow e\nu$,9.6,1.2,-1.2
+Fit input $W\rightarrow \mu\nu$,11.5,1.4,-1.4
+Fit input $W\rightarrow \tau\nu$,2.45,0.27,-0.27
+Fit input VBF $W$+jets,2.9,3.2,-3.2
+Fit input $Z\rightarrow ee$,-,0,0
+Fit input $Z\rightarrow \mu\mu$,0.06,0.01,-0.01
+Fit input $Z\rightarrow \tau\tau$,-,0,0
+Fit input $Z\rightarrow \nu\nu$,-,0,0
+Fit input VBF $Z$+jets,-,0,0
+Fit input $t\bar{t}$,21.0,9.0,-9.0
+Fit input single-$t$,23.0,23.0,-23.0
+Fit input dibosons,5.3,2.6,-2.6
+Fit input multijet,-,0,0
+Fit input noncollision background,-,0,0
+
+EM9,Z$\rightarrow\mu\mu$,stat+syst +,stat+syst -
+Observed events (139 fb$^{-1}$),61.0,0,0
+SM prediction (post-fit),57.7,2.3,-2.3
+Fitted $W\rightarrow e\nu$,-,0,0
+Fitted $W\rightarrow \mu\nu$,-,0,0
+Fitted $W\rightarrow \tau\nu$,-,0,0
+Fitted VBF $W$+jets,-,0,0
+Fitted $Z\rightarrow ee$,-,0,0
+Fitted $Z\rightarrow \mu\mu$,48.2,2.4,-2.4
+Fitted $Z\rightarrow \tau\tau$,-,0,0
+Fitted $Z\rightarrow \nu\nu$,-,0,0
+Fitted VBF $Z$+jets,5.1,1.3,-1.3
+Fitted $t\bar{t}$,0.2,0.06,-0.06
+Fitted single-$t$,-,0,0
+Fitted dibosons,4.1,1.2,-1.2
+multijet,-,0,0
+noncollision background,-,0,0
+MC exp. SM events,52.0,5.0,-5.0
+Fit input $W\rightarrow e\nu$,-,0,0
+Fit input $W\rightarrow \mu\nu$,-,0,0
+Fit input $W\rightarrow \tau\nu$,-,0,0
+Fit input VBF $W$+jets,-,0,0
+Fit input $Z\rightarrow ee$,-,0,0
+Fit input $Z\rightarrow \mu\mu$,44.0,4.0,-4.0
+Fit input $Z\rightarrow \tau\tau$,-,0,0
+Fit input $Z\rightarrow \nu\nu$,-,0,0
+Fit input VBF $Z$+jets,3.4,1.7,-1.7
+Fit input $t\bar{t}$,0.3,0.19,-0.19
+Fit input single-$t$,0.2,0.27,-0.27
+Fit input dibosons,4.2,1.4,-1.4
+Fit input multijet,-,0,0
+Fit input noncollision background,-,0,0
+
+EM9,Z$\rightarrow ee$,stat+syst +,stat+syst -
+Observed events (139 fb$^{-1}$),81.0,0,0
+SM prediction (post-fit),78.8,2.1,-2.1
+Fitted $W\rightarrow e\nu$,-,0,0
+Fitted $W\rightarrow \mu\nu$,-,0,0
+Fitted $W\rightarrow \tau\nu$,-,0,0
+Fitted VBF $W$+jets,-,0,0
+Fitted $Z\rightarrow ee$,67.2,2.4,-2.4
+Fitted $Z\rightarrow \mu\mu$,-,0,0
+Fitted $Z\rightarrow \tau\tau$,-,0,0
+Fitted $Z\rightarrow \nu\nu$,-,0,0
+Fitted VBF $Z$+jets,6.0,1.6,-1.6
+Fitted $t\bar{t}$,1.15,0.25,-0.25
+Fitted single-$t$,0.01,0.01,-0.01
+Fitted dibosons,4.5,1.2,-1.2
+multijet,-,0,0
+noncollision background,-,0,0
+MC exp. SM events,69.0,6.0,-6.0
+Fit input $W\rightarrow e\nu$,-,0,0
+Fit input $W\rightarrow \mu\nu$,-,0,0
+Fit input $W\rightarrow \tau\nu$,-,0,0
+Fit input VBF $W$+jets,-,0,0
+Fit input $Z\rightarrow ee$,59.0,5.0,-5.0
+Fit input $Z\rightarrow \mu\mu$,-,0,0
+Fit input $Z\rightarrow \tau\tau$,-,0,0
+Fit input $Z\rightarrow \nu\nu$,-,0,0
+Fit input VBF $Z$+jets,3.9,1.9,-1.9
+Fit input $t\bar{t}$,1.2,0.8,-0.8
+Fit input single-$t$,0.2,0.29,-0.29
+Fit input dibosons,4.6,1.5,-1.5
+Fit input multijet,-,0,0
+Fit input noncollision background,-,0,0
+

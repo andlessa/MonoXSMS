@@ -1,0 +1,4 @@
+# AnalysisName               PADType    Switch     DetectorCard
+# Detector cards must be located in the PAD(ForMA5tune/ForSFS) directory
+# Switches must be on or off
+atlas_exot_2018_06            vSFS        on    sfs_card_atlas_exot_2018_05.ma5                    #  ATLAS - 13 TeV - multijet + met [inclusive] (139/fb)

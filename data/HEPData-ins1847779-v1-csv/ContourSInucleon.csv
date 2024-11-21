@@ -1,0 +1,38 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t68
+#: name: Contour SI nucleon
+#: description: A comparison of the inferred limits with the constraints from direct-detection experiments on the spin-independent WIMP-nucleon scattering cross section as a function of the WIMP mass, in the context of the simplified model with vector couplings. Limits are shown at 90% CL.
+#: data_file: contour_si_nucleon.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\chi}$ [GeV],$\sigma_{SI}(\chi-neutron)$ [cm$^2$]
+135.0,5.9784e-29
+414.48,1.218e-40
+710.83,1.4391e-41
+716.32,1.3958e-41
+725.88,1.1943e-41
+746.14,1.0293e-41
+783.4,5.9691e-42
+757.22,3.7793e-42
+750.0,3.5373e-42
+722.67,3.4532e-42
+600.0,3.1129e-42
+561.31,3.126e-42
+500.0,3.0985e-42
+477.47,3.0309e-42
+450.0,2.9999e-42
+427.19,3.0216e-42
+400.0,3.0096e-42
+350.17,2.9547e-42
+300.0,2.8732e-42
+270.71,2.836e-42
+250.0,2.8587e-42
+222.6,2.8822e-42
+200.0,2.8384e-42
+177.05,2.8855e-42
+150.0,2.8385e-42
+122.71,2.8656e-42
+100.0,2.8176e-42
+71.663,2.8072e-42
+1.0,7.6658e-43
+

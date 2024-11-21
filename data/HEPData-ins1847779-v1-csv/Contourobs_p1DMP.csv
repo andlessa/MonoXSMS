@@ -1,0 +1,33 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t17
+#: name: Contour obs_p1 DMP
+#: description: 1 $\sigma_{\mathrm{theory}}^{\mathrm{PDF+scale}}$ up observed exclusion contour at 95% CL in the $m_{Z_{P}}-m_\chi$ parameter plane    for the pseudo-scalar mediator model.
+#: data_file: contour_obs_p1_dmp.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{Z_{P}}$ [GeV],$m_{\chi}$ [GeV]
+0.4,1.0
+1.0,1.4628
+10.992,5.2592
+12.944,6.0055
+12.976,6.0177
+14.96,6.6121
+15.755,7.0065
+16.944,7.4281
+18.18,8.0075
+18.928,8.2933
+20.798,9.0085
+100.27,44.712
+128.54,60.001
+128.54,1.0
+278.0,1.0
+278.0,130.0
+345.0,158.0
+347.0,155.0
+356.0,144.0
+357.0,65.0
+358.0,55.0
+359.0,45.0
+360.0,40.0
+360.0,1.0
+

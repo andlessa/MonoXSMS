@@ -1,0 +1,408 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t70
+#: name: Table syst impacts
+#: description: Contribution to the total SR background uncertainty in exclusive bins of the SR, as obtained from the CR-only fit. In the table, the contribution of each source of systematic is shown as the sum in quadrature of the individual contributions represented by the corresponding nuisance parameters.
+#: data_file: table_syst_impacts.yaml
+#: keyword cmenergies: 13000.0
+Source,EM0 [$\%$]
+Flavor tagging,0.1
+Jet energy scale,0.17
+Jet energy resolution,0.15
+Jet JVT efficiency,0.0
+Pile-up reweighting,0.37
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.34
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.53
+Electron and photon energy resolution,0.0
+Electron and photon energy scale,0.3
+Electron identification efficiency,0.58
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.06
+Muon reconstruction efficiency,0.41
+Muon momentum scale,0.1
+$\tau$-lepton identification efficiency,0.1
+Luminosity,0.01
+Diboson theory,0.04
+Non-collisional background,0.2
+Multijet background,1.04
+Single-top theory,0.15
+$t\bar{t}$ theory,0.07
+$V$+jets $\tau$ lepton definition,0.05
+$V$+jets pure QCD corrections,0.24
+$V$+jets pure EW corrections,0.17
+$V$+jets mixed QCD - EW corrections,0.02
+$V$+jets PDF,0.02
+VBF EW $V$+jets backgrounds,0.02
+Limited MC statistics,0.05
+Total bkg. unc.,1.48
+
+Source,EM1 [$\%$]
+Flavor tagging,0.13
+Jet energy scale,0.2
+Jet energy resolution,0.2
+Jet JVT efficiency,0.0
+Pile-up reweighting,0.35
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.31
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.46
+Electron and photon energy resolution,0.0
+Electron and photon energy scale,0.3
+Electron identification efficiency,0.56
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.07
+Muon reconstruction efficiency,0.48
+Muon momentum scale,0.12
+$\tau$-lepton identification efficiency,0.1
+Luminosity,0.01
+Diboson theory,0.04
+Non-collisional background,0.1
+Multijet background,0.72
+Single-top theory,0.15
+$t\bar{t}$ theory,0.07
+$V$+jets $\tau$ lepton definition,0.04
+$V$+jets pure QCD corrections,0.28
+$V$+jets pure EW corrections,0.25
+$V$+jets mixed QCD - EW corrections,0.04
+$V$+jets PDF,0.03
+VBF EW $V$+jets backgrounds,0.03
+Limited MC statistics,0.06
+Total bkg. unc.,1.26
+
+Source,EM2 [$\%$]
+Flavor tagging,0.15
+Jet energy scale,0.27
+Jet energy resolution,0.21
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.34
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.25
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.4
+Electron and photon energy resolution,0.0
+Electron and photon energy scale,0.31
+Electron identification efficiency,0.54
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.07
+Muon reconstruction efficiency,0.56
+Muon momentum scale,0.15
+$\tau$-lepton identification efficiency,0.09
+Luminosity,0.01
+Diboson theory,0.04
+Non-collisional background,0.08
+Multijet background,0.36
+Single-top theory,0.14
+$t\bar{t}$ theory,0.06
+$V$+jets $\tau$ lepton definition,0.04
+$V$+jets pure QCD corrections,0.33
+$V$+jets pure EW corrections,0.35
+$V$+jets mixed QCD - EW corrections,0.06
+$V$+jets PDF,0.01
+VBF EW $V$+jets backgrounds,0.04
+Limited MC statistics,0.06
+Total bkg. unc.,1.13
+
+Source,EM3 [$\%$]
+Flavor tagging,0.17
+Jet energy scale,0.25
+Jet energy resolution,0.25
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.33
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.2
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.36
+Electron and photon energy resolution,0.0
+Electron and photon energy scale,0.32
+Electron identification efficiency,0.54
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.04
+Muon reconstruction efficiency,0.63
+Muon momentum scale,0.17
+$\tau$-lepton identification efficiency,0.09
+Luminosity,0.01
+Diboson theory,0.04
+Non-collisional background,0.06
+Multijet background,0.28
+Single-top theory,0.15
+$t\bar{t}$ theory,0.06
+$V$+jets $\tau$ lepton definition,0.04
+$V$+jets pure QCD corrections,0.39
+$V$+jets pure EW corrections,0.45
+$V$+jets mixed QCD - EW corrections,0.08
+$V$+jets PDF,0.03
+VBF EW $V$+jets backgrounds,0.06
+Limited MC statistics,0.06
+Total bkg. unc.,1.14
+
+Source,EM4 [$\%$]
+Flavor tagging,0.19
+Jet energy scale,0.28
+Jet energy resolution,0.32
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.32
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.18
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.31
+Electron and photon energy resolution,0.0
+Electron and photon energy scale,0.33
+Electron identification efficiency,0.54
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.03
+Muon reconstruction efficiency,0.73
+Muon momentum scale,0.2
+$\tau$-lepton identification efficiency,0.08
+Luminosity,0.01
+Diboson theory,0.04
+Non-collisional background,0.05
+Multijet background,0.06
+Single-top theory,0.17
+$t\bar{t}$ theory,0.08
+$V$+jets $\tau$ lepton definition,0.04
+$V$+jets pure QCD corrections,0.44
+$V$+jets pure EW corrections,0.58
+$V$+jets mixed QCD - EW corrections,0.12
+$V$+jets PDF,0.04
+VBF EW $V$+jets backgrounds,0.09
+Limited MC statistics,0.08
+Total bkg. unc.,1.22
+
+Source,EM5 [$\%$]
+Flavor tagging,0.25
+Jet energy scale,0.39
+Jet energy resolution,0.37
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.3
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.14
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.27
+Electron and photon energy resolution,0.01
+Electron and photon energy scale,0.36
+Electron identification efficiency,0.56
+Electron reconstruction efficiency,0.15
+Muon identification efficiency,0.11
+Muon reconstruction efficiency,0.82
+Muon momentum scale,0.26
+$\tau$-lepton identification efficiency,0.07
+Luminosity,0.01
+Diboson theory,0.02
+Non-collisional background,0.05
+Multijet background,0.02
+Single-top theory,0.22
+$t\bar{t}$ theory,0.13
+$V$+jets $\tau$ lepton definition,0.04
+$V$+jets pure QCD corrections,0.5
+$V$+jets pure EW corrections,0.78
+$V$+jets mixed QCD - EW corrections,0.18
+$V$+jets PDF,0.08
+VBF EW $V$+jets backgrounds,0.13
+Limited MC statistics,0.13
+Total bkg. unc.,1.42
+
+Source,EM6 [$\%$]
+Flavor tagging,0.33
+Jet energy scale,0.5
+Jet energy resolution,0.4
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.32
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.08
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.26
+Electron and photon energy resolution,0.01
+Electron and photon energy scale,0.4
+Electron identification efficiency,0.6
+Electron reconstruction efficiency,0.15
+Muon identification efficiency,0.2
+Muon reconstruction efficiency,0.92
+Muon momentum scale,0.31
+$\tau$-lepton identification efficiency,0.06
+Luminosity,0.02
+Diboson theory,0.01
+Non-collisional background,0.08
+Multijet background,0.01
+Single-top theory,0.24
+$t\bar{t}$ theory,0.18
+$V$+jets $\tau$ lepton definition,0.06
+$V$+jets pure QCD corrections,0.61
+$V$+jets pure EW corrections,0.96
+$V$+jets mixed QCD - EW corrections,0.23
+$V$+jets PDF,0.16
+VBF EW $V$+jets backgrounds,0.17
+Limited MC statistics,0.56
+Total bkg. unc.,1.76
+
+Source,EM7 [$\%$]
+Flavor tagging,0.41
+Jet energy scale,0.63
+Jet energy resolution,0.37
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.34
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.05
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.26
+Electron and photon energy resolution,0.02
+Electron and photon energy scale,0.44
+Electron identification efficiency,0.67
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.29
+Muon reconstruction efficiency,1.03
+Muon momentum scale,0.37
+$\tau$-lepton identification efficiency,0.06
+Luminosity,0.02
+Diboson theory,0.04
+Non-collisional background,0.0
+Multijet background,0.0
+Single-top theory,0.22
+$t\bar{t}$ theory,0.22
+$V$+jets $\tau$ lepton definition,0.07
+$V$+jets pure QCD corrections,0.73
+$V$+jets pure EW corrections,1.15
+$V$+jets mixed QCD - EW corrections,0.28
+$V$+jets PDF,0.23
+VBF EW $V$+jets backgrounds,0.16
+Limited MC statistics,0.6
+Total bkg. unc.,2.03
+
+Source,EM8 [$\%$]
+Flavor tagging,0.49
+Jet energy scale,0.8
+Jet energy resolution,0.31
+Jet JVT efficiency,0.0
+Pile-up reweighting,0.36
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.04
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.25
+Electron and photon energy resolution,0.02
+Electron and photon energy scale,0.48
+Electron identification efficiency,0.73
+Electron reconstruction efficiency,0.16
+Muon identification efficiency,0.38
+Muon reconstruction efficiency,1.13
+Muon momentum scale,0.42
+$\tau$-lepton identification efficiency,0.05
+Luminosity,0.02
+Diboson theory,0.04
+Non-collisional background,0.0
+Multijet background,0.01
+Single-top theory,0.23
+$t\bar{t}$ theory,0.24
+$V$+jets $\tau$ lepton definition,0.08
+$V$+jets pure QCD corrections,0.83
+$V$+jets pure EW corrections,1.36
+$V$+jets mixed QCD - EW corrections,0.33
+$V$+jets PDF,0.3
+VBF EW $V$+jets backgrounds,0.16
+Limited MC statistics,0.9
+Total bkg. unc.,2.41
+
+Source,EM9 [$\%$]
+Flavor tagging,0.57
+Jet energy scale,0.89
+Jet energy resolution,0.34
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.33
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.05
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.26
+Electron and photon energy resolution,0.03
+Electron and photon energy scale,0.54
+Electron identification efficiency,0.8
+Electron reconstruction efficiency,0.17
+Muon identification efficiency,0.48
+Muon reconstruction efficiency,1.21
+Muon momentum scale,0.48
+$\tau$-lepton identification efficiency,0.06
+Luminosity,0.02
+Diboson theory,0.05
+Non-collisional background,0.0
+Multijet background,0.0
+Single-top theory,0.17
+$t\bar{t}$ theory,0.33
+$V$+jets $\tau$ lepton definition,0.1
+$V$+jets pure QCD corrections,0.9
+$V$+jets pure EW corrections,1.53
+$V$+jets mixed QCD - EW corrections,0.4
+$V$+jets PDF,0.35
+VBF EW $V$+jets backgrounds,0.03
+Limited MC statistics,1.0
+Total bkg. unc.,2.69
+
+Source,EM10 [$\%$]
+Flavor tagging,0.62
+Jet energy scale,0.9
+Jet energy resolution,0.43
+Jet JVT efficiency,0.01
+Pile-up reweighting,0.26
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.05
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.27
+Electron and photon energy resolution,0.04
+Electron and photon energy scale,0.6
+Electron identification efficiency,0.85
+Electron reconstruction efficiency,0.18
+Muon identification efficiency,0.58
+Muon reconstruction efficiency,1.27
+Muon momentum scale,0.53
+$\tau$-lepton identification efficiency,0.06
+Luminosity,0.02
+Diboson theory,0.06
+Non-collisional background,0.0
+Multijet background,0.0
+Single-top theory,0.13
+$t\bar{t}$ theory,0.4
+$V$+jets $\tau$ lepton definition,0.12
+$V$+jets pure QCD corrections,0.89
+$V$+jets pure EW corrections,1.69
+$V$+jets mixed QCD - EW corrections,0.45
+$V$+jets PDF,0.39
+VBF EW $V$+jets backgrounds,0.24
+Limited MC statistics,1.21
+Total bkg. unc.,2.98
+
+Source,EM11 [$\%$]
+Flavor tagging,0.7
+Jet energy scale,1.0
+Jet energy resolution,0.62
+Jet JVT efficiency,0.02
+Pile-up reweighting,0.24
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.06
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.27
+Electron and photon energy resolution,0.05
+Electron and photon energy scale,0.66
+Electron identification efficiency,0.92
+Electron reconstruction efficiency,0.18
+Muon identification efficiency,0.7
+Muon reconstruction efficiency,1.35
+Muon momentum scale,0.58
+$\tau$-lepton identification efficiency,0.06
+Luminosity,0.03
+Diboson theory,0.1
+Non-collisional background,0.0
+Multijet background,0.0
+Single-top theory,0.13
+$t\bar{t}$ theory,0.52
+$V$+jets $\tau$ lepton definition,0.16
+$V$+jets pure QCD corrections,0.96
+$V$+jets pure EW corrections,1.89
+$V$+jets mixed QCD - EW corrections,0.54
+$V$+jets PDF,0.48
+VBF EW $V$+jets backgrounds,0.53
+Limited MC statistics,1.76
+Total bkg. unc.,3.53
+
+Source,EM12 [$\%$]
+Flavor tagging,0.87
+Jet energy scale,0.97
+Jet energy resolution,1.28
+Jet JVT efficiency,0.03
+Pile-up reweighting,0.3
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ resolution,0.07
+$E^{\small\mbox{miss}}_{\small\mbox{T}}$ scale,0.3
+Electron and photon energy resolution,0.08
+Electron and photon energy scale,0.74
+Electron identification efficiency,1.06
+Electron reconstruction efficiency,0.2
+Muon identification efficiency,0.9
+Muon reconstruction efficiency,1.49
+Muon momentum scale,0.66
+$\tau$-lepton identification efficiency,0.07
+Luminosity,0.05
+Diboson theory,0.22
+Non-collisional background,0.0
+Multijet background,0.0
+Single-top theory,0.28
+$t\bar{t}$ theory,0.71
+$V$+jets $\tau$ lepton definition,0.13
+$V$+jets pure QCD corrections,1.07
+$V$+jets pure EW corrections,2.2
+$V$+jets mixed QCD - EW corrections,0.7
+$V$+jets PDF,0.69
+VBF EW $V$+jets backgrounds,1.1
+Limited MC statistics,1.86
+Total bkg. unc.,4.21
+

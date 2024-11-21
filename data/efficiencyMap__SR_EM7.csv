@@ -1,0 +1,8 @@
+filename,Total xsec (pb),Total MC Events,Coupling,Mode,$m_{med}$,$m_{DM}$,$g_{DM}$,$g_{q}$,analysis name,signal region,sig95(exp),sig95(obs),efficiency,stat
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_01/mzp_20_mx_73_pythia8_events.hepmc.gz,0.697028,11040,Axial,DM+QCDjets,20.01,72.91,1.0,0.25,atlas_exot_2018_06,EM7,0.5216255,0.7606353,0.0027606,4.73e-05
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_02/mzp_33_mx_76_pythia8_events.hepmc.gz,0.645854,11040,Axial,DM+QCDjets,32.964,76.142,1.0,0.25,atlas_exot_2018_06,EM7,0.7187639,1.0479686,0.0020031,4.19e-05
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_03/mzp_40_mx_78_pythia8_events.hepmc.gz,0.631721,11040,Axial,DM+QCDjets,40.03,77.744,1.0,0.25,atlas_exot_2018_06,EM7,0.7549598,1.1044058,0.0018964,4.12e-05
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_04/mzp_49_mx_80_pythia8_events.hepmc.gz,0.6119789999999999,11040,Axial,DM+QCDjets,49.084,79.637,1.0,0.25,atlas_exot_2018_06,EM7,0.7553121,1.096558,0.0019041,4.19e-05
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_05/mzp_60_mx_82_pythia8_events.hepmc.gz,0.591243,11040,Axial,DM+QCDjets,60.05,81.93,1.0,0.25,atlas_exot_2018_06,EM7,0.6338295,0.925422,0.0022672,4.65e-05
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_06/mzp_64_mx_83_pythia8_events.hepmc.gz,0.5773159999999999,11040,Axial,DM+QCDjets,64.262,83.132,1.0,0.25,atlas_exot_2018_06,EM7,0.4232526,0.616935,0.0033941,5.76e-05
+/media/yoxara/T9/DMSimp_vector_axial_pp_xxj_LO_eff_new/Events/run_07/mzp_70_mx_87_pythia8_events.hepmc.gz,0.536622,11040,Axial,DM+QCDjets,70.374,86.627,1.0,0.25,atlas_exot_2018_06,EM7,0.5002687,0.7324117,0.0028688,5.49e-05

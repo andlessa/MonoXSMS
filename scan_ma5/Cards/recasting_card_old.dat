@@ -1,0 +1,4 @@
+# AnalysisName               PADType    Switch     DetectorCard
+# Detector cards must be located in the PAD(ForMA5tune/ForSFS) directory
+# Switches must be on or off
+atlas_exot_2016_27            v1.2        on    delphes_card_atlas_exot_2016_27.tcl                #  ATLAS - 13 TeV - Mono-jet (36.1/fb)

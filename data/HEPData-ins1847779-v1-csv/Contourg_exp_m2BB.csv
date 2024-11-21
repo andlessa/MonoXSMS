@@ -1,0 +1,30 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t48
+#: name: Contour g_exp_m2 BB
+#: description: 2 $\sigma$ down expected exclusion plane at 95% CL as a function of sbottom and neutralino masses for the decay channel $\tilde{b}_1 \to  b +  \tilde{\chi}^{0}_{1}$ ($\mathcal{B}=100\%$)
+#: data_file: contour_g_exp_m2_bb.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\tilde{b}_{1}}$ [GeV],$m_{\tilde{\chi}^{0}_{1}}$ [GeV]
+492.42,403.79
+500.0,418.31
+513.61,450.0
+523.86,463.07
+548.57,499.28
+548.92,499.68
+549.08,499.91
+550.0,501.35
+570.28,535.14
+578.51,543.55
+580.67,546.13
+581.75,548.17
+600.0,574.74
+600.12,574.94
+600.19,575.1
+611.68,588.5
+614.95,592.99
+616.79,596.68
+622.63,607.45
+622.18,610.52
+395.0,400.0
+

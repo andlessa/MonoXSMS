@@ -1,0 +1,21 @@
+#!/bin/bash
+
+base_dir="/home/yoxara/Insync/DMSimp_vector_axial_pp_xxj_NLO_eff/Events"
+
+for run_dir in "$base_dir"/run_03; do
+
+  if [ -d "$run_dir" ]; then
+    rm -f "$run_dir"/log_sys_*.txt
+    rm -f "$run_dir"/res_*.txt
+    rm -f "$run_dir"/summary.txt
+    rm -f "$run_dir"/*.log
+    rm -f "$run_dir"/*.lhe.gz
+    rm -f f "$run_dir"/*.dat
+    rm -f f "$run_dir"/*.cmd
+    rm -f f "$run_dir"/*.html
+    rm -f f "$run_dir"/*.sh
+    rm -f f "$run_dir"/RunMaterial.tar.gz
+
+    echo "Files log_sys_*.txt, *.log, unweighted_events.lhe.gz and .dat deleted in $run_dir"
+  fi
+done

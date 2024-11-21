@@ -1,0 +1,14 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t36
+#: name: Contour g_exp TT_bffN
+#: description: Expected excluded regions at the 95% CL in the ($\tilde{t}_1,\tilde{\chi}^{0}_{1}$)mass plane for the decay channel $\tilde{t}_1 \to  b + ff^{'} + \tilde{\chi}^{0}_{1}$ ($\mathcal{B}=100\%$)
+#: data_file: contour_g_exp_tt_bffn.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\tilde{t}_{1}}$ [GeV],$m_{\tilde{\chi}^{0}_{1}}$ [GeV]
+351.9,300.0
+589.53,582.53
+589.57,582.57
+589.57,584.57
+300.0,295.0
+

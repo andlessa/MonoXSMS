@@ -1,0 +1,34 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t64
+#: name: Contour exp_p1 DMV
+#: description: 1 $\sigma$ up expected exclusion contour at 95% CL in the $m_{Z_{V}}-m_\chi$ parameter plane    for the vector mediator model.
+#: data_file: contour_exp_p1_dmv.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{Z_{V}}$ [GeV],$m_{\chi}$ [GeV]
+1.0,138.0
+668.94,329.47
+1138.8,564.4
+1278.5,634.23
+1311.5,650.77
+1500.0,697.96
+1712.9,749.26
+1794.0,750.0
+1823.8,705.75
+1892.1,600.0
+1899.3,540.27
+1907.2,500.0
+1917.0,466.61
+1920.7,450.0
+1924.7,415.06
+1928.1,400.0
+1932.8,350.0
+1952.6,300.0
+1938.4,250.0
+1965.1,200.0
+1936.2,130.0
+1956.0,108.81
+1957.5,100.0
+1957.0,58.6
+1957.9,1.0
+

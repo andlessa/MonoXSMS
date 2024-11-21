@@ -1,0 +1,24 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t58
+#: name: Contour ADD
+#: description: $95\%$ CL observed and expected lower limits on the fundamental Planck scale in $4+n$ dimensions, $M_D$, as a function of the number of extra dimensions $n$, considering nominal LO signal cross sections.
+#: data_file: contour_add.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+Number of extra dimensions,Lower Limit on $M_D$ [TeV],1 $\sigma_{\mathrm{theory}}^{\mathrm{PDF+scale}}$ +,1 $\sigma_{\mathrm{theory}}^{\mathrm{PDF+scale}}$ -
+2.0,11.207,-1.2645,0.95799
+3.0,8.4952,-0.78992,0.58083
+4.0,7.1167,-0.61863,0.42838
+5.0,6.3588,-0.45568,0.33291
+6.0,5.8933,-0.41232,0.27625
+
+#: Limit,Expected
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+Number of extra dimensions,Lower Limit on $M_D$ [fb],1 $\sigma$ +,1 $\sigma$ -,2 $\sigma$ +,2 $\sigma$ -
+2.0,11.551,-0.98628,0.96862,-1.9443,1.8167
+3.0,8.5944,-0.58221,0.58061,-1.139,1.0969
+4.0,7.1678,-0.40241,0.405,-0.7833,0.7684
+5.0,6.3546,-0.30459,0.30901,-0.59077,0.58871
+6.0,5.8681,-0.24539,0.24964,-0.47467,0.47687
+

@@ -1,0 +1,84 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t98
+#: name: Table cutflows 350GeV
+#: description: Cutflow of several signal benchmarks. A cut on the truth $E_\mathrm{T}^\mathrm{miss}$ at 350 GeV is applied.
+#: data_file: table_cutflows_350gev.yaml
+Cut,"ADD ($d=4$,M$_D=3600$)"
+Total evts (truth $E_\mathrm{T}^\mathrm{miss}>350$ GeV),91657.0
+Trigger,91657.0
+Event cleaning,91494.0
+Lepton veto,87792.0
+$N_\mathrm{jets}\leq4$,80072.0
+"$\min{\Delta\Phi\left(\mathrm{jets},E_\mathrm{T}^\mathrm{miss}\right)}$ cut",74714.0
+Lead. Jet quality requirements,74216.0
+Lead. Jet $p_\mathrm{T}>150$ GeV and lead. Jet $\left|\eta\right|<2.4$,73314.0
+$E_\mathrm{T}^\mathrm{miss}>400$ GeV,54059.0
+400 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $500 GeV,21140.0
+500 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $600 GeV,12155.0
+600 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $700 GeV,7145.0
+700 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $800 GeV,4560.0
+800 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $900 GeV,2960.0
+900 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1000 GeV,1927.0
+1000 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1100 GeV,1319.0
+1100 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1200 GeV,924.0
+$E_\mathrm{T}^\mathrm{miss} > $1200 GeV,1930.0
+
+Cut,"ADD ($d=4$,M$_D=3600$)  [$\%$]"
+Total evts (truth $E_\mathrm{T}^\mathrm{miss}>350$ GeV),100.0
+Trigger,100.0
+Event cleaning,99.82
+Lepton veto,95.78
+$N_\mathrm{jets}\leq4$,87.36
+"$\min{\Delta\Phi\left(\mathrm{jets},E_\mathrm{T}^\mathrm{miss}\right)}$ cut",81.52
+Lead. Jet quality requirements,80.97
+Lead. Jet $p_\mathrm{T}>150$ GeV and lead. Jet $\left|\eta\right|<2.4$,79.99
+$E_\mathrm{T}^\mathrm{miss}>400$ GeV,58.98
+400 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $500 GeV,23.06
+500 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $600 GeV,13.26
+600 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $700 GeV,7.79
+700 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $800 GeV,4.98
+800 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $900 GeV,3.23
+900 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1000 GeV,2.1
+1000 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1100 GeV,1.44
+1100 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1200 GeV,1.01
+$E_\mathrm{T}^\mathrm{miss} > $1200 GeV,2.11
+
+Cut,"ALPs ($C_{\tilde{G}}=0.02$,f$_a=1$ TeV)"
+Total evts (truth $E_\mathrm{T}^\mathrm{miss}>350$ GeV),420880.0
+Trigger,420880.0
+Event cleaning,420460.0
+Lepton veto,412110.0
+$N_\mathrm{jets}\leq4$,410470.0
+"$\min{\Delta\Phi\left(\mathrm{jets},E_\mathrm{T}^\mathrm{miss}\right)}$ cut",408340.0
+Lead. Jet quality requirements,402400.0
+Lead. Jet $p_\mathrm{T}>150$ GeV and lead. Jet $\left|\eta\right|<2.4$,397260.0
+$E_\mathrm{T}^\mathrm{miss}>400$ GeV,277920.0
+400 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $500 GeV,153720.0
+500 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $600 GeV,62404.0
+600 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $700 GeV,26916.0
+700 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $800 GeV,14227.0
+800 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $900 GeV,7054.0
+900 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1000 GeV,4145.0
+1000 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1100 GeV,3305.0
+1100 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1200 GeV,2119.0
+$E_\mathrm{T}^\mathrm{miss} > $1200 GeV,4028.0
+
+Cut,"ALPs ($C_{\tilde{G}}=0.02$,f$_a=1$ TeV)  [$\%$]"
+Total evts (truth $E_\mathrm{T}^\mathrm{miss}>350$ GeV),100.0
+Trigger,100.0
+Event cleaning,99.9
+Lepton veto,97.92
+$N_\mathrm{jets}\leq4$,97.53
+"$\min{\Delta\Phi\left(\mathrm{jets},E_\mathrm{T}^\mathrm{miss}\right)}$ cut",97.02
+Lead. Jet quality requirements,95.61
+Lead. Jet $p_\mathrm{T}>150$ GeV and lead. Jet $\left|\eta\right|<2.4$,94.39
+$E_\mathrm{T}^\mathrm{miss}>400$ GeV,66.03
+400 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $500 GeV,36.52
+500 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $600 GeV,14.83
+600 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $700 GeV,6.4
+700 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $800 GeV,3.38
+800 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $900 GeV,1.68
+900 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1000 GeV,0.98
+1000 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1100 GeV,0.79
+1100 GeV $< E_\mathrm{T}^\mathrm{miss} \leq $1200 GeV,0.5
+$E_\mathrm{T}^\mathrm{miss} > $1200 GeV,0.96
+

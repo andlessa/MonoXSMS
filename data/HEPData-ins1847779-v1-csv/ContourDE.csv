@@ -1,0 +1,18 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t57
+#: name: Contour DE
+#: description: Observed and expected exclusions at $95\%$ CL on the Horndeski dark-energy model for $m_{\phi}=0.1$ GeV and $c_{i\neq 2}=0$, $c_{2}=1$, expressed in terms of the visible cross section as a function of the suppression scale $M_{2}$.
+#: data_file: contour_de.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$M_{2}$ [GeV],$\sigma (pp \rightarrow j\phi\phi)$ [fb],1 $\sigma_{\mathrm{theory}}^{\mathrm{PDF+scale}}$ +,1 $\sigma_{\mathrm{theory}}^{\mathrm{PDF+scale}}$ -
+1000.0,63.101,-22.751,26.771
+2000.0,63.101,-22.751,26.771
+
+#: Limit,Expected
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$M_{2}$ [GeV],$\sigma (pp \rightarrow j\phi\phi)$ [fb],1 $\sigma$ +,1 $\sigma$ -,2 $\sigma$ +,2 $\sigma$ -
+1000.0,59.008,-16.49,25.197,-27.337,60.108
+2000.0,59.008,-16.49,25.197,-27.337,60.108
+

@@ -1,0 +1,18 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t54
+#: name: Contour g_exp_m1 SS
+#: description: 1 $\sigma$ down expected exclusion region at 95$\%$ CL as a function of squark mass and the squark--neutralino massdifference for $\tilde{q} \to q + \tilde{\chi}^{0}_{1}$ and $\tilde{q}_\mathrm{L} + \tilde{q}_\mathrm{R}$with ($\tilde{u},\tilde{d},\tilde{c},\tilde{s}$).
+#: data_file: contour_g_exp_m1_ss.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\tilde{q}_{1}}$ [GeV],$m_{\tilde{q}_{1}} - m_{\tilde{\chi}^{0}_{1}}$ [GeV]
+993.09,5.0
+951.1,15.0
+925.87,20.174
+915.71,25.0
+900.0,29.323
+883.4,31.679
+871.86,35.0
+863.37,40.494
+851.64,50.0
+

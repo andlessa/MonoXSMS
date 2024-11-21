@@ -1,0 +1,31 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t41
+#: name: Contour g_obs BB
+#: description: Observed exclusion plane at 95% CL as a function of sbottom and neutralino masses for the decay channel $\tilde{b}_1 \to  b +  \tilde{\chi}^{0}_{1}$ ($\mathcal{B}=100\%$)
+#: data_file: contour_g_obs_bb.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\tilde{b}_{1}}$ [GeV],$m_{\tilde{\chi}^{0}_{1}}$ [GeV]
+420.34,395.34
+436.37,414.1
+439.83,417.88
+440.73,419.44
+450.0,430.11
+454.56,436.37
+460.87,442.17
+464.0,446.4
+475.04,460.02
+497.14,482.71
+500.0,485.94
+507.1,495.71
+510.1,501.06
+519.91,510.93
+533.27,524.94
+550.0,544.26
+550.51,545.05
+550.79,545.48
+551.42,546.13
+552.59,547.33
+554.88,549.88
+395.0,400.0
+

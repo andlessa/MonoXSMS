@@ -1,0 +1,28 @@
+#: table_doi: 10.17182/hepdata.102093.v1/t26
+#: name: Contour g_obs_p1 TT_directCC
+#: description: 1 $\sigma_{\mathrm{theory}}^{\mathrm{PDF+scale}}$ up observed excluded regions at the 95% CL in the ($\tilde{t}_1,\tilde{\chi}^{0}_{1}$)mass plane for the decay channel $\tilde{t}_1 \to c +  \tilde{\chi}^{0}_{1}$ ($\mathcal{B}=100\%$)
+#: data_file: contour_g_obs_p1_tt_directcc.yaml
+#: Limit,Observed
+#: SQRT(S) [TeV],13
+#: LUMINOSITY [fb$^{-1}$],139
+$m_{\tilde{t}_{1}}$ [GeV],$m_{\tilde{\chi}^{0}_{1}}$ [GeV]
+357.62,277.62
+360.13,304.05
+363.94,313.94
+400.0,367.81
+405.88,378.82
+408.2,383.28
+420.15,395.82
+448.68,429.03
+450.0,430.46
+462.5,444.75
+478.05,463.76
+500.0,487.03
+505.6,493.78
+511.96,501.85
+550.0,542.74
+550.39,543.05
+550.74,543.54
+551.99,544.99
+300.0,295.0
+
