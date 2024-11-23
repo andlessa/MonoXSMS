@@ -81,7 +81,16 @@ cc      to use this code you must set                                           
 cc                 dynamical_scale_choice = 0                                    cc
 cc      in the run_card (run_card.dat)                                           cc
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-         rscale = user_dynamical_scale(P)
+c         Ht = sqrt(mxx^2 + ptj^2) + ptj
+c         Set the renormalization scale to Ht/2
+          write(*,*) 'Custom renormalization scale is being used.'
+          rscale = 0d0
+          do i=3,nexternal
+c             Calcula Ht = sqrt(mxx^2 + ptj^2) + ptj
+            rscale = rscale + dsqrt(max(0d0,(P(0,i)+P(3,i))*(P(0,i)-P(3,i)))) + pt(P(0,i))
+          enddo
+          rscale = rscale / 2d0
+          write(*,*) 'Custom scale rscale:', rscale
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 cc      USER-DEFINED SCALE: END OF USER CODE                                     cc
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
