@@ -514,6 +514,54 @@ WH = Parameter(name = 'WH',
                lhablock = 'DECAY',
                lhacode = [ 25 ])
 
+WXs = Parameter(name = 'WXs',
+                nature = 'external',
+                type = 'real',
+                value = 0.00001,
+                texname = '\\text{WXs}',
+                lhablock = 'DECAY',
+                lhacode = [ 51 ])
+
+WXm = Parameter(name = 'WXm',
+                nature = 'external',
+                type = 'real',
+                value = 0.00001,
+                texname = '\\text{WXm}',
+                lhablock = 'DECAY',
+                lhacode = [ 52 ])
+
+WXd = Parameter(name = 'WXd',
+                nature = 'external',
+                type = 'real',
+                value = 0.00001,
+                texname = '\\text{WXd}',
+                lhablock = 'DECAY',
+                lhacode = [ 57 ])
+
+WXc = Parameter(name = 'WXc',
+                nature = 'external',
+                type = 'real',
+                value = 0.00001,
+                texname = '\\text{WXc}',
+                lhablock = 'DECAY',
+                lhacode = [ 56 ])
+
+WXv = Parameter(name = 'WXv',
+                nature = 'external',
+                type = 'real',
+                value = 0.00001,
+                texname = '\\text{WXv}',
+                lhablock = 'DECAY',
+                lhacode = [ 53 ])
+
+WXw = Parameter(name = 'WXw',
+                nature = 'external',
+                type = 'real',
+                value = 0.00001,
+                texname = '\\text{WXw}',
+                lhablock = 'DECAY',
+                lhacode = [ 58 ])
+
 WYS3Qu1 = Parameter(name = 'WYS3Qu1',
                     nature = 'external',
                     type = 'real',
