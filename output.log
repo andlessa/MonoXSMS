@@ -1,0 +1,151 @@
+nohup: ignoring input
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 12/09/2024 04:20:43 PM
+INFO in runScanMG5.main(): Running in series with a single process at 12/09/2024 04:20:43 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_43yz434_.txt at 12/09/2024 04:20:43 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 355 in 2.32 min at 12/09/2024 04:23:03 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_w7vc6pcv.txt at 12/09/2024 04:23:03 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 356 in 2.45 min at 12/09/2024 04:25:30 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_j17m_idn.txt at 12/09/2024 04:25:30 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 357 in 2.37 min at 12/09/2024 04:27:52 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_c31yappe.txt at 12/09/2024 04:27:52 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ltej5b0a.txt at 12/09/2024 04:30:23 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 358 in 2.51 min at 12/09/2024 04:30:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_hxocnjr9.txt at 12/09/2024 04:32:46 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 359 in 2.39 min at 12/09/2024 04:32:46 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 360 in 2.56 min at 12/09/2024 04:35:19 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_3tyz6mue.txt at 12/09/2024 04:35:19 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 361 in 2.35 min at 12/09/2024 04:37:41 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_all_kdqp.txt at 12/09/2024 04:37:41 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 362 in 2.42 min at 12/09/2024 04:40:06 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands__tt8ijcu.txt at 12/09/2024 04:40:06 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 363 in 2.46 min at 12/09/2024 04:42:34 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_objavv1c.txt at 12/09/2024 04:42:34 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_pyccfcs5.txt at 12/09/2024 04:44:59 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 364 in 2.43 min at 12/09/2024 04:44:59 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_doolc_e5.txt at 12/09/2024 04:47:55 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 365 in 2.92 min at 12/09/2024 04:47:55 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 366 in 2.44 min at 12/09/2024 04:50:21 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ae5b1iq4.txt at 12/09/2024 04:50:21 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 367 in 2.45 min at 12/09/2024 04:52:49 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_dkb3yery.txt at 12/09/2024 04:52:49 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 368 in 2.35 min at 12/09/2024 04:55:10 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ze625_wf.txt at 12/09/2024 04:55:10 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 369 in 2.51 min at 12/09/2024 04:57:41 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_u6btxqls.txt at 12/09/2024 04:57:41 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 370 in 2.43 min at 12/09/2024 05:00:06 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_3702myo3.txt at 12/09/2024 05:00:06 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 371 in 2.32 min at 12/09/2024 05:02:25 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_dzzg4563.txt at 12/09/2024 05:02:25 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 372 in 2.31 min at 12/09/2024 05:04:44 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_1w6o3lxp.txt at 12/09/2024 05:04:44 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 373 in 2.32 min at 12/09/2024 05:07:03 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_6sf016j8.txt at 12/09/2024 05:07:03 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 374 in 2.38 min at 12/09/2024 05:09:25 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_63b_f_02.txt at 12/09/2024 05:09:25 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 375 in 2.52 min at 12/09/2024 05:11:56 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_vds5boh_.txt at 12/09/2024 05:11:56 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 376 in 2.52 min at 12/09/2024 05:14:28 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_i3fqbyp9.txt at 12/09/2024 05:14:28 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 377 in 2.59 min at 12/09/2024 05:17:03 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_mgdqa76r.txt at 12/09/2024 05:17:03 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 378 in 2.26 min at 12/09/2024 05:19:19 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_5bi7xtxm.txt at 12/09/2024 05:19:19 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 379 in 2.40 min at 12/09/2024 05:21:43 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands__o0jxjuk.txt at 12/09/2024 05:21:43 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_uy72dzi2.txt at 12/09/2024 05:24:09 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 380 in 2.44 min at 12/09/2024 05:24:09 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 381 in 2.45 min at 12/09/2024 05:26:36 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_5vgp_nnw.txt at 12/09/2024 05:26:36 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_1994dfdq.txt at 12/09/2024 05:29:01 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 382 in 2.42 min at 12/09/2024 05:29:01 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 383 in 2.52 min at 12/09/2024 05:31:32 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ahfzthw2.txt at 12/09/2024 05:31:32 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 384 in 2.25 min at 12/09/2024 05:33:47 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_52f2wsua.txt at 12/09/2024 05:33:47 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_kln73ik3.txt at 12/09/2024 05:36:17 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 385 in 2.50 min at 12/09/2024 05:36:17 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 386 in 2.53 min at 12/09/2024 05:38:49 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_x9ab2kw0.txt at 12/09/2024 05:38:49 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 387 in 6.51 min at 12/09/2024 05:45:20 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ymgtoys4.txt at 12/09/2024 05:45:20 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 388 in 2.49 min at 12/09/2024 05:47:49 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_s534bmgb.txt at 12/09/2024 05:47:49 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_wuj4an8w.txt at 12/09/2024 05:54:29 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 389 in 6.67 min at 12/09/2024 05:54:29 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 390 in 6.04 min at 12/09/2024 06:00:32 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_7da6zjkt.txt at 12/09/2024 06:00:32 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_beo1lf3r.txt at 12/09/2024 06:06:28 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 391 in 5.95 min at 12/09/2024 06:06:28 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 392 in 5.91 min at 12/09/2024 06:12:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_3gptdr5e.txt at 12/09/2024 06:12:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_b0banlbs.txt at 12/09/2024 06:18:34 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 393 in 6.17 min at 12/09/2024 06:18:34 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 394 in 6.01 min at 12/09/2024 06:24:34 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_fv2kcd4a.txt at 12/09/2024 06:24:34 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 395 in 6.06 min at 12/09/2024 06:30:38 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_e7ruheiu.txt at 12/09/2024 06:30:38 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 396 in 6.46 min at 12/09/2024 06:37:06 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_js4d_7l2.txt at 12/09/2024 06:37:06 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 397 in 6.28 min at 12/09/2024 06:43:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ho_iu1ee.txt at 12/09/2024 06:43:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_0kdtrznm.txt at 12/09/2024 06:49:41 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 398 in 6.30 min at 12/09/2024 06:49:41 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 399 in 6.18 min at 12/09/2024 06:55:52 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_1ejj4m3_.txt at 12/09/2024 06:55:52 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 400 in 5.98 min at 12/09/2024 07:01:51 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_msdfhkp0.txt at 12/09/2024 07:01:51 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 401 in 5.99 min at 12/09/2024 07:07:50 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_j7b_stqk.txt at 12/09/2024 07:07:50 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_jumnk6y0.txt at 12/09/2024 07:14:08 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 402 in 6.30 min at 12/09/2024 07:14:08 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 403 in 6.35 min at 12/09/2024 07:20:29 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_kngtoxy8.txt at 12/09/2024 07:20:29 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_2mkn156_.txt at 12/09/2024 07:26:38 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 404 in 6.14 min at 12/09/2024 07:26:38 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 405 in 6.09 min at 12/09/2024 07:32:43 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_x65oa4am.txt at 12/09/2024 07:32:43 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 406 in 6.08 min at 12/09/2024 07:38:48 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_410uytbf.txt at 12/09/2024 07:38:48 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_1hg8m2_j.txt at 12/09/2024 07:44:59 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 407 in 6.18 min at 12/09/2024 07:44:59 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 408 in 6.07 min at 12/09/2024 07:51:03 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_cfp27dr9.txt at 12/09/2024 07:51:03 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 409 in 6.30 min at 12/09/2024 07:57:21 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_5m7lx3e7.txt at 12/09/2024 07:57:21 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 410 in 6.51 min at 12/09/2024 08:03:52 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_gsqts0x8.txt at 12/09/2024 08:03:52 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 411 in 6.50 min at 12/09/2024 08:10:22 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_2uulcu4s.txt at 12/09/2024 08:10:22 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 412 in 6.36 min at 12/09/2024 08:16:44 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_0vmqascz.txt at 12/09/2024 08:16:44 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 413 in 6.49 min at 12/09/2024 08:23:14 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_3z7f78qb.txt at 12/09/2024 08:23:14 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 414 in 6.22 min at 12/09/2024 08:29:27 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_fpkf2eb_.txt at 12/09/2024 08:29:27 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 415 in 6.05 min at 12/09/2024 08:35:30 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_88cjgpru.txt at 12/09/2024 08:35:30 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 416 in 6.05 min at 12/09/2024 08:41:33 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_pz_rceii.txt at 12/09/2024 08:41:33 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_yssagmba.txt at 12/09/2024 08:48:05 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 417 in 6.54 min at 12/09/2024 08:48:05 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_rszagq3o.txt at 12/09/2024 08:54:42 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 418 in 6.62 min at 12/09/2024 08:54:42 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 419 in 6.69 min at 12/09/2024 09:01:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_juizuoqn.txt at 12/09/2024 09:01:23 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 420 in 6.23 min at 12/09/2024 09:07:37 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_f8ailkxh.txt at 12/09/2024 09:07:37 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 421 in 6.09 min at 12/09/2024 09:13:43 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_n6p6q_xp.txt at 12/09/2024 09:13:43 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_vpcqcbrz.txt at 12/09/2024 09:19:39 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 422 in 5.93 min at 12/09/2024 09:19:39 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 423 in 6.32 min at 12/09/2024 09:25:58 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_v492rm93.txt at 12/09/2024 09:25:58 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 424 in 5.94 min at 12/09/2024 09:31:54 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_eb0mibvx.txt at 12/09/2024 09:31:54 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 425 in 5.86 min at 12/09/2024 09:37:46 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/yoxara/MonoXSMS/DMSimp_vector_all/MG5_commands_ve894iih.txt at 12/09/2024 09:37:46 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 426 in 2.86 min at 12/09/2024 09:40:38 PM
+INFO in runScanMG5.main(): Finished all runs (72) at 2024-12-09 16:20 at 12/09/2024 09:40:38 PM
+
+
+Done in 319.90 min
