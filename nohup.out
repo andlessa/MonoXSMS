@@ -1,0 +1,552 @@
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 05/02/2023 09:24:17 PM
+INFO in runScanMG5.main(): Running in series with a single process at 05/02/2023 09:24:17 PM
+INFO in runScanMG5.main(): Folder /home/camila/MonoXSMS/DMSimp_vector_1j_test not found. Running MG5 to create folder. at 05/02/2023 09:24:17 PM
+INFO in runScanMG5.generateProcess(): Generating process using /home/camila/MonoXSMS/Cards/DMSimp_spin1/proc_card_1j.dat at 05/02/2023 09:24:17 PM
+INFO in runScanMG5.generateProcess(): Finished process generation at 05/02/2023 09:24:31 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_7ap4ff6u.txt at 05/02/2023 09:24:31 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_gvyv9fnp.txt at 05/02/2023 09:54:07 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 1 in 29.61 min at 05/02/2023 09:54:08 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 2 in 29.63 min at 05/02/2023 10:23:45 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_2p8wwy77.txt at 05/02/2023 10:23:45 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_1nj5mvr6.txt at 05/02/2023 10:54:34 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 3 in 30.81 min at 05/02/2023 10:54:34 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_ep1mwmpd.txt at 05/02/2023 11:21:49 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 4 in 27.25 min at 05/02/2023 11:21:49 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_t5qsi0d6.txt at 05/02/2023 11:48:21 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 5 in 26.53 min at 05/02/2023 11:48:21 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 6 in 27.40 min at 05/03/2023 12:15:45 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_mdocuw57.txt at 05/03/2023 12:15:45 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 7 in 27.53 min at 05/03/2023 12:43:17 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_v_7rk1cn.txt at 05/03/2023 12:43:17 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 8 in 57.33 min at 05/03/2023 01:40:37 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_vector_1j_test/MG5_commands_b5ekgt4j.txt at 05/03/2023 01:40:37 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 9 in 53.48 min at 05/03/2023 02:34:06 AM
+INFO in runScanMG5.main(): Finished all runs (9) at 2023-05-02 21:24 at 05/03/2023 02:34:06 AM
+
+
+Done in 309.83 min
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 05/03/2023 07:21:22 AM
+INFO in runScanMG5.main(): Running in series with a single process at 05/03/2023 07:21:22 AM
+INFO in runScanMG5.main(): Folder /home/camila/MonoXSMS/DMSimp_axial_1j_test not found. Running MG5 to create folder. at 05/03/2023 07:21:22 AM
+INFO in runScanMG5.generateProcess(): Generating process using /home/camila/MonoXSMS/Cards/DMSimp_spin1/proc_card_1j.dat at 05/03/2023 07:21:22 AM
+INFO in runScanMG5.generateProcess(): Finished process generation at 05/03/2023 07:21:37 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_w3qw4n8m.txt at 05/03/2023 07:21:37 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 1 in 29.44 min at 05/03/2023 07:51:04 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_8fvddb5p.txt at 05/03/2023 07:51:04 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 2 in 29.14 min at 05/03/2023 08:20:12 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_smo2z_vk.txt at 05/03/2023 08:20:12 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 3 in 26.01 min at 05/03/2023 08:46:13 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_j_icny_e.txt at 05/03/2023 08:46:13 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 4 in 26.81 min at 05/03/2023 09:13:02 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_3bwatlle.txt at 05/03/2023 09:13:02 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 5 in 76.99 min at 05/03/2023 10:30:01 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_gr4cpgge.txt at 05/03/2023 10:30:01 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 6 in 27.87 min at 05/03/2023 10:57:53 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_v84etzgn.txt at 05/03/2023 10:57:53 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 7 in 27.12 min at 05/03/2023 11:25:01 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_ylmkzckt.txt at 05/03/2023 11:25:01 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 8 in 62.59 min at 05/03/2023 12:27:36 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_1j_test/MG5_commands_j5ocm60t.txt at 05/03/2023 12:27:36 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 9 in 62.85 min at 05/03/2023 01:30:28 PM
+INFO in runScanMG5.main(): Finished all runs (9) at 2023-05-03 07:21 at 05/03/2023 01:30:28 PM
+
+
+Done in 369.10 min
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 05/03/2023 10:25:44 PM
+INFO in runScanMG5.main(): Running in series with a single process at 05/03/2023 10:25:44 PM
+INFO in runScanMG5.main(): Folder /home/camila/MonoXSMS/DMSimp_axial_0j_test not found. Running MG5 to create folder. at 05/03/2023 10:25:44 PM
+INFO in runScanMG5.generateProcess(): Generating process using /home/camila/MonoXSMS/Cards/DMSimp_spin1/proc_card_0j.dat at 05/03/2023 10:25:44 PM
+INFO in runScanMG5.generateProcess(): Finished process generation at 05/03/2023 10:25:48 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_31o9j_3w.txt at 05/03/2023 10:25:48 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_jl9oigxq.txt at 05/03/2023 10:41:31 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 1 in 15.71 min at 05/03/2023 10:41:31 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 2 in 20.16 min at 05/03/2023 11:01:41 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_j3hclsfo.txt at 05/03/2023 11:01:41 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 3 in 15.56 min at 05/03/2023 11:17:14 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_cpk0927v.txt at 05/03/2023 11:17:14 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 4 in 17.72 min at 05/03/2023 11:34:58 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_riof1r_3.txt at 05/03/2023 11:34:58 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 5 in 19.25 min at 05/03/2023 11:54:13 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_ujfi91z0.txt at 05/03/2023 11:54:13 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 6 in 21.12 min at 05/04/2023 12:15:20 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_ikt3no_7.txt at 05/04/2023 12:15:20 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 7 in 15.52 min at 05/04/2023 12:30:51 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_zhbo875i.txt at 05/04/2023 12:30:51 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 8 in 16.67 min at 05/04/2023 12:47:31 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_axial_0j_test/MG5_commands_t265casi.txt at 05/04/2023 12:47:31 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 9 in 16.90 min at 05/04/2023 01:04:25 AM
+INFO in runScanMG5.main(): Finished all runs (9) at 2023-05-03 22:25 at 05/04/2023 01:04:26 AM
+
+
+Done in 158.70 min
+python: can't open file '/home/camila/MonoXSMS/notebook': [Errno 2] No such file or directory
+[I 13:37:15.024 NotebookApp] [jupyter_nbextensions_configurator] enabled 0.6.1
+[W 2023-07-06 13:37:15.618 LabApp] 'extra_static_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[W 2023-07-06 13:37:15.618 LabApp] 'extra_static_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose.
+[I 2023-07-06 13:37:15.634 LabApp] JupyterLab extension loaded from /home/camila/.local/lib/python3.10/site-packages/jupyterlab
+[I 2023-07-06 13:37:15.634 LabApp] JupyterLab application directory is /home/camila/.local/share/jupyter/lab
+[I 13:37:15.643 NotebookApp] Serving notebooks from local directory: /home/camila/MonoXSMS
+[I 13:37:15.643 NotebookApp] Jupyter Notebook 6.5.2 is running at:
+[I 13:37:15.643 NotebookApp] http://localhost:8888/?token=20fcf4e28986f62d90e4b1296713e78d657491ed3ea64e27
+[I 13:37:15.643 NotebookApp]  or http://127.0.0.1:8888/?token=20fcf4e28986f62d90e4b1296713e78d657491ed3ea64e27
+[I 13:37:15.643 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:37:16.050 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/camila/.local/share/jupyter/runtime/nbserver-117118-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=20fcf4e28986f62d90e4b1296713e78d657491ed3ea64e27
+     or http://127.0.0.1:8888/?token=20fcf4e28986f62d90e4b1296713e78d657491ed3ea64e27
+[W 13:37:51.759 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 47.810000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 13:37:51.761 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 49.650000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[I 13:37:52.597 NotebookApp] Kernel started: eee3afbe-ae7d-4c77-9db8-95a3372b0635, name: python3
+[W 13:37:52.705 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.440000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[I 13:39:52.441 NotebookApp] Saving file at /notebooks/PlotPT-MediatorLHE.ipynb
+[I 13:47:20.136 NotebookApp] Kernel started: ba063cfd-9a41-40cf-bb7b-27181c6fe9af, name: python3
+[W 13:47:20.328 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 80.280000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin1.ipynb
+[W 13:47:20.333 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 3.310000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin1.ipynb
+[W 13:47:21.583 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.380000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin1.ipynb
+[I 14:29:20.199 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1.ipynb
+/home/camila/.local/lib/python3.10/site-packages/nbformat/__init__.py:128: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+/home/camila/.local/lib/python3.10/site-packages/notebook/services/contents/manager.py:353: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate_nb(model['content'])
+[W 14:44:38.753 NotebookApp] Notebook notebooks/checkMET.ipynb is not trusted
+[W 14:44:38.769 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 4.350000ms referer=http://localhost:8888/notebooks/notebooks/checkMET.ipynb
+[W 14:44:38.770 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 4.740000ms referer=http://localhost:8888/notebooks/notebooks/checkMET.ipynb
+[I 14:44:39.536 NotebookApp] Kernel started: 45a2e7cc-324c-4c4e-985a-e02416c699aa, name: python3
+[W 14:44:39.664 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.160000ms referer=http://localhost:8888/notebooks/notebooks/checkMET.ipynb
+[I 14:45:20.421 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1.ipynb
+[I 14:46:39.568 NotebookApp] Saving file at /notebooks/checkMET.ipynb
+[W 14:46:39.569 NotebookApp] Notebook notebooks/checkMET.ipynb is not trusted
+[W 14:47:06.884 NotebookApp] Notebook notebooks/checkEvent.ipynb is not trusted
+[W 14:47:07.444 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 4.830000ms referer=http://localhost:8888/notebooks/notebooks/checkEvent.ipynb
+[W 14:47:07.445 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 5.890000ms referer=http://localhost:8888/notebooks/notebooks/checkEvent.ipynb
+[I 14:47:07.491 NotebookApp] Kernel started: d3e47f10-8886-42e6-91f4-40dbda08be2d, name: python3
+[W 14:47:07.650 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.390000ms referer=http://localhost:8888/notebooks/notebooks/checkEvent.ipynb
+[I 14:47:37.534 NotebookApp] Starting buffering for d3e47f10-8886-42e6-91f4-40dbda08be2d:4ae69e82df0a4ea283b770411988cb28
+[W 14:47:51.206 NotebookApp] Notebook notebooks/cms_exo_20_004-CompSpin1.ipynb is not trusted
+[W 14:47:51.228 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 2.220000ms referer=http://localhost:8888/notebooks/notebooks/cms_exo_20_004-CompSpin1.ipynb
+[W 14:47:51.236 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 3.330000ms referer=http://localhost:8888/notebooks/notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 14:47:52.056 NotebookApp] Kernel started: 81753515-c61f-49d2-9af2-ee929f0262bb, name: python3
+[W 14:47:52.665 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.280000ms referer=http://localhost:8888/notebooks/notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 14:49:52.068 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[W 14:49:52.068 NotebookApp] Notebook notebooks/cms_exo_20_004-CompSpin1.ipynb is not trusted
+[I 14:51:52.066 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[W 14:51:52.067 NotebookApp] Notebook notebooks/cms_exo_20_004-CompSpin1.ipynb is not trusted
+[I 14:53:52.067 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 14:55:52.077 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 14:56:19.617 NotebookApp] Creating new notebook in /notebooks
+[W 14:56:22.501 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 4.270000ms referer=http://localhost:8888/notebooks/notebooks/Untitled.ipynb?kernel_name=python3
+[W 14:56:22.503 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 5.100000ms referer=http://localhost:8888/notebooks/notebooks/Untitled.ipynb?kernel_name=python3
+[I 14:56:22.674 NotebookApp] Kernel started: dc73115a-7b99-4a7a-922c-ed830566f7be, name: python3
+[W 14:56:23.411 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.380000ms referer=http://localhost:8888/notebooks/notebooks/Untitled.ipynb?kernel_name=python3
+[I 14:56:46.890 NotebookApp] Starting buffering for 81753515-c61f-49d2-9af2-ee929f0262bb:24010bc8e77d41d48fa3908f6583cba2
+[I 14:56:49.460 NotebookApp] Kernel restarted: 81753515-c61f-49d2-9af2-ee929f0262bb
+[I 14:56:49.481 NotebookApp] Restoring connection for 81753515-c61f-49d2-9af2-ee929f0262bb:24010bc8e77d41d48fa3908f6583cba2
+[I 14:56:49.482 NotebookApp] Replaying 1 buffered messages
+[E 14:56:52.011 NotebookApp] Exception restarting kernel
+    Traceback (most recent call last):
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/manager.py", line 85, in wrapper
+        self._ready.set_result(None)
+    asyncio.exceptions.InvalidStateError: invalid state
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/home/camila/.local/lib/python3.10/site-packages/notebook/services/kernels/handlers.py", line 89, in post
+        yield maybe_future(km.restart_kernel(kernel_id))
+      File "/home/camila/.local/lib/python3.10/site-packages/tornado/gen.py", line 769, in run
+        value = future.result()
+      File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+        raise self._exception.with_traceback(self._exception_tb)
+      File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+        result = coro.send(None)
+      File "/home/camila/.local/lib/python3.10/site-packages/notebook/services/kernels/kernelmanager.py", line 314, in restart_kernel
+        await maybe_future(self.pinned_superclass.restart_kernel(self, kernel_id, now=now))
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/utils.py", line 30, in wrapped
+        raise e
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/utils.py", line 27, in wrapped
+        return loop.run_until_complete(future)
+      File "/home/camila/.local/lib/python3.10/site-packages/nest_asyncio.py", line 90, in run_until_complete
+        return f.result()
+      File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+        raise self._exception.with_traceback(self._exception_tb)
+      File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+        result = coro.send(None)
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/multikernelmanager.py", line 377, in _async_restart_kernel
+        out = await ensure_async(kernel.restart_kernel(now=now))
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/utils.py", line 30, in wrapped
+        raise e
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/utils.py", line 27, in wrapped
+        return loop.run_until_complete(future)
+      File "/home/camila/.local/lib/python3.10/site-packages/nest_asyncio.py", line 90, in run_until_complete
+        return f.result()
+      File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+        raise self._exception.with_traceback(self._exception_tb)
+      File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+        result = coro.send(None)
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/manager.py", line 541, in _async_restart_kernel
+        await ensure_async(self.shutdown_kernel(now=now, restart=True))
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/utils.py", line 30, in wrapped
+        raise e
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/utils.py", line 27, in wrapped
+        return loop.run_until_complete(future)
+      File "/home/camila/.local/lib/python3.10/site-packages/nest_asyncio.py", line 90, in run_until_complete
+        return f.result()
+      File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+        raise self._exception.with_traceback(self._exception_tb)
+      File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+        result = coro.send(None)
+      File "/home/camila/.local/lib/python3.10/site-packages/jupyter_client/manager.py", line 88, in wrapper
+        self._ready.set_exception(e)
+    asyncio.exceptions.InvalidStateError: invalid state
+[E 14:56:52.092 NotebookApp] {
+      "Host": "localhost:8888",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "Referer": "http://localhost:8888/notebooks/notebooks/cms_exo_20_004-CompSpin1.ipynb",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+    }
+[E 14:56:52.092 NotebookApp] 500 POST /api/kernels/81753515-c61f-49d2-9af2-ee929f0262bb/restart (127.0.0.1) 5198.460000ms referer=http://localhost:8888/notebooks/notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 14:56:52.101 NotebookApp] Starting buffering for 81753515-c61f-49d2-9af2-ee929f0262bb:24010bc8e77d41d48fa3908f6583cba2
+[I 14:56:52.107 NotebookApp] Kernel shutdown: 81753515-c61f-49d2-9af2-ee929f0262bb
+[I 14:56:52.177 NotebookApp] Kernel started: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1, name: python3
+[I 14:57:20.176 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1.ipynb
+[I 14:57:44.122 NotebookApp] Saving file at /notebooks/PlotPT-MediatorLHE.ipynb
+[I 14:57:45.564 NotebookApp] Saving file at /notebooks/PlotPT-MediatorLHE.ipynb
+[I 14:57:49.360 NotebookApp] Starting buffering for eee3afbe-ae7d-4c77-9db8-95a3372b0635:b2b173cf96d14c878facce93c02fd5a9
+[I 14:57:52.467 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 14:58:23.438 NotebookApp] Saving file at /notebooks/Untitled.ipynb
+[I 15:05:52.091 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:07:52.067 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:09:17.355 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 15:09:18.089 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 15:09:18.106 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 15:09:19.348 NotebookApp] Replaying 3 buffered messages
+[I 15:09:52.072 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:11:52.120 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:13:52.068 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:19:52.094 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:21:52.064 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:23:52.064 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:25:52.068 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:27:52.073 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:29:52.082 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:31:52.072 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:33:52.072 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[W 15:35:23.332 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 6.870000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 15:35:23.334 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 9.040000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 15:35:24.080 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.100000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[I 15:35:52.075 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:37:52.072 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:39:52.095 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:49:52.065 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:51:52.061 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:53:52.068 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:55:52.064 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:57:52.069 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 15:59:52.428 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 16:01:52.084 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 16:03:52.071 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 16:05:23.214 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 16:05:25.844 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 16:05:25.857 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 16:05:25.859 NotebookApp] Replaying 1 buffered messages
+[I 16:05:43.204 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 16:05:43.749 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 16:05:43.761 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 16:05:45.038 NotebookApp] Replaying 3 buffered messages
+[I 16:05:52.070 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 16:07:35.644 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 16:07:38.283 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 16:07:38.296 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 16:07:38.297 NotebookApp] Replaying 1 buffered messages
+[I 16:07:52.071 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 16:11:53.209 NotebookApp] Starting buffering for dc73115a-7b99-4a7a-922c-ed830566f7be:8e022bf798cc44c38603d6ae9488f2ff
+[I 16:13:52.080 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 16:21:52.070 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 17:35:52.074 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 17:37:52.074 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 17:52:22.851 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:52:25.485 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 17:52:25.499 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:52:25.501 NotebookApp] Replaying 1 buffered messages
+[I 17:53:52.095 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 17:54:01.140 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:54:03.781 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 17:54:03.795 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:54:03.795 NotebookApp] Replaying 1 buffered messages
+[I 17:54:53.283 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:54:55.915 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 17:54:55.934 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:54:55.935 NotebookApp] Replaying 1 buffered messages
+[I 17:55:52.070 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 17:56:37.939 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:56:40.585 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 17:56:40.599 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:56:40.599 NotebookApp] Replaying 1 buffered messages
+[I 17:57:52.070 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 17:57:57.969 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:58:00.600 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 17:58:00.613 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 17:58:00.613 NotebookApp] Replaying 1 buffered messages
+[I 17:59:52.068 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 19:36:49.655 NotebookApp] Starting buffering for 45a2e7cc-324c-4c4e-985a-e02416c699aa:3bfe7c36c17848d585d552081874cbf9
+[I 19:48:32.972 NotebookApp] Starting buffering for eee3afbe-ae7d-4c77-9db8-95a3372b0635:49efb68c9b1b468389c56fcfa2058000
+[W 10:08:45.864 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 4.330000ms referer=http://localhost:8888/notebooks/notebooks/plotValidation-Pseudoscalar.ipynb
+[W 10:08:45.866 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 5.400000ms referer=http://localhost:8888/notebooks/notebooks/plotValidation-Pseudoscalar.ipynb
+[I 10:08:46.564 NotebookApp] Kernel started: 261705e8-f605-4e1f-b4c3-2d9facdc3c83, name: python3
+[W 10:08:46.675 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.160000ms referer=http://localhost:8888/notebooks/notebooks/plotValidation-Pseudoscalar.ipynb
+[I 10:10:46.561 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 10:12:47.412 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[W 10:25:14.598 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 10.320000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 10:25:14.893 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 302.980000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 10:25:15.878 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 6.490000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[I 10:25:52.628 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:27:52.432 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:29:52.099 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:31:52.098 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:33:52.081 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:35:52.118 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:37:52.083 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:39:52.073 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:43:52.088 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:45:52.090 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 10:59:52.105 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:01:52.095 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:03:52.083 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:17:02.176 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:17:04.845 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:17:04.857 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:17:04.860 NotebookApp] Replaying 1 buffered messages
+[I 11:17:52.068 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:19:52.095 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:19:54.977 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:19:57.621 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:19:57.636 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:19:57.636 NotebookApp] Replaying 1 buffered messages
+[I 11:21:52.102 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:22:30.519 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:22:33.147 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:22:33.157 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:22:33.157 NotebookApp] Replaying 1 buffered messages
+[I 11:23:52.094 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:24:58.077 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:25:00.709 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:25:00.721 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:25:00.722 NotebookApp] Replaying 1 buffered messages
+[I 11:25:52.090 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:25:59.291 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:26:01.945 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:26:01.957 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:26:01.957 NotebookApp] Replaying 1 buffered messages
+[I 11:26:45.568 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:26:48.207 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:26:48.221 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:26:48.222 NotebookApp] Replaying 1 buffered messages
+[I 11:27:52.113 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:28:21.129 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:28:23.765 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:28:23.791 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:28:23.791 NotebookApp] Replaying 1 buffered messages
+[I 11:29:52.084 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:37:16.707 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:37:19.349 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:37:19.362 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:37:19.362 NotebookApp] Replaying 1 buffered messages
+[I 11:37:52.154 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:38:32.936 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:38:35.567 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:38:35.578 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:38:35.579 NotebookApp] Replaying 1 buffered messages
+[I 11:39:52.116 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:44:15.228 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:44:17.882 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:44:17.898 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:44:17.898 NotebookApp] Replaying 1 buffered messages
+[I 11:45:52.201 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:46:21.372 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:46:24.010 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:46:24.023 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:46:24.025 NotebookApp] Replaying 1 buffered messages
+[I 11:46:56.766 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:46:59.401 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:46:59.429 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:46:59.429 NotebookApp] Replaying 1 buffered messages
+[I 11:47:45.493 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:47:48.124 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:47:48.152 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:47:48.154 NotebookApp] Replaying 1 buffered messages
+[I 11:47:52.112 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 11:48:32.810 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:48:35.447 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:48:35.474 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:48:35.475 NotebookApp] Replaying 1 buffered messages
+[I 11:49:22.047 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:49:24.682 NotebookApp] Kernel restarted: 7c391f45-b3b3-4210-b8a6-66d96edf9fd1
+[I 11:49:24.697 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:49:24.698 NotebookApp] Replaying 1 buffered messages
+[I 11:49:52.076 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 12:40:08.435 NotebookApp] Saving file at /notebooks/cms_exo_20_004-CompSpin1.ipynb
+[I 13:16:15.289 NotebookApp] Starting buffering for eee3afbe-ae7d-4c77-9db8-95a3372b0635:9145bee314634b919b71047bedaaa711
+[I 14:00:47.430 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[W 14:12:33.555 NotebookApp] Notebook notebooks/checkMET.ipynb is not trusted
+[W 14:12:33.735 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 2.270000ms referer=http://localhost:8888/notebooks/notebooks/checkMET.ipynb
+[W 14:12:33.739 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 2.240000ms referer=http://localhost:8888/notebooks/notebooks/checkMET.ipynb
+[W 14:12:34.340 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 3.160000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 14:12:34.344 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 1.770000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[W 14:12:34.421 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.340000ms referer=http://localhost:8888/notebooks/notebooks/checkMET.ipynb
+[W 14:12:35.406 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 1.090000ms referer=http://localhost:8888/notebooks/notebooks/PlotPT-MediatorLHE.ipynb
+[I 14:14:47.591 NotebookApp] Copying notebooks/map-ratio-mu-spin1.ipynb to /notebooks
+[W 14:15:33.831 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 4.760000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin1-Copy1.ipynb
+[W 14:15:33.833 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 5.560000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin1-Copy1.ipynb
+[I 14:15:34.404 NotebookApp] Kernel started: 753abb6f-e206-4452-b227-fe0814521bdb, name: python3
+[W 14:15:34.509 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.290000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin1-Copy1.ipynb
+[I 14:17:34.401 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1-Copy1.ipynb
+[W 14:18:35.017 NotebookApp] 404 GET /nbextensions/ExecuteTime.js?v=20230706133713 (127.0.0.1) 2.680000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin0.ipynb
+[W 14:18:35.020 NotebookApp] 404 GET /nbextensions/execute_time.js?v=20230706133713 (127.0.0.1) 1.820000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin0.ipynb
+[I 14:18:35.326 NotebookApp] Kernel started: fd5c514b-4429-4ebe-8a9b-9fb67d824664, name: python3
+[W 14:18:35.425 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20230706133713 (127.0.0.1) 2.160000ms referer=http://localhost:8888/notebooks/notebooks/map-ratio-mu-spin0.ipynb
+[I 14:19:34.418 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1-Copy1.ipynb
+[I 14:28:48.081 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 14:30:47.703 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 14:31:22.838 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1.ipynb
+[I 14:33:20.183 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1.ipynb
+[I 14:36:46.573 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 14:37:20.492 NotebookApp] Saving file at /notebooks/map-ratio-mu-spin1.ipynb
+[I 14:38:46.574 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 14:40:46.564 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 14:41:22.153 NotebookApp] Starting buffering for 261705e8-f605-4e1f-b4c3-2d9facdc3c83:237c5e27575b4f508400ba76c5a8d14b
+[I 14:41:24.822 NotebookApp] Kernel restarted: 261705e8-f605-4e1f-b4c3-2d9facdc3c83
+[I 14:41:24.896 NotebookApp] Restoring connection for 261705e8-f605-4e1f-b4c3-2d9facdc3c83:237c5e27575b4f508400ba76c5a8d14b
+[I 14:41:24.897 NotebookApp] Replaying 1 buffered messages
+[I 14:42:46.690 NotebookApp] Saving file at /notebooks/plotValidation-Pseudoscalar.ipynb
+[I 15:12:35.958 NotebookApp] Starting buffering for fd5c514b-4429-4ebe-8a9b-9fb67d824664:209ea4ac9b024768b448ba40e3455108
+[I 15:12:37.308 NotebookApp] Starting buffering for 753abb6f-e206-4452-b227-fe0814521bdb:89af35fae46c42f2a4766c9e67357b80
+[I 15:12:49.711 NotebookApp] Starting buffering for 45a2e7cc-324c-4c4e-985a-e02416c699aa:82645e294f3740a0babfe37a625208e4
+[I 18:13:57.115 NotebookApp] Starting buffering for 261705e8-f605-4e1f-b4c3-2d9facdc3c83:237c5e27575b4f508400ba76c5a8d14b
+[I 18:13:57.647 NotebookApp] Starting buffering for eee3afbe-ae7d-4c77-9db8-95a3372b0635:a219f235b1bd45549ccaf0772061dfae
+[I 18:13:57.648 NotebookApp] Starting buffering for ba063cfd-9a41-40cf-bb7b-27181c6fe9af:3d8d01478a8848918dfafcd4e9c36840
+[I 18:13:57.982 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 18:13:58.624 NotebookApp] Restoring connection for eee3afbe-ae7d-4c77-9db8-95a3372b0635:a219f235b1bd45549ccaf0772061dfae
+[I 18:13:58.760 NotebookApp] Restoring connection for 261705e8-f605-4e1f-b4c3-2d9facdc3c83:237c5e27575b4f508400ba76c5a8d14b
+[I 18:14:00.171 NotebookApp] Restoring connection for ba063cfd-9a41-40cf-bb7b-27181c6fe9af:3d8d01478a8848918dfafcd4e9c36840
+[I 18:14:00.778 NotebookApp] Restoring connection for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:24:45.011 NotebookApp] Starting buffering for 7c391f45-b3b3-4210-b8a6-66d96edf9fd1:24010bc8e77d41d48fa3908f6583cba2
+[I 11:24:45.015 NotebookApp] Starting buffering for ba063cfd-9a41-40cf-bb7b-27181c6fe9af:3d8d01478a8848918dfafcd4e9c36840
+[I 11:24:45.017 NotebookApp] Starting buffering for 261705e8-f605-4e1f-b4c3-2d9facdc3c83:237c5e27575b4f508400ba76c5a8d14b
+[I 11:24:45.024 NotebookApp] Starting buffering for eee3afbe-ae7d-4c77-9db8-95a3372b0635:a219f235b1bd45549ccaf0772061dfae
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 02/04/2024 09:04:45 PM
+/home/camila/mg5amcnlo/Delphes/external
+
+INFO in runScanMG5.main(): Running in series with a single process at 02/04/2024 09:04:46 PM
+INFO in runScanMG5.main(): Folder /home/camila/MonoXSMS/DMSimp_scalar_1j_eff not found. Running MG5 to create folder. at 02/04/2024 09:04:46 PM
+INFO in runScanMG5.generateProcess(): Generating process using /home/camila/MonoXSMS/Cards/DMSimp_spin0/proc_card_1j.dat at 02/04/2024 09:04:46 PM
+INFO in runScanMG5.generateProcess(): Finished process generation at 02/04/2024 09:05:07 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_ieu21njt.txt at 02/04/2024 09:05:07 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 1 in 440.53 min at 02/05/2024 04:25:39 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands__9k_k75j.txt at 02/05/2024 04:25:40 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 2 in 71.02 min at 02/05/2024 05:36:41 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_qs7m9nhf.txt at 02/05/2024 05:36:41 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 3 in 68.54 min at 02/05/2024 06:45:13 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_kagasrsq.txt at 02/05/2024 06:45:13 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 4 in 199.94 min at 02/05/2024 10:05:10 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_8v3bo1th.txt at 02/05/2024 10:05:10 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 5 in 51.29 min at 02/05/2024 10:56:27 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_sosj_q8p.txt at 02/05/2024 10:56:27 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 6 in 190.96 min at 02/05/2024 02:07:24 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_r8ei0zyp.txt at 02/05/2024 02:07:25 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 7 in 44.62 min at 02/05/2024 02:52:02 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_a8kkbtdj.txt at 02/05/2024 02:52:02 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 8 in 50.47 min at 02/05/2024 03:42:30 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_kvhcdmb2.txt at 02/05/2024 03:42:30 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 9 in 49.75 min at 02/05/2024 04:32:15 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_6f4bvzng.txt at 02/05/2024 04:32:15 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 10 in 62.31 min at 02/05/2024 05:34:34 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_hrcqs_qu.txt at 02/05/2024 05:34:34 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 11 in 56.43 min at 02/05/2024 06:31:00 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_i0iqnie_.txt at 02/05/2024 06:31:00 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 12 in 73.89 min at 02/05/2024 07:44:53 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_bzr8kad6.txt at 02/05/2024 07:44:53 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 13 in 83.38 min at 02/05/2024 09:08:16 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_3dh114s6.txt at 02/05/2024 09:08:16 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 14 in 75.11 min at 02/05/2024 10:23:23 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_nig_4crz.txt at 02/05/2024 10:23:23 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 15 in 73.36 min at 02/05/2024 11:36:44 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_h1gii5sv.txt at 02/05/2024 11:36:44 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 16 in 82.80 min at 02/06/2024 12:59:32 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_fiw6ezjg.txt at 02/06/2024 12:59:32 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 17 in 137.28 min at 02/06/2024 03:16:49 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_omazoxrq.txt at 02/06/2024 03:16:49 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 18 in 148.46 min at 02/06/2024 05:45:16 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_pwjznb63.txt at 02/06/2024 05:45:16 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 19 in 1.18 min at 02/06/2024 05:46:27 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_spi6ugvg.txt at 02/06/2024 05:46:27 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 20 in 1.02 min at 02/06/2024 05:47:28 AM
+INFO in runScanMG5.main(): Finished all runs (20) at 2024-02-04 21:04 at 02/06/2024 05:47:28 AM
+
+
+Done in 1962.72 min
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 02/06/2024 06:33:49 AM
+/home/camila/mg5amcnlo/Delphes/external
+
+INFO in runScanMG5.main(): Running in series with a single process at 02/06/2024 06:33:49 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_uqqsw741.txt at 02/06/2024 06:33:49 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 19 in 937.86 min at 02/06/2024 10:11:40 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_1j_eff/MG5_commands_hydczmz3.txt at 02/06/2024 10:11:41 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 20 in 474.88 min at 02/07/2024 06:06:33 AM
+INFO in runScanMG5.main(): Finished all runs (2) at 2024-02-06 06:33 at 02/07/2024 06:06:33 AM
+
+
+Done in 1412.74 min
+INFO in configParserWrapper.expandLoops():  Looping over variables:  AuxPars:massPairs at 02/07/2024 07:10:39 AM
+/home/camila/mg5amcnlo/Delphes/external
+
+INFO in runScanMG5.main(): Running in series with a single process at 02/07/2024 07:10:39 AM
+INFO in runScanMG5.main(): Folder /home/camila/MonoXSMS/DMSimp_scalar_0j_eff not found. Running MG5 to create folder. at 02/07/2024 07:10:39 AM
+INFO in runScanMG5.generateProcess(): Generating process using /home/camila/MonoXSMS/Cards/DMSimp_spin0/proc_card_0j.dat at 02/07/2024 07:10:39 AM
+INFO in runScanMG5.generateProcess(): Finished process generation at 02/07/2024 07:10:46 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_7xwy3if6.txt at 02/07/2024 07:10:46 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 1 in 22.47 min at 02/07/2024 07:33:14 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_2siu5o2x.txt at 02/07/2024 07:33:14 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 2 in 18.39 min at 02/07/2024 07:51:37 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_n04w112t.txt at 02/07/2024 07:51:37 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 3 in 15.60 min at 02/07/2024 08:07:13 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_mm20hwau.txt at 02/07/2024 08:07:13 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 4 in 13.31 min at 02/07/2024 08:20:32 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_opd7k469.txt at 02/07/2024 08:20:32 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 5 in 12.24 min at 02/07/2024 08:32:46 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_d5sam8fx.txt at 02/07/2024 08:32:46 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 6 in 11.85 min at 02/07/2024 08:44:37 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_kcsxzs30.txt at 02/07/2024 08:44:37 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 7 in 12.30 min at 02/07/2024 08:56:55 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands__6qzr9af.txt at 02/07/2024 08:56:55 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 8 in 12.32 min at 02/07/2024 09:09:15 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_t3ikvpc5.txt at 02/07/2024 09:09:15 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 9 in 12.73 min at 02/07/2024 09:21:59 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_5_lms810.txt at 02/07/2024 09:21:59 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 10 in 15.71 min at 02/07/2024 09:37:41 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_f4fnkiyh.txt at 02/07/2024 09:37:41 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 11 in 15.72 min at 02/07/2024 09:53:24 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_rekqwt5j.txt at 02/07/2024 09:53:24 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 12 in 18.78 min at 02/07/2024 10:12:11 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_8hgnfu2u.txt at 02/07/2024 10:12:11 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 13 in 21.55 min at 02/07/2024 10:33:44 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_uqpdskpx.txt at 02/07/2024 10:33:44 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 14 in 23.13 min at 02/07/2024 10:56:52 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_488wsflo.txt at 02/07/2024 10:56:52 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 15 in 20.33 min at 02/07/2024 11:17:11 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_8pkgy7r2.txt at 02/07/2024 11:17:12 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 16 in 29.10 min at 02/07/2024 11:46:17 AM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_tei4p9ss.txt at 02/07/2024 11:46:18 AM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 17 in 34.52 min at 02/07/2024 12:20:48 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_7ojttiy7.txt at 02/07/2024 12:20:48 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 18 in 42.06 min at 02/07/2024 01:02:52 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_701rrjom.txt at 02/07/2024 01:02:52 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 19 in 25.06 min at 02/07/2024 01:27:55 PM
+INFO in runScanMG5.generateEvents(): Generating MG5 events with command file /home/camila/MonoXSMS/DMSimp_scalar_0j_eff/MG5_commands_jy_2m4rp.txt at 02/07/2024 01:27:55 PM
+INFO in runScanMG5.moveFolders(): Finished event generation for run 20 in 26.02 min at 02/07/2024 01:53:57 PM
+INFO in runScanMG5.main(): Finished all runs (20) at 2024-02-07 07:10 at 02/07/2024 01:53:57 PM
+
+
+Done in 403.29 min

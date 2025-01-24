@@ -74,8 +74,10 @@ module PdgCodeFilter VisibleFilter {
   
   add PdgCode {51}
   add PdgCode {52}
+  add PdgCode {57}
   add PdgCode {-51}
   add PdgCode {-52}
+  add PdgCode {-57}
   add PdgCode {5000039}
   add PdgCode {-5000039}
 }
@@ -308,6 +310,7 @@ module SimpleCalorimeter ECal {
   add EnergyFraction {16} {0.0}
   add EnergyFraction {51} {0.0}    
   add EnergyFraction {52} {0.0} 
+  add EnergyFraction {57} {0.0} 
   add EnergyFraction {5000039} {0.0}     
   add EnergyFraction {1000022} {0.0}
   add EnergyFraction {1000023} {0.0}
@@ -396,6 +399,7 @@ module SimpleCalorimeter HCal {
   add EnergyFraction {16} {0.0}
   add EnergyFraction {51} {0.0}      
   add EnergyFraction {52} {0.0}
+  add EnergyFraction {57} {0.0} 
   add EnergyFraction {5000039} {0.0}
   add EnergyFraction {1000022} {0.0}
   add EnergyFraction {1000023} {0.0}
@@ -622,12 +626,14 @@ module PdgCodeFilter NeutrinoFilter {
   add PdgCode {14}
   add PdgCode {16}
   add PdgCode {51}    
-  add PdgCode {52}  
+  add PdgCode {52} 
+  add PdgCode {57}  
   add PdgCode {-12}
   add PdgCode {-14}
   add PdgCode {-16}
   add PdgCode {-51}    
   add PdgCode {-52}  
+  add PdgCode {-57} 
   add PdgCode {5000039}
   add PdgCode {-5000039}
 }
@@ -665,8 +671,10 @@ module PdgCodeFilter DMFilter {
 
   add PdgCode {51}    
   add PdgCode {52}  
+  add PdgCode {57} 
   add PdgCode {-51}    
   add PdgCode {-52}  
+  add PdgCode {-57} 
   add PdgCode {5000039}
   add PdgCode {-5000039}
 }
