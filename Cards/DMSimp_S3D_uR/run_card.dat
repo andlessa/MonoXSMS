@@ -108,7 +108,7 @@
 #*********************************************************************
 # Minimum and maximum pt's (for max, -1 means no cut)                *
 #*********************************************************************
- 10.0  = ptj       ! minimum pt for the jets 
+ 125.0  = ptj       ! minimum pt for the jets 
  0.0  = ptb       ! minimum pt for the b 
  10.0  = pta       ! minimum pt for the photons 
  10.0  = ptl       ! minimum pt for the charged leptons 
