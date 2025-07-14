@@ -35,10 +35,11 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-import model DMSimp_t-S3D_uR --modelname
+import model /home/ramos/MonoXSMS-camila/modelFiles/DMSimp_t-S3D_uR --modelname
 define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
 define j = p
 define fp = ys3u1
 define fp~ = ys3u1~
-generate  p p > fp fp~ dmscalar=0 dmpscalar=0 dmvector=1 dmpvector=0\, (fp > xd~ j), (fp~ > xd j) @2
+generate  p p > fp fp~ dmscalar=0 dmpscalar=0 dmvector=1 dmpvector=0\,\
+ (fp > xd~ j), (fp~ > xd j) @2
 output 	  DMsimp_t-S3D_uR_JChiChi  -nojpeg

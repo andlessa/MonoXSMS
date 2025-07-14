@@ -9,7 +9,7 @@ from math import *
 import re, itertools
 import numpy
 import logging
-logger = logging.getLogger("MG5Scan")
+logger = logging.getLogger("MA5Scan")
 
 try:
     from ConfigParser import RawConfigParser,InterpolationDepthError,ParsingError
@@ -171,9 +171,9 @@ if __name__ == "__main__":
     ret = parser.read(parFile)
 #     ret = parser.read('slha-parameters.ini')
     
-    print(parser.get("MadGraphPars","mg5out"))
+    # print(parser.get("MadGraphPars","mg5out"))
 #     print(parser.sections())
-    print(parser.get('slhaCreator','inputFile'))
+    # print(parser.get('slhaCreator','inputFile'))
 #     print(parser.get('slhaCreator','slhaout'))
 #     print(parser.get('MadGraphSet','F'))
 #     print(parser.get('MadGraphSet','MH'))

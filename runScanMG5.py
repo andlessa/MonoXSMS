@@ -222,10 +222,14 @@ def generateEvents(parser):
 
     ncore = parser['options']['ncore']
     
+#    logger.info("Wait 30s...")
+    
+#    time.sleep(30)
+    
     logger.info("Generating MG5 events with command file %s" %commandsFile)
     run = subprocess.Popen('./bin/generate_events --multicore --nb_core=%i < %s' %(ncore,commandsFile),
                            shell=True,stdout=subprocess.PIPE,
-                           stderr=subprocess.PIPE,cwd=runFolder)
+                           stderr=subprocess.PIPE,cwd=runFolder)           
       
     output,errorMsg= run.communicate()
     runInfo = {'time (s)' : time.time()-t0}

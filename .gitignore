@@ -1,6 +1,7 @@
 *.pyc
 *.pcl
 *.pkl
+*.pyo
 *ipynb_checkpoints
 MG5
 pythia8
@@ -10,3 +11,5 @@ HepMC2
 DMSimp_*
 slha_files*
 *slha*
+HEPData-ins1847779-v2-csv
+ma5_*

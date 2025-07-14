@@ -35,7 +35,7 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-import model DMSimp_t-S3D_uR --modelname
+import model /home/ramos/MonoXSMS-camila/modelFiles/DMSimp_t-S3D_uR --modelname
 define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
 define j = p
 define fp = ys3u1

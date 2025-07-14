@@ -1,8 +1,8 @@
 #!/bin/sh
 
 currentDIR="$( pwd )"
-delphesDIR=$currentDIR/MG5/Delphes
-pythiaDIR=$currentDIR/MG5/HEPTools/pythia8
+delphesDIR=/home/ramos/MG5/Delphes
+pythiaDIR=/home/ramos/MG5/HEPTools/pythia8
 #Make sure pythia can be found by Delphes
 export LD_LIBRARY_PATH=$pythiaDIR/lib:$LD_LIBRARY_PATH
 #Make sure Delphes can be found by ROOT
