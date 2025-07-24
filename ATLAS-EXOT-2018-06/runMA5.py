@@ -21,23 +21,23 @@ logger.info("Hello!")
 def getDataFromBanner(banner):
     with open(banner, 'r') as f:
         lines = f.readlines()
-
-    is_xsecBlock = False
+        
+    isxsecBlock = False
     xsec = None
+    xsecBlock = []
 
     for i, line in enumerate(lines):
-        if '<init>' in line:
-            is_xsecBlock = True
-            l = i+2
+        if '<MGGenerationInfo>' in line:
+            isxsecBlock = True
             continue
-        elif '<generator' in line:
-            is_xsecBlock = False
+        elif '</MGGenerationInfo>' in line:
+            isxsecBlock = False
             continue
-        if is_xsecBlock:
-            xsec_line = lines[l]
-            xsec = float(xsec_line.split(' ')[0])
-            if not '<generator' in lines[l+1]:
-                xsec += float(xsec_line.split(' ')[0])
+        if isxsecBlock:
+            xsecBlock.append(line)
+
+    xsec_str = xsecBlock[-1].strip('\n').split(' ')[-1]
+    xsec = float(xsec_str)
 
     f.close()
 
