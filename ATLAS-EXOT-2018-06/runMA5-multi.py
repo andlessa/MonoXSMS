@@ -36,17 +36,11 @@ def getDataFromBanner(banner):
             continue
         if isxsecBlock:
             xsecBlock.append(line)
-        # if 'Number of events' in line:  
-        #     try:
-        #         nEvents = int(line.split(':')[-1].strip())
-        #     except ValueError:
-        #         pass
 
     nevts_str = xsecBlock[0].strip('\n').split(' ')[-1]
     nEvents = float(nevts_str)
     xsec_str = xsecBlock[-1].strip('\n').split(' ')[-1]
     xsec = float(xsec_str)
-    print(nEvents, xsec)
 
     xtree = ET.parse(banner)
     xroot = xtree.getroot()
