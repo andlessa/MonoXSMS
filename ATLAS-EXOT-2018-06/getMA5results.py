@@ -8,9 +8,9 @@ import numpy as np
 import xml.etree.ElementTree as ET
 
 # SAF and CLs file patterns
-saf_patterns = ['/home/ramos/MonoXSMS/ATLAS-EXOT-2018-06/ma5_axial_all_add/Output/SAF/*/*.saf']
-cls_patterns = ['/home/ramos/MonoXSMS/ATLAS-EXOT-2018-06/ma5_axial_all_add/Output/SAF/*/CLs_output.dat']
-inputList_pattern = sorted(glob.glob('/home/ramos/MonoXSMS/ATLAS-EXOT-2018-06/ma5_axial_all_add/Input/*.list'))
+saf_patterns = ['/home/ramos/MonoXSMS-camila/ATLAS-EXOT-2018-06/ma5_test_vector_match/Output/SAF/*/*.saf']
+cls_patterns = ['/home/ramos/MonoXSMS-camila/ATLAS-EXOT-2018-06/ma5_test_vector_match/Output/SAF/*/CLs_output.dat']
+inputList_pattern = sorted(glob.glob('/home/ramos/MonoXSMS-camila/ATLAS-EXOT-2018-06/ma5_test_vector_match/Input/*.list'))
 
 
 saf_to_theoretical = {}
@@ -135,8 +135,8 @@ for inputFile, cls_file, saf_file in zip(inputList_pattern, cls_files, saf_files
         n_err = np.sqrt(np.array(weights_sq[1:]))
         n_tot = weights[0]
         effs = np.array(weights[1:])/n_tot
-        # effErr = (nerr / nevts) * eff
-        effs_stat = (n_err / n_tot) * effs
+        # effErr = (nerr / n) * eff or effErr = nerr / n_tot 
+        effs_stat = n_err / n_tot
 
         effs_dict = {}
         effs_stat_dict = {}
@@ -214,4 +214,4 @@ df_final_results = pd.DataFrame(
              "Sigma_theoretical (pb)", "SAF File", "mMed (GeV)", "mchi (GeV)", "Efficiency", "Efficiency_Err"])
 
 
-df_final_results.to_pickle('/home/ramos/MonoXSMS/ATLAS-EXOT-2018-06/ma5_axial_all_add/ma5Results_axial_add_effs-correct.pcl')
+df_final_results.to_pickle('/home/ramos/MonoXSMS-camila/ATLAS-EXOT-2018-06/ma5_test_vector_match/ma5Results_test_vector_match.pcl')
