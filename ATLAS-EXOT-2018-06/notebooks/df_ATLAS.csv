@@ -1,0 +1,20 @@
+,Cuts,ATLAS Cumulative Efficiencies [%],ATLAS Cumulative Errors [%]
+0,Total events ($p_{T}^{miss}>150$ GeV),100.0,0.0
+1,Lepton veto,96.893,0.0
+2,$N(j) <= 4$,91.657,0.0
+3,"min $\Delta \Phi(jets, p_{T}^{miss})$ cut",87.503,0.0
+4,Lead.Jet $p_{T}>150$ GeV $|\eta|<2.4$,46.8,0.0
+5,$p_{T}^{miss}>200$ GeV,31.142,0.0
+6,EM0,13.031,0.0
+7,EM1,8.053,0.0
+8,EM2,4.479,0.0
+9,EM3,2.443,0.0
+10,EM4,2.089,0.0
+11,EM5,0.675,0.0
+12,EM6,0.23,0.0
+13,EM7,0.081,0.0
+14,EM8,0.035,0.0
+15,EM9,0.015,0.0
+16,EM10,0.006,0.0
+17,EM11,0.004,0.0
+18,EM12,0.003,0.0
